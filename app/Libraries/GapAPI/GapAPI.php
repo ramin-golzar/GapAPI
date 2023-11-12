@@ -8,26 +8,17 @@ class GapAPI
 {
 
     private object $sendParams = null;
-    private $token = null;
 
-    public function __construct (string $token = null) {
-        $this->set_token ($token);
-
+    public function __construct () {
         $this->sendParams = new SendParams();
-    }
-
-    private function set_token (string $token): void {
-        if ($token) {
-            $this->token = $token;
-        }
     }
 
     public function send_join_msg (SendParams $params): void {
 
     }
 
-    public function send_message (): void {
-        $send = new Send ($this->sendParams , $this->token);
+    public function send_message (string $token): void {
+        $send = new Send ($this->sendParams , $token);
     }
 
     public function set_chat_id (string $chatId = null): object {
