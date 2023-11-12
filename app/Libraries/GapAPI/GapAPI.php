@@ -16,8 +16,8 @@ class GapAPI
         $this->URLs = new URLs();
     }
 
-    public function send_joinmsg (string|array $keyboard , string $textMsg = null): void {
-
+    public function send_joinmsg (SendParams $params): void {
+        
     }
 
     public function send_textmsg (SendParams $params): void {
