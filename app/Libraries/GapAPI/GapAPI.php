@@ -7,13 +7,19 @@ use App\Libraries\GapAPI\Messages\Send;
 class GapAPI
 {
 
-    private object $sendParams;
+    private object $sendParams = null;
     private $token = null;
 
-    public function __construct (string $token) {
-        $this->token = $token;
+    public function __construct (string $token = null) {
+        $this->set_token ($token);
 
         $this->sendParams = new SendParams();
+    }
+
+    private function set_token (string $token): void {
+        if ($token) {
+            $this->token = $token;
+        }
     }
 
     public function send_join_msg (SendParams $params): void {
