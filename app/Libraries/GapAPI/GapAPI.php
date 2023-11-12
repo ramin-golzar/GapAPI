@@ -9,15 +9,13 @@ class GapAPI
 
     private object $sendParams = null;
 
-    public function __construct () {
-        $this->sendParams = new SendParams();
-    }
-
     public function send_join_msg (SendParams $params): void {
 
     }
 
     public function send_message (string $token): void {
+        $this->sendParams = new SendParams();
+
         $send = new Send ($this->sendParams , $token);
     }
 
