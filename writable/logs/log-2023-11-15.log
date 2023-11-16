@@ -1,0 +1,383 @@
+CRITICAL - 2023-11-15 06:30:12 --> Default value for property of type object may not be null. Use the nullable type ?object to allow null default value
+in APPPATH\Libraries\GapAPI\GapAPI.php on line 18.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-11-15 06:31:16 --> Default value for property of type object may not be null. Use the nullable type ?object to allow null default value
+in APPPATH\Libraries\GapAPI\GapAPI.php on line 18.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-11-15 06:31:26 --> Default value for property of type object may not be null. Use the nullable type ?object to allow null default value
+in APPPATH\Libraries\GapAPI\GapAPI.php on line 18.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-11-15 06:33:04 --> Default value for property of type object may not be null. Use the nullable type ?object to allow null default value
+in APPPATH\Libraries\GapAPI\GapAPI.php on line 18.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-11-15 06:35:45 --> Default value for property of type object may not be null. Use the nullable type ?object to allow null default value
+in APPPATH\Libraries\GapAPI\GapAPI.php on line 18.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-11-15 08:21:23 --> Object of class CURLFile could not be converted to string
+in SYSTEMPATH\HTTP\Header.php on line 162.
+ 1 SYSTEMPATH\HTTP\Message.php(114): CodeIgniter\HTTP\Header->getValueLine()
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(408): CodeIgniter\HTTP\Message->getHeaderLine('multipart')
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(356): CodeIgniter\HTTP\CURLRequest->applyRequestHeaders([...])
+ 4 SYSTEMPATH\HTTP\CURLRequest.php(136): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://api.gap.im/upload/')
+ 5 APPPATH\Controllers\Home.php(57): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://api.gap.im/upload/', [...])
+ 6 APPPATH\Controllers\Home.php(16): App\Controllers\Home->sendImage('339322905')
+ 7 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 08:24:16 --> file_put_contents(http://localhost/my_projects/GitHub/GapAPI/public/Text/log.txt): Failed to open stream: HTTP wrapper does not support writeable connections
+in APPPATH\Controllers\Home.php on line 37.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_put_contents(http://localhost/my_projects/GitHub/GapAPI/public/Text/log.txt): Failed to open stream: HTTP wrapper does not support writeable connections', 'APPPATH\\Controllers\\Home.php', 37)
+ 2 APPPATH\Controllers\Home.php(37): file_put_contents('http://localhost/my_projects/GitHub/GapAPI/public/Text/log.txt', 200)
+ 3 APPPATH\Controllers\Home.php(14): App\Controllers\Home->sendText('339322905')
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 08:25:40 --> file_put_contents(http://localhost/my_projects/GitHub/GapAPI/public/Text/log.txt): Failed to open stream: HTTP wrapper does not support writeable connections
+in APPPATH\Controllers\Home.php on line 37.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_put_contents(http://localhost/my_projects/GitHub/GapAPI/public/Text/log.txt): Failed to open stream: HTTP wrapper does not support writeable connections', 'APPPATH\\Controllers\\Home.php', 37)
+ 2 APPPATH\Controllers\Home.php(37): file_put_contents('http://localhost/my_projects/GitHub/GapAPI/public/Text/log.txt', 'hello')
+ 3 APPPATH\Controllers\Home.php(14): App\Controllers\Home->sendText('339322905')
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 08:27:03 --> file_put_contents(http://localhost/my_projects/GitHub/GapAPI/public/Text/log.txt): Failed to open stream: HTTP wrapper does not support writeable connections
+in APPPATH\Controllers\Home.php on line 37.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_put_contents(http://localhost/my_projects/GitHub/GapAPI/public/Text/log.txt): Failed to open stream: HTTP wrapper does not support writeable connections', 'APPPATH\\Controllers\\Home.php', 37)
+ 2 APPPATH\Controllers\Home.php(37): file_put_contents('http://localhost/my_projects/GitHub/GapAPI/public/Text/log.txt', 'hello')
+ 3 APPPATH\Controllers\Home.php(14): App\Controllers\Home->sendText('339322905')
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 08:29:31 --> file_put_contents(E:\SoftWare\xampp-windows-x64-8.2.4-0-VS16-installer\htdocs\my_projects\GitHub\GapAPI\writable\TEXT/SEND_TEXT.TXT): Failed to open stream: No such file or directory
+in APPPATH\Controllers\Home.php on line 37.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_put_contents(E:\\SoftWare\\xampp-windows-x64-8.2.4-0-VS16-installer\\htdocs\\my_projects\\GitHub\\GapAPI\\writable\\TEXT/SEND_TEXT.TXT): Failed to open stream: No such file or directory', 'APPPATH\\Controllers\\Home.php', 37)
+ 2 APPPATH\Controllers\Home.php(37): file_put_contents('ROOTPATH\\writable\\TEXT/SEND_TEXT.TXT', 'hello')
+ 3 APPPATH\Controllers\Home.php(14): App\Controllers\Home->sendText('339322905')
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 08:33:46 --> Object of class CURLFile could not be converted to string
+in SYSTEMPATH\HTTP\Header.php on line 162.
+ 1 SYSTEMPATH\HTTP\Message.php(114): CodeIgniter\HTTP\Header->getValueLine()
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(408): CodeIgniter\HTTP\Message->getHeaderLine('multipart')
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(356): CodeIgniter\HTTP\CURLRequest->applyRequestHeaders([...])
+ 4 SYSTEMPATH\HTTP\CURLRequest.php(136): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://api.gap.im/upload/')
+ 5 APPPATH\Controllers\Home.php(59): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://api.gap.im/upload/', [...])
+ 6 APPPATH\Controllers\Home.php(16): App\Controllers\Home->sendImage('339322905')
+ 7 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 08:34:15 --> Object of class CURLFile could not be converted to string
+in SYSTEMPATH\HTTP\Header.php on line 162.
+ 1 SYSTEMPATH\HTTP\Message.php(114): CodeIgniter\HTTP\Header->getValueLine()
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(408): CodeIgniter\HTTP\Message->getHeaderLine('multipart')
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(356): CodeIgniter\HTTP\CURLRequest->applyRequestHeaders([...])
+ 4 SYSTEMPATH\HTTP\CURLRequest.php(136): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://api.gap.im/upload/')
+ 5 APPPATH\Controllers\Home.php(59): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://api.gap.im/upload/', [...])
+ 6 APPPATH\Controllers\Home.php(16): App\Controllers\Home->sendImage('339322905')
+ 7 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 08:34:29 --> Object of class CURLFile could not be converted to string
+in SYSTEMPATH\HTTP\Header.php on line 162.
+ 1 SYSTEMPATH\HTTP\Message.php(114): CodeIgniter\HTTP\Header->getValueLine()
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(408): CodeIgniter\HTTP\Message->getHeaderLine('multipart')
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(356): CodeIgniter\HTTP\CURLRequest->applyRequestHeaders([...])
+ 4 SYSTEMPATH\HTTP\CURLRequest.php(136): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://api.gap.im/upload/')
+ 5 APPPATH\Controllers\Home.php(59): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://api.gap.im/upload/', [...])
+ 6 APPPATH\Controllers\Home.php(16): App\Controllers\Home->sendImage('339322905')
+ 7 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 08:38:18 --> Undefined constant "App\Controllers\PUBLICPATH"
+in APPPATH\Controllers\Home.php on line 52.
+ 1 APPPATH\Controllers\Home.php(16): App\Controllers\Home->sendImage('339322905')
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 09:19:36 --> Undefined constant "App\Controllers\PUBLICPATH"
+in APPPATH\Controllers\Home.php on line 52.
+ 1 APPPATH\Controllers\Home.php(16): App\Controllers\Home->sendImage('339322905')
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 09:19:40 --> Undefined constant "App\Controllers\PUBLICPATH"
+in APPPATH\Controllers\Home.php on line 52.
+ 1 APPPATH\Controllers\Home.php(16): App\Controllers\Home->sendImage('339322905')
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 09:22:11 --> Undefined constant "App\Controllers\PUBLICPATH"
+in APPPATH\Controllers\Home.php on line 53.
+ 1 APPPATH\Controllers\Home.php(16): App\Controllers\Home->sendImage('339322905')
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 09:26:18 --> Undefined constant "App\Controllers\PUBLICPATH"
+in APPPATH\Controllers\Home.php on line 54.
+ 1 APPPATH\Controllers\Home.php(16): App\Controllers\Home->sendImage('339322905')
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 09:26:24 --> Undefined constant "App\Controllers\PUBLICPATH"
+in APPPATH\Controllers\Home.php on line 54.
+ 1 APPPATH\Controllers\Home.php(16): App\Controllers\Home->sendImage('339322905')
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 09:26:39 --> Undefined constant "App\Controllers\PUBLICPATH"
+in APPPATH\Controllers\Home.php on line 54.
+ 1 APPPATH\Controllers\Home.php(16): App\Controllers\Home->sendImage('339322905')
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 09:32:28 --> Undefined constant "App\Controllers\PUBLICPATH"
+in APPPATH\Controllers\Home.php on line 54.
+ 1 APPPATH\Controllers\Home.php(16): App\Controllers\Home->sendImage('339322905')
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 09:38:54 --> Undefined constant "App\Controllers\PUBLICPATH"
+in APPPATH\Controllers\Home.php on line 53.
+ 1 APPPATH\Controllers\Home.php(16): App\Controllers\Home->sendImage('339322905')
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 09:41:04 --> Undefined constant "App\Controllers\PUBLICPATH"
+in APPPATH\Controllers\Home.php on line 54.
+ 1 APPPATH\Controllers\Home.php(16): App\Controllers\Home->sendImage('339322905')
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 09:44:41 --> Undefined constant "App\Controllers\PUBLICPATH"
+in APPPATH\Controllers\Home.php on line 54.
+ 1 APPPATH\Controllers\Home.php(16): App\Controllers\Home->sendImage('339322905')
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 09:49:13 --> 42 : operation aborted by callback
+in SYSTEMPATH\HTTP\CURLRequest.php on line 655.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(655): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('42', 'operation aborted by callback')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(363): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(136): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://api.gap.im/upload/')
+ 4 APPPATH\Controllers\Home.php(59): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://api.gap.im/upload/', [...])
+ 5 APPPATH\Controllers\Home.php(16): App\Controllers\Home->sendImage('339322905')
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 09:50:14 --> 22 : The requested URL returned error: 500
+in SYSTEMPATH\HTTP\CURLRequest.php on line 655.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(655): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested URL returned error: 500')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(363): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(136): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://api.gap.im/upload/')
+ 4 APPPATH\Controllers\Home.php(59): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://api.gap.im/upload/', [...])
+ 5 APPPATH\Controllers\Home.php(16): App\Controllers\Home->sendImage('339322905')
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 09:54:31 --> 22 : The requested URL returned error: 500
+in SYSTEMPATH\HTTP\CURLRequest.php on line 655.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(655): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested URL returned error: 500')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(363): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(136): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://api.gap.im/upload/')
+ 4 APPPATH\Controllers\Home.php(60): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://api.gap.im/upload/', [...])
+ 5 APPPATH\Controllers\Home.php(16): App\Controllers\Home->sendImage('339322905')
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 09:54:33 --> 22 : The requested URL returned error: 500
+in SYSTEMPATH\HTTP\CURLRequest.php on line 655.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(655): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested URL returned error: 500')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(363): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(136): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://api.gap.im/upload/')
+ 4 APPPATH\Controllers\Home.php(60): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://api.gap.im/upload/', [...])
+ 5 APPPATH\Controllers\Home.php(16): App\Controllers\Home->sendImage('339322905')
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 10:09:06 --> 22 : The requested URL returned error: 500
+in SYSTEMPATH\HTTP\CURLRequest.php on line 655.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(655): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested URL returned error: 500')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(363): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(136): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://api.gap.im/upload/')
+ 4 APPPATH\Controllers\Home.php(60): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://api.gap.im/upload/', [...])
+ 5 APPPATH\Controllers\Home.php(16): App\Controllers\Home->sendImage('339322905')
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 10:10:51 --> 22 : The requested URL returned error: 500
+in SYSTEMPATH\HTTP\CURLRequest.php on line 655.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(655): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested URL returned error: 500')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(363): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(136): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://api.gap.im/upload/')
+ 4 APPPATH\Controllers\Home.php(60): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://api.gap.im/upload/', [...])
+ 5 APPPATH\Controllers\Home.php(16): App\Controllers\Home->sendImage('339322905')
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 10:11:15 --> syntax error, unexpected token "=>"
+in APPPATH\Controllers\Home.php on line 47.
+ 1 SYSTEMPATH\Router\Router.php(499): CodeIgniter\Router\AutoRouter->getRoute('Home')
+ 2 SYSTEMPATH\Router\Router.php(205): CodeIgniter\Router\Router->autoRoute('Home')
+ 3 SYSTEMPATH\CodeIgniter.php(773): CodeIgniter\Router\Router->handle('Home')
+ 4 SYSTEMPATH\CodeIgniter.php(417): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 10:12:55 --> 22 : The requested URL returned error: 500
+in SYSTEMPATH\HTTP\CURLRequest.php on line 655.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(655): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested URL returned error: 500')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(363): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(136): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://api.gap.im/upload/')
+ 4 APPPATH\Controllers\Home.php(61): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://api.gap.im/upload/', [...])
+ 5 APPPATH\Controllers\Home.php(16): App\Controllers\Home->sendImage('339322905')
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 10:14:03 --> Undefined constant "App\Controllers\PUBLICPATH"
+in APPPATH\Controllers\Home.php on line 56.
+ 1 APPPATH\Controllers\Home.php(16): App\Controllers\Home->sendImage('339322905')
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 10:14:33 --> Undefined constant "App\Controllers\PUBLICPATH"
+in APPPATH\Controllers\Home.php on line 56.
+ 1 APPPATH\Controllers\Home.php(16): App\Controllers\Home->sendImage('339322905')
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 10:19:08 --> 22 : The requested URL returned error: 500
+in SYSTEMPATH\HTTP\CURLRequest.php on line 655.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(655): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested URL returned error: 500')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(363): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(136): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://api.gap.im/upload/')
+ 4 APPPATH\Controllers\Home.php(65): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://api.gap.im/upload/', [...])
+ 5 APPPATH\Controllers\Home.php(16): App\Controllers\Home->sendImage('339322905')
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 10:25:54 --> 42 : operation aborted by callback
+in SYSTEMPATH\HTTP\CURLRequest.php on line 655.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(655): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('42', 'operation aborted by callback')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(363): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(136): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://api.gap.im/upload/')
+ 4 APPPATH\Controllers\Home.php(65): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://api.gap.im/upload/', [...])
+ 5 APPPATH\Controllers\Home.php(16): App\Controllers\Home->sendImage('339322905')
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 11:01:02 --> 42 : operation aborted by callback
+in SYSTEMPATH\HTTP\CURLRequest.php on line 655.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(655): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('42', 'operation aborted by callback')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(363): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(136): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://api.gap.im/upload/')
+ 4 APPPATH\Controllers\Home.php(64): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://api.gap.im/upload/', [...])
+ 5 APPPATH\Controllers\Home.php(16): App\Controllers\Home->sendImage('339322905')
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 11:02:57 --> 42 : operation aborted by callback
+in SYSTEMPATH\HTTP\CURLRequest.php on line 655.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(655): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('42', 'operation aborted by callback')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(363): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(136): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://api.gap.im/upload/')
+ 4 APPPATH\Controllers\Home.php(63): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://api.gap.im/upload/', [...])
+ 5 APPPATH\Controllers\Home.php(16): App\Controllers\Home->sendImage('339322905')
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 11:05:35 --> 22 : The requested URL returned error: 500
+in SYSTEMPATH\HTTP\CURLRequest.php on line 655.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(655): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested URL returned error: 500')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(363): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(136): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://api.gap.im/upload/')
+ 4 APPPATH\Controllers\Home.php(64): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://api.gap.im/upload/', [...])
+ 5 APPPATH\Controllers\Home.php(16): App\Controllers\Home->sendImage('339322905')
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 11:08:16 --> 22 : The requested URL returned error: 500
+in SYSTEMPATH\HTTP\CURLRequest.php on line 655.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(655): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested URL returned error: 500')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(363): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(136): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://api.gap.im/upload/')
+ 4 APPPATH\Controllers\Home.php(64): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://api.gap.im/upload/', [...])
+ 5 APPPATH\Controllers\Home.php(16): App\Controllers\Home->sendImage('339322905')
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 11:13:58 --> Undefined constant "App\Controllers\PUBLICPATH"
+in APPPATH\Controllers\Home.php on line 51.
+ 1 APPPATH\Controllers\Home.php(16): App\Controllers\Home->sendImage('339322905')
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 11:14:00 --> Undefined constant "App\Controllers\PUBLICPATH"
+in APPPATH\Controllers\Home.php on line 51.
+ 1 APPPATH\Controllers\Home.php(16): App\Controllers\Home->sendImage('339322905')
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 11:15:22 --> Undefined constant "App\Controllers\PUBLICPATH"
+in APPPATH\Controllers\Home.php on line 51.
+ 1 APPPATH\Controllers\Home.php(16): App\Controllers\Home->sendImage('339322905')
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 11:16:31 --> Undefined constant "App\Controllers\PUBLICPATH"
+in APPPATH\Controllers\Home.php on line 51.
+ 1 APPPATH\Controllers\Home.php(16): App\Controllers\Home->sendImage('339322905')
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 11:18:16 --> Undefined constant "App\Controllers\PUBLICPATH"
+in APPPATH\Controllers\Home.php on line 51.
+ 1 APPPATH\Controllers\Home.php(16): App\Controllers\Home->sendImage('339322905')
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-15 11:19:43 --> Undefined constant "App\Controllers\PUBLICPATH"
+in APPPATH\Controllers\Home.php on line 51.
+ 1 APPPATH\Controllers\Home.php(16): App\Controllers\Home->sendImage('339322905')
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()

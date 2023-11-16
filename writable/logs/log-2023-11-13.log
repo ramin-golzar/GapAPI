@@ -1,0 +1,26 @@
+CRITICAL - 2023-11-13 08:48:49 --> Default value for property of type object may not be null. Use the nullable type ?object to allow null default value
+in APPPATH\Libraries\GapAPI\GapAPI.php on line 10.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-11-13 08:50:45 --> compact(): Undefined variable $Start
+in APPPATH\Controllers\Test.php on line 22.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'compact(): Undefined variable $Start', 'APPPATH\\Controllers\\Test.php', 22)
+ 2 APPPATH\Controllers\Test.php(22): compact([...])
+ 3 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Test->index()
+ 4 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-13 08:51:53 --> compact(): Undefined variable $Start
+in APPPATH\Controllers\Test.php on line 20.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'compact(): Undefined variable $Start', 'APPPATH\\Controllers\\Test.php', 20)
+ 2 APPPATH\Controllers\Test.php(20): compact([...])
+ 3 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Test->index()
+ 4 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-13 09:17:44 --> Undefined variable $array
+in APPPATH\Controllers\Test.php on line 18.
+ 1 APPPATH\Controllers\Test.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $array', 'APPPATH\\Controllers\\Test.php', 18)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Test->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()

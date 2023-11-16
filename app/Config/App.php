@@ -1,5 +1,4 @@
 <?php
-
 namespace Config;
 
 use CodeIgniter\Config\BaseConfig;
@@ -7,6 +6,7 @@ use CodeIgniter\Session\Handlers\FileHandler;
 
 class App extends BaseConfig
 {
+
     /**
      * --------------------------------------------------------------------------
      * Base Site URL
@@ -24,7 +24,7 @@ class App extends BaseConfig
      *
      * @var string
      */
-    public $baseURL = 'http://localhost:8080/';
+    public $baseURL = 'http://localhost/my_projects/GitHub/GapAPI/public/';
 
     /**
      * --------------------------------------------------------------------------
@@ -462,4 +462,5 @@ class App extends BaseConfig
      * @var bool
      */
     public $CSPEnabled = false;
+
 }

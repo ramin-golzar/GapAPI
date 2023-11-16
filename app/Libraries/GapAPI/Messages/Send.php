@@ -2,7 +2,7 @@
 namespace App\Libraries\GapAPI\Messages;
 
 use App\Libraries\GapAPI\SendParams;
-use App\Libraries\GapAPI\SendParams;
+use App\Libraries\GapAPI\URLs;
 
 class Send
 {
@@ -11,7 +11,7 @@ class Send
     private object $curlFile = null;
     private string $token = null;
     private object $sendParams = null;
-    private array $formParams = null;
+    private array $form_params = null;
 
     public function __construct (SendParams $params , string $token) {
         $this->sendParams = $params;
@@ -54,11 +54,11 @@ class Send
     }
 
     private function provide_form_params (): void {
-        $this->formParams = (array) $this->sendParams;
+        $this->form_params = (array) $this->sendParams;
 
-        foreach ($this->formParams as $k => $v) {
+        foreach ($this->form_params as $k => $v) {
             if (is_null ($k)) {
-                unset ($this->formParams [$k]);
+                unset ($this->form_params [$k]);
             }
         }
     }
@@ -75,6 +75,10 @@ class Send
         ];
 
         $this->curl = \Config\Services::curlrequest ($options);
+    }
+
+    public function request (): void {
+        $response = $this->curl->request ('POST' , URLs::SEND_MESSAGE , compact ($this->form_params));
     }
 
 }
