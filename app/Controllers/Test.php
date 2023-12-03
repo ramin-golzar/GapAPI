@@ -5,25 +5,13 @@ class Test extends BaseController
 {
 
     public function index (): void {
-        $Super = [
-            [
-                ['start' => 'Start' ,] ,
-                ['rank' => 'Rank'] ,
-            ]
-        ];
+        $chat_id = '12345';
+        $type = 'file';
 
-        $select = 'AAAAA';
+        $params ['form_params'] = compact ('chat_id' , 'type');
 
         echo'<pre><b>';
-        print_r ($Super);
-        echo'</b></pre>';
-
-        echo '<hr />';
-
-        $result = compact ("Super" , 'select');
-
-        echo'<pre><b>';
-        print_r ($result);
+        print_r ($params);
         echo'</b></pre>';
     }
 
