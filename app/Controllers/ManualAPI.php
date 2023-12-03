@@ -12,6 +12,12 @@ class ManualAPI extends BaseController
 
     public function get_text (): void {
         $api = new GetText();
+
+        $api->get ();
+    }
+
+    private function log (string $string): void {
+        file_put_contents (WRITEPATH . 'TestAPI.txt' , "\n$string\n" , FILE_APPEND);
     }
 
 }
