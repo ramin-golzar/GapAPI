@@ -1,17 +1,6 @@
 <?php
 namespace App\Libraries\GapAPI;
 
-use App\Libraries\GapAPI\SendParams;
-use App\Libraries\GapAPI\Messages\Send;
-
-/*
- * ta sare moshkele type params.
- *
- * dar asl code bayad in gune taghir konak ke:
- * ba har bar set shodane type params , curl monaseb
- * an load shavad.
- */
-
 class GapAPI
 {
 
