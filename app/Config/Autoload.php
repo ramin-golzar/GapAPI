@@ -45,6 +45,7 @@ class Autoload extends AutoloadConfig
         'Config' => APPPATH . 'Config' ,
         'Libraries' => APPPATH . 'Libraries' ,
         'Libraries\GapAPI' => APPPATH . 'Libraries/GapAPI' ,
+        'Libraries\GapAPI\Handlers' => APPPATH . 'Libraries/GapAPI/Handlers' ,
         'Libraries\TestAPI' => APPPATH . 'Libraries/TestAPI' ,
     ];
 

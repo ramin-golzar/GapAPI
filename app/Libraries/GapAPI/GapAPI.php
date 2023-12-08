@@ -1,8 +1,14 @@
 <?php
 namespace App\Libraries\GapAPI;
 
-class GapAPI
+use App\Libraries\GapAPI\SetParams;
+
+class GapAPI extends SetParams
 {
+
+    public function send_text (): string {
+
+    }
 
 }
 
