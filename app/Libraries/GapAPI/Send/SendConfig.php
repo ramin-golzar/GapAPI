@@ -7,52 +7,65 @@ class SendConfig
 {
 
     /**
-     * Holds the token robot
+     * Holds the headers properties
      *
-     * @var string
+     * @var Headers
      */
-    public string $token = null;
+    protected array $headers = null;
 
     /**
      * Holds the method for send message or data
      *
      * @var string
      */
-    public string $method = null;
+    protected string $method = null;
 
     /**
      * Contains parameters key to send
      *
      * @var Params
      */
-    public FormParams $form_params = null;
+    protected FormParams $form_params = null;
 
     /**
      * Is it necessary to upload?
      *
      * @var bool
      */
-    public bool $uploadRequire = false;
+    protected bool $uploadRequire = false;
 
     /**
-     * Holds the content type
+     * Setting the token in the header
      *
-     * @var string
+     * @param string $token
+     * @return void
      */
-    public string $contentType = null;
+    protected function set_token (string &$token): void {
+        $this->headers ['token'] = $token;
+    }
 
     /**
      * Holds a content type string
      *
      * It is suitable for sending anything except files
      */
-    public const APPLICATION = 'application/x-www-form-urlencoded';
+    protected const APPLICATION = 'application/x-www-form-urlencoded';
 
     /**
      * Holds a content type string
      *
      * It is suitable sending file
      */
-    public const MULTIPART = 'multipart/form-data';
+    protected const MULTIPART = 'multipart/form-data';
+
+    /**
+     * Setting a valid value for content-type header
+     *
+     * @param string $contentType
+     * @return void
+     */
+    protected function set_content_type (string &$contentType): void {
+        $this->headers ['Content-Type'] = $contentType;
+    }
 
 }
