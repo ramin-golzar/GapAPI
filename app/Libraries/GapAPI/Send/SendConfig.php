@@ -1,7 +1,7 @@
 <?php
 namespace App\Libraries\GapAPI\Send;
 
-use App\Libraries\GapAPI\Handlers\Params;
+use App\Libraries\GapAPI\Handlers\FormParams;
 
 class SendConfig
 {
@@ -25,7 +25,7 @@ class SendConfig
      *
      * @var Params
      */
-    public Params $params = null;
+    public FormParams $form_params = null;
 
     /**
      * Is it necessary to upload?

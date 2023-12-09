@@ -1,7 +1,7 @@
 <?php
 namespace App\Libraries\GapAPI\Send\Handlers;
 
-use App\Libraries\GapAPI\Handlers\Params;
+use App\Libraries\GapAPI\Handlers\FormParams;
 use App\Libraries\GapAPI\Handlers\Codes;
 
 class PrepareParams
@@ -13,7 +13,7 @@ class PrepareParams
      * @return array|null
      */
     public function run (): array|null {
-        $params = new Params();
+        $params = new FormParams();
 
         $this->set_chat_id ($params);
 
@@ -28,7 +28,7 @@ class PrepareParams
      * @param Params $params
      * @return array|null
      */
-    private function ignoring_null_params (Params &$params): array|null {
+    private function ignoring_null_params (FormParams &$params): array|null {
         $result = [];
 
         foreach ($params as $k => $v) {
@@ -46,7 +46,7 @@ class PrepareParams
      * @param Params $params
      * @return string|null
      */
-    private function set_chat_id (Params &$params): string|null {
+    private function set_chat_id (FormParams &$params): string|null {
         $codes = new Codes();
 
         return $params->chat_id ?? $codes->get_chat_id ();

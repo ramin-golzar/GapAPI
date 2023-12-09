@@ -1,7 +1,7 @@
 <?php
 namespace App\Libraries\GapAPI\Handlers;
 
-class Params
+class FormParams
 {
 
     public string $chat_id = null;
