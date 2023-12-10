@@ -7,11 +7,11 @@ class SendConfig
 {
 
     /**
-     * Holds the headers properties
+     * Holds the token
      *
      * @var Headers
      */
-    protected array $headers = null;
+    protected string $token = null;
 
     /**
      * Holds the method for send message or data
@@ -42,58 +42,72 @@ class SendConfig
     protected bool $uploadRequire = false;
 
     /**
-     * Setting the token in the header
-     *
-     * @param string $token
-     * @return void
-     */
-    protected function set_token (string &$token): void {
-        $this->headers ['token'] = $token;
-    }
-
-    /**
      * Holds a content type string
      *
      * It is suitable for sending anything except files
      */
-    protected const APPLICATION = 'application/x-www-form-urlencoded';
+    protected const CONTENT_TYPE_APPLICATION = 'application/x-www-form-urlencoded';
 
     /**
      * Holds a content type string
      *
      * It is suitable sending file
      */
-    protected const MULTIPART = 'multipart/form-data';
+    protected const CONTENT_TYPE_MULTIPART = 'multipart/form-data';
 
     /**
-     * Setting a valid value for content-type header
+     * Return the base options for cURL
      *
-     * @param string $contentType
-     * @return void
+     * @return array
      */
-    protected function set_content_type (string &$contentType): void {
-        $this->headers ['Content-Type'] = $contentType;
-    }
-
-    protected function getting_base_options (): array {
+    protected function get_base_options (): array {
         return [
             'headers' => [
-                'token' => $this->headers ['token'] ,
+                'token' => $this->token ,
             ] ,
             'baseURI' => URLs::BASE_URL ,
         ];
     }
 
-    protected function getting_options (): array {
-        $options = [
-            'headers' => [
-                'Content-Type' => $this->headers ['Content-Type'] ,
-            ] ,
-        ];
-
+    /**
+     * Getting array of options
+     *
+     * @return array
+     */
+    protected function get_options (): array {
         if ($this->uploadRequire) {
-            $options ['multipart'] = $this->
+            return $this->get_upload_options ();
+        } else {
+            return $this->get_send_options ();
         }
+    }
+
+    /**
+     * Getting options for everything except uploading
+     *
+     * @return array
+     */
+    private function get_send_options (): array {
+        return [
+            'headers' => [
+                'Content-Type' => self::CONTENT_TYPE_APPLICATION ,
+            ] ,
+            compact ($this->form_params) ,
+        ];
+    }
+
+    /**
+     * Getting options for uploading
+     *
+     * @return array
+     */
+    private function get_upload_options (): array {
+        return [
+            'headers' => [
+                'Content-Type' => self::CONTENT_TYPE_MULTIPART ,
+            ] ,
+            compact ($this->multipart) ,
+        ];
     }
 
 }
