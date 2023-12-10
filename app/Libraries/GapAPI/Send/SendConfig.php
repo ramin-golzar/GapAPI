@@ -2,6 +2,7 @@
 namespace App\Libraries\GapAPI\Send;
 
 use App\Libraries\GapAPI\Handlers\FormParams;
+use App\Libraries\GapAPI\Handlers\Multipart;
 
 class SendConfig
 {
@@ -26,6 +27,13 @@ class SendConfig
      * @var Params
      */
     protected FormParams $form_params = null;
+
+    /**
+     * To hold the upload parameters
+     *
+     * @var Multipart
+     */
+    protected Multipart $multipart = null;
 
     /**
      * Is it necessary to upload?
