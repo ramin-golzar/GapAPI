@@ -6,12 +6,16 @@ use App\Libraries\GapAPI\Send\Handlers\URLs;
 class SendConfig
 {
 
+    public function __construct (string &$token) {
+        $this->client = \Config\Services::curlrequest ($this->get_base_options ($token));
+    }
+
     /**
-     * Holds the token
+     * This is cURL object
      *
-     * @var Headers
+     * @var object
      */
-    protected string $token = null;
+    private object $client = null;
 
     /**
      * Holds the method for send message or data
@@ -46,25 +50,23 @@ class SendConfig
      *
      * It is suitable for sending anything except files
      */
-    protected const CONTENT_TYPE_APPLICATION = 'application/x-www-form-urlencoded';
+    private const CONTENT_TYPE_APPLICATION = 'application/x-www-form-urlencoded';
 
     /**
      * Holds a content type string
      *
      * It is suitable sending file
      */
-    protected const CONTENT_TYPE_MULTIPART = 'multipart/form-data';
+    private const CONTENT_TYPE_MULTIPART = 'multipart/form-data';
 
     /**
      * Return the base options for cURL
      *
      * @return array
      */
-    protected function get_base_options (): array {
+    private function get_base_options (string &$token): array {
         return [
-            'headers' => [
-                'token' => $this->token ,
-            ] ,
+            'headers' => ['token' => $token] ,
             'baseURI' => URLs::BASE_URL ,
         ];
     }
@@ -74,11 +76,11 @@ class SendConfig
      *
      * @return array
      */
-    protected function get_options (): array {
+    private function get_options (): array {
         if ($this->uploadRequire) {
             return $this->get_upload_options ();
         } else {
-            return $this->get_send_options ();
+            return $this->get_message_options ();
         }
     }
 
@@ -87,7 +89,7 @@ class SendConfig
      *
      * @return array
      */
-    private function get_send_options (): array {
+    private function get_message_options (): array {
         return [
             'headers' => [
                 'Content-Type' => self::CONTENT_TYPE_APPLICATION ,
@@ -108,6 +110,15 @@ class SendConfig
             ] ,
             compact ($this->multipart) ,
         ];
+    }
+
+    /**
+     * Sending evetything except upload file
+     *
+     * @return object
+     */
+    protected function request (): object {
+        return $this->client->request ('POST' , $this->method , $this->get_options ());
     }
 
 }

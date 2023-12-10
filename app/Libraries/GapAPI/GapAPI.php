@@ -7,7 +7,13 @@ use App\Libraries\GapAPI\SetParams;
 class GapAPI extends SetParams
 {
 
-    public function send_text (string $token): string {
+    /**
+     * Sending evetything except upload file
+     *
+     * @param string $token
+     * @return object
+     */
+    public function send_text (string &$token): object {
         $send = new Send ($token);
 
         $send->send_text ();
