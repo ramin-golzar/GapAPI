@@ -1,8 +1,7 @@
 <?php
 namespace App\Libraries\GapAPI\Send;
 
-use App\Libraries\GapAPI\Handlers\FormParams;
-use App\Libraries\GapAPI\Handlers\Multipart;
+use App\Libraries\GapAPI\Send\Handlers\URLs;
 
 class SendConfig
 {
@@ -26,14 +25,14 @@ class SendConfig
      *
      * @var Params
      */
-    protected FormParams $form_params = null;
+    protected array $form_params = null;
 
     /**
      * To hold the upload parameters
      *
      * @var Multipart
      */
-    protected Multipart $multipart = null;
+    protected array $multipart = null;
 
     /**
      * Is it necessary to upload?
@@ -74,6 +73,27 @@ class SendConfig
      */
     protected function set_content_type (string &$contentType): void {
         $this->headers ['Content-Type'] = $contentType;
+    }
+
+    protected function getting_base_options (): array {
+        return [
+            'headers' => [
+                'token' => $this->headers ['token'] ,
+            ] ,
+            'baseURI' => URLs::BASE_URL ,
+        ];
+    }
+
+    protected function getting_options (): array {
+        $options = [
+            'headers' => [
+                'Content-Type' => $this->headers ['Content-Type'] ,
+            ] ,
+        ];
+
+        if ($this->uploadRequire) {
+            $options ['multipart'] = $this->
+        }
     }
 
 }
