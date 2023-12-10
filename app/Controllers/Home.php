@@ -6,8 +6,7 @@ class Home extends BaseController
 
     public function index () {
 
-        $post = $this->request->getPost ();
-
+//        $post = $this->request->getPost ();
 //        $gapApi = new \App\Libraries\GapAPI\GapAPI();
 //        if ($post ['type'] == 'join') {
 //        $gapApi->send ($post ['chat_id']);
@@ -19,7 +18,7 @@ class Home extends BaseController
 //        $this->send_image ($_POST ['chat_id']);
 //        $this->send_message ($_POST['chat_id'] , 'text' , '🌼🌻🌺 Hello');
 //        $this->send_phone ();
-        $this->send_location ();
+//        $this->send_location ();
     }
 
     public function send_text (string $chatId): void {
