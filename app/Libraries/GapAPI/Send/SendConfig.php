@@ -15,8 +15,7 @@ class SendConfig
      *
      * @var object
      */
-    /* ToDo: `set data type */
-    private $client;
+    private object $client;
 
     /**
      * Holds the method for send message or data
@@ -30,7 +29,7 @@ class SendConfig
      *
      * @var Params
      */
-    protected array $form_params;
+    protected array $formParams;
 
     /**
      * To hold the upload parameters
@@ -69,7 +68,6 @@ class SendConfig
         return [
             'headers' => [
                 'token' => $token ,
-                'Content-Type' => self::CONTENT_TYPE_APPLICATION ,
             ] ,
             'baseURI' => URLs::BASE_URL ,
         ];
@@ -95,7 +93,10 @@ class SendConfig
      */
     private function get_message_options (): array {
         return [
-            'form_params' => $this->form_params ,
+            'headers' => [
+                'Content-Type' => self::CONTENT_TYPE_APPLICATION ,
+            ] ,
+            'form_params' => $this->formParams ,
         ];
     }
 
@@ -121,31 +122,5 @@ class SendConfig
     protected function request (): object {
         return $this->client->request ('POST' , $this->method , $this->get_options ());
     }
-
-//    public function request (): object {
-//        $token = '18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496';
-//
-//        $formParams = [
-//            'chat_id' => '339322905' ,
-//            'type' => 'text' ,
-//            'data' => 'AAAA' ,
-//        ];
-//
-//        $contentType = self::CONTENT_TYPE_APPLICATION;
-//
-//        $url = 'https://api.gap.im/sendMessage';
-//
-//        $options = [
-//            'headers' => [
-//                'token' => $token ,
-//                'Content-Type' => $contentType ,
-//            ] ,
-//            'form_params' => $formParams ,
-//        ];
-//
-////        $client = \Config\Services::curlrequest ();
-//
-//        return $this->client->request ('POST' , $url , $options);
-//    }
 
 }

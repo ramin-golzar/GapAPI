@@ -5,7 +5,7 @@ class FormParams
 {
 
     public string $chat_id = '';
-    public string $type = 'text';
+    public string $type = '';
     public string $data = '';
     public string|array $reply_keyboard = '';
     public string|array $inline_keyboard = '';

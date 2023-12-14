@@ -16,10 +16,6 @@ class SetParams
         $this->formParams->chat_id = $chatId;
     }
 
-    public function set_type (string $type): void {
-        $this->formParams->type = $type;
-    }
-
     public function set_data (string $data): void {
         $this->formParams->data = $data;
     }
