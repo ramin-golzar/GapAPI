@@ -12,12 +12,12 @@ class Send extends SendConfig
         parent::__construct ($token);
     }
 
-    public function send_text (): object {
+    public function send_text (object $formParams): object {
         $this->method = URLs::SEND_MESSAGE;
 
         $prepareParams = new PrepareParams();
 
-        $this->form_params = $prepareParams->run ();
+        $this->form_params = $prepareParams->run ($formParams);
 
         return $this->request ();
     }

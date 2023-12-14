@@ -1,0 +1,114 @@
+CRITICAL - 2023-12-09 21:46:54 --> Attempt to assign property "data" on null
+in APPPATH\Libraries\GapAPI\SetParams.php on line 20.
+ 1 APPPATH\Controllers\Home.php(12): App\Libraries\GapAPI\SetParams->set_data('Hello Ramin')
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-09 21:52:12 --> Attempt to assign property "data" on null
+in APPPATH\Libraries\GapAPI\SetParams.php on line 20.
+ 1 APPPATH\Controllers\Home.php(12): App\Libraries\GapAPI\SetParams->set_data('Hello Ramin')
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-09 21:57:01 --> Attempt to assign property "data" on null
+in APPPATH\Libraries\GapAPI\SetParams.php on line 20.
+ 1 APPPATH\Controllers\Home.php(12): App\Libraries\GapAPI\SetParams->set_data('Hello Ramin')
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-09 22:00:04 --> Attempt to assign property "data" on null
+in APPPATH\Libraries\GapAPI\SetParams.php on line 20.
+ 1 APPPATH\Controllers\Home.php(12): App\Libraries\GapAPI\SetParams->set_data('Hello Ramin')
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-09 22:21:03 --> Attempt to assign property "data" on null
+in APPPATH\Libraries\GapAPI\SetParams.php on line 20.
+ 1 APPPATH\Controllers\Home.php(12): App\Libraries\GapAPI\SetParams->set_data('Hello Ramin')
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-09 22:21:19 --> Attempt to assign property "data" on null
+in APPPATH\Libraries\GapAPI\SetParams.php on line 20.
+ 1 APPPATH\Controllers\Home.php(12): App\Libraries\GapAPI\SetParams->set_data('Hello Ramin')
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-09 22:23:40 --> Attempt to assign property "data" on null
+in APPPATH\Libraries\GapAPI\SetParams.php on line 20.
+ 1 APPPATH\Controllers\Home.php(12): App\Libraries\GapAPI\SetParams->set_data('Hello Ramin')
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-09 22:30:41 --> Attempt to assign property "data" on null
+in APPPATH\Libraries\GapAPI\SetParams.php on line 20.
+ 1 APPPATH\Controllers\Home.php(12): App\Libraries\GapAPI\SetParams->set_data('Hello Ramin')
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-09 22:30:45 --> Attempt to assign property "data" on null
+in APPPATH\Libraries\GapAPI\SetParams.php on line 20.
+ 1 APPPATH\Controllers\Home.php(12): App\Libraries\GapAPI\SetParams->set_data('Hello Ramin')
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-09 22:33:07 --> Attempt to assign property "data" on null
+in APPPATH\Libraries\GapAPI\SetParams.php on line 20.
+ 1 APPPATH\Controllers\Home.php(12): App\Libraries\GapAPI\SetParams->set_data('Hello Ramin')
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-09 22:33:19 --> Default value for property of type string may not be null. Use the nullable type ?string to allow null default value
+in APPPATH\Controllers\Test.php on line 7.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-12-09 22:33:52 --> Default value for property of type string may not be null. Use the nullable type ?string to allow null default value
+in APPPATH\Controllers\Test.php on line 7.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-12-09 22:34:20 --> Typed property App\Controllers\Test::$var2 must not be accessed before initialization
+in APPPATH\Controllers\Test.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Test->index()
+ 2 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-09 22:34:41 --> Default value for property of type object may not be null. Use the nullable type ?object to allow null default value
+in APPPATH\Controllers\Test.php on line 7.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-12-09 22:35:04 --> Typed property App\Controllers\Test::$var2 must not be accessed before initialization
+in APPPATH\Controllers\Test.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Test->index()
+ 2 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-09 22:35:14 --> Default value for property of type array may not be null. Use the nullable type ?array to allow null default value
+in APPPATH\Controllers\Test.php on line 8.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-12-09 22:35:32 --> Typed property App\Controllers\Test::$var2 must not be accessed before initialization
+in APPPATH\Controllers\Test.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Test->index()
+ 2 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-09 22:59:37 --> Attempt to assign property "data" on null
+in APPPATH\Libraries\GapAPI\SetParams.php on line 20.
+ 1 APPPATH\Controllers\Home.php(12): App\Libraries\GapAPI\SetParams->set_data('Hello Ramin')
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-09 23:02:16 --> Attempt to assign property "data" on null
+in APPPATH\Libraries\GapAPI\SetParams.php on line 20.
+ 1 APPPATH\Controllers\Home.php(12): App\Libraries\GapAPI\SetParams->set_data('Hello Ramin')
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()

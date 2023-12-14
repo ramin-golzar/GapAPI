@@ -16,7 +16,9 @@ class GapAPI extends SetParams
     public function send_text (string &$token): object {
         $send = new Send ($token);
 
-        $send->send_text ();
+        $response = $send->send_text ($this->formParams);
+
+        return $response;
     }
 
 }

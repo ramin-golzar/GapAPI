@@ -6,7 +6,11 @@ use App\Libraries\GapAPI\Handlers\FormParams;
 class SetParams
 {
 
-    private FormParams $formParams;
+    public FormParams $formParams;
+
+    public function __construct () {
+        $this->formParams = new FormParams();
+    }
 
     public function set_chat_id (string|int $chatId): void {
         $this->formParams->chat_id = $chatId;

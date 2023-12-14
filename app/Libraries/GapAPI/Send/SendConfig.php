@@ -15,28 +15,29 @@ class SendConfig
      *
      * @var object
      */
-    private object $client = null;
+    /* ToDo: `set data type */
+    private $client;
 
     /**
      * Holds the method for send message or data
      *
      * @var string
      */
-    protected string $method = null;
+    protected string $method;
 
     /**
      * Contains parameters key to send
      *
      * @var Params
      */
-    protected array $form_params = null;
+    protected array $form_params;
 
     /**
      * To hold the upload parameters
      *
      * @var Multipart
      */
-    protected array $multipart = null;
+    protected array $multipart;
 
     /**
      * Is it necessary to upload?
@@ -66,7 +67,10 @@ class SendConfig
      */
     private function get_base_options (string &$token): array {
         return [
-            'headers' => ['token' => $token] ,
+            'headers' => [
+                'token' => $token ,
+                'Content-Type' => self::CONTENT_TYPE_APPLICATION ,
+            ] ,
             'baseURI' => URLs::BASE_URL ,
         ];
     }
@@ -91,10 +95,7 @@ class SendConfig
      */
     private function get_message_options (): array {
         return [
-            'headers' => [
-                'Content-Type' => self::CONTENT_TYPE_APPLICATION ,
-            ] ,
-            compact ($this->form_params) ,
+            'form_params' => $this->form_params ,
         ];
     }
 
@@ -108,7 +109,7 @@ class SendConfig
             'headers' => [
                 'Content-Type' => self::CONTENT_TYPE_MULTIPART ,
             ] ,
-            compact ($this->multipart) ,
+            'multipart' => $this->multipart ,
         ];
     }
 
@@ -120,5 +121,31 @@ class SendConfig
     protected function request (): object {
         return $this->client->request ('POST' , $this->method , $this->get_options ());
     }
+
+//    public function request (): object {
+//        $token = '18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496';
+//
+//        $formParams = [
+//            'chat_id' => '339322905' ,
+//            'type' => 'text' ,
+//            'data' => 'AAAA' ,
+//        ];
+//
+//        $contentType = self::CONTENT_TYPE_APPLICATION;
+//
+//        $url = 'https://api.gap.im/sendMessage';
+//
+//        $options = [
+//            'headers' => [
+//                'token' => $token ,
+//                'Content-Type' => $contentType ,
+//            ] ,
+//            'form_params' => $formParams ,
+//        ];
+//
+////        $client = \Config\Services::curlrequest ();
+//
+//        return $this->client->request ('POST' , $url , $options);
+//    }
 
 }

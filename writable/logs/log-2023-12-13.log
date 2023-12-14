@@ -1,0 +1,424 @@
+CRITICAL - 2023-12-13 19:30:27 --> 22 : The requested URL returned error: 400
+in SYSTEMPATH\HTTP\CURLRequest.php on line 655.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(655): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested URL returned error: 400')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(363): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(136): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://api.gap.im/sendMessage')
+ 4 APPPATH\Libraries\GapAPI\Send\SendConfig.php(123): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://api.gap.im/sendMessage', [...])
+ 5 APPPATH\Libraries\GapAPI\Send\Send.php(22): App\Libraries\GapAPI\Send\SendConfig->request()
+ 6 APPPATH\Libraries\GapAPI\GapAPI.php(19): App\Libraries\GapAPI\Send\Send->send_text(Object(App\Libraries\GapAPI\Handlers\FormParams))
+ 7 APPPATH\Controllers\Home.php(14): App\Libraries\GapAPI\GapAPI->send_text('18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496')
+ 8 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 9 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-13 19:30:40 --> 22 : The requested URL returned error: 400
+in SYSTEMPATH\HTTP\CURLRequest.php on line 655.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(655): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested URL returned error: 400')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(363): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(136): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://api.gap.im/sendMessage')
+ 4 APPPATH\Libraries\GapAPI\Send\SendConfig.php(123): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://api.gap.im/sendMessage', [...])
+ 5 APPPATH\Libraries\GapAPI\Send\Send.php(22): App\Libraries\GapAPI\Send\SendConfig->request()
+ 6 APPPATH\Libraries\GapAPI\GapAPI.php(19): App\Libraries\GapAPI\Send\Send->send_text(Object(App\Libraries\GapAPI\Handlers\FormParams))
+ 7 APPPATH\Controllers\Home.php(14): App\Libraries\GapAPI\GapAPI->send_text('18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496')
+ 8 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 9 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-13 19:30:58 --> 22 : The requested URL returned error: 400
+in SYSTEMPATH\HTTP\CURLRequest.php on line 655.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(655): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested URL returned error: 400')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(363): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(136): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://api.gap.im/sendMessage')
+ 4 APPPATH\Libraries\GapAPI\Send\SendConfig.php(123): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://api.gap.im/sendMessage', [...])
+ 5 APPPATH\Libraries\GapAPI\Send\Send.php(22): App\Libraries\GapAPI\Send\SendConfig->request()
+ 6 APPPATH\Libraries\GapAPI\GapAPI.php(19): App\Libraries\GapAPI\Send\Send->send_text(Object(App\Libraries\GapAPI\Handlers\FormParams))
+ 7 APPPATH\Controllers\Home.php(14): App\Libraries\GapAPI\GapAPI->send_text('18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496')
+ 8 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 9 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-13 19:32:45 --> 22 : The requested URL returned error: 400
+in SYSTEMPATH\HTTP\CURLRequest.php on line 655.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(655): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested URL returned error: 400')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(363): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(136): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://api.gap.im/sendMessage')
+ 4 APPPATH\Libraries\GapAPI\Send\SendConfig.php(123): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://api.gap.im/sendMessage', [...])
+ 5 APPPATH\Libraries\GapAPI\Send\Send.php(22): App\Libraries\GapAPI\Send\SendConfig->request()
+ 6 APPPATH\Libraries\GapAPI\GapAPI.php(19): App\Libraries\GapAPI\Send\Send->send_text(Object(App\Libraries\GapAPI\Handlers\FormParams))
+ 7 APPPATH\Controllers\Home.php(14): App\Libraries\GapAPI\GapAPI->send_text('18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496')
+ 8 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 9 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-13 19:35:59 --> 22 : The requested URL returned error: 400
+in SYSTEMPATH\HTTP\CURLRequest.php on line 655.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(655): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested URL returned error: 400')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(363): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(136): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://api.gap.im/sendMessage')
+ 4 APPPATH\Libraries\GapAPI\Send\SendConfig.php(123): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://api.gap.im/sendMessage', [...])
+ 5 APPPATH\Libraries\GapAPI\Send\Send.php(22): App\Libraries\GapAPI\Send\SendConfig->request()
+ 6 APPPATH\Libraries\GapAPI\GapAPI.php(19): App\Libraries\GapAPI\Send\Send->send_text(Object(App\Libraries\GapAPI\Handlers\FormParams))
+ 7 APPPATH\Controllers\Home.php(14): App\Libraries\GapAPI\GapAPI->send_text('18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496')
+ 8 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 9 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-13 19:38:07 --> Undefined variable $post
+in APPPATH\Controllers\Home.php on line 21.
+ 1 APPPATH\Controllers\Home.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $post', 'APPPATH\\Controllers\\Home.php', 21)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-13 19:53:21 --> 22 : The requested URL returned error: 405
+in SYSTEMPATH\HTTP\CURLRequest.php on line 655.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(655): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested URL returned error: 405')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(363): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(136): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://api.gap.im/sendMessage')
+ 4 APPPATH\Controllers\Home.php(48): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://api.gap.im/sendMessage', [...])
+ 5 APPPATH\Controllers\Home.php(21): App\Controllers\Home->send_text('339322905')
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-13 19:55:27 --> 22 : The requested URL returned error: 400
+in SYSTEMPATH\HTTP\CURLRequest.php on line 655.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(655): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested URL returned error: 400')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(363): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(136): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://api.gap.im/sendMessage')
+ 4 APPPATH\Libraries\GapAPI\Send\SendConfig.php(123): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://api.gap.im/sendMessage', [...])
+ 5 APPPATH\Libraries\GapAPI\Send\Send.php(22): App\Libraries\GapAPI\Send\SendConfig->request()
+ 6 APPPATH\Libraries\GapAPI\GapAPI.php(19): App\Libraries\GapAPI\Send\Send->send_text(Object(App\Libraries\GapAPI\Handlers\FormParams))
+ 7 APPPATH\Controllers\Home.php(14): App\Libraries\GapAPI\GapAPI->send_text('18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496')
+ 8 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 9 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-13 19:55:36 --> 22 : The requested URL returned error: 400
+in SYSTEMPATH\HTTP\CURLRequest.php on line 655.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(655): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested URL returned error: 400')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(363): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(136): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://api.gap.im/sendMessage')
+ 4 APPPATH\Libraries\GapAPI\Send\SendConfig.php(123): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://api.gap.im/sendMessage', [...])
+ 5 APPPATH\Libraries\GapAPI\Send\Send.php(22): App\Libraries\GapAPI\Send\SendConfig->request()
+ 6 APPPATH\Libraries\GapAPI\GapAPI.php(19): App\Libraries\GapAPI\Send\Send->send_text(Object(App\Libraries\GapAPI\Handlers\FormParams))
+ 7 APPPATH\Controllers\Home.php(14): App\Libraries\GapAPI\GapAPI->send_text('18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496')
+ 8 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 9 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-13 19:56:23 --> Undefined array key "chat_id"
+in APPPATH\Controllers\Home.php on line 22.
+ 1 APPPATH\Controllers\Home.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "chat_id"', 'APPPATH\\Controllers\\Home.php', 22)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-13 19:57:40 --> 22 : The requested URL returned error: 400
+in SYSTEMPATH\HTTP\CURLRequest.php on line 655.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(655): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested URL returned error: 400')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(363): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(136): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://api.gap.im/sendMessage')
+ 4 APPPATH\Libraries\GapAPI\Send\SendConfig.php(123): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://api.gap.im/sendMessage', [...])
+ 5 APPPATH\Libraries\GapAPI\Send\Send.php(22): App\Libraries\GapAPI\Send\SendConfig->request()
+ 6 APPPATH\Libraries\GapAPI\GapAPI.php(19): App\Libraries\GapAPI\Send\Send->send_text(Object(App\Libraries\GapAPI\Handlers\FormParams))
+ 7 APPPATH\Controllers\Home.php(14): App\Libraries\GapAPI\GapAPI->send_text('18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496')
+ 8 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 9 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-13 20:10:01 --> 22 : The requested URL returned error: 400
+in SYSTEMPATH\HTTP\CURLRequest.php on line 655.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(655): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested URL returned error: 400')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(363): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(136): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://api.gap.im/sendMessage')
+ 4 APPPATH\Libraries\GapAPI\Send\SendConfig.php(123): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://api.gap.im/sendMessage', [...])
+ 5 APPPATH\Libraries\GapAPI\Send\Send.php(22): App\Libraries\GapAPI\Send\SendConfig->request()
+ 6 APPPATH\Libraries\GapAPI\GapAPI.php(19): App\Libraries\GapAPI\Send\Send->send_text(Object(App\Libraries\GapAPI\Handlers\FormParams))
+ 7 APPPATH\Controllers\Home.php(14): App\Libraries\GapAPI\GapAPI->send_text('18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496')
+ 8 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 9 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-13 20:10:41 --> 22 : The requested URL returned error: 400
+in SYSTEMPATH\HTTP\CURLRequest.php on line 655.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(655): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested URL returned error: 400')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(363): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(136): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://api.gap.im/sendMessage')
+ 4 APPPATH\Libraries\GapAPI\Send\SendConfig.php(123): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://api.gap.im/sendMessage', [...])
+ 5 APPPATH\Libraries\GapAPI\Send\Send.php(22): App\Libraries\GapAPI\Send\SendConfig->request()
+ 6 APPPATH\Libraries\GapAPI\GapAPI.php(19): App\Libraries\GapAPI\Send\Send->send_text(Object(App\Libraries\GapAPI\Handlers\FormParams))
+ 7 APPPATH\Controllers\Home.php(14): App\Libraries\GapAPI\GapAPI->send_text('18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496')
+ 8 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 9 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-13 20:20:33 --> 22 : The requested URL returned error: 400
+in SYSTEMPATH\HTTP\CURLRequest.php on line 655.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(655): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested URL returned error: 400')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(363): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(136): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://api.gap.im/sendMessage')
+ 4 APPPATH\Libraries\GapAPI\Send\SendConfig.php(149): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://api.gap.im/sendMessage', [...])
+ 5 APPPATH\Libraries\GapAPI\Send\Send.php(22): App\Libraries\GapAPI\Send\SendConfig->request()
+ 6 APPPATH\Libraries\GapAPI\GapAPI.php(19): App\Libraries\GapAPI\Send\Send->send_text(Object(App\Libraries\GapAPI\Handlers\FormParams))
+ 7 APPPATH\Controllers\Home.php(14): App\Libraries\GapAPI\GapAPI->send_text('18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496')
+ 8 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 9 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-13 20:21:24 --> 22 : The requested URL returned error: 400
+in SYSTEMPATH\HTTP\CURLRequest.php on line 655.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(655): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested URL returned error: 400')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(363): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(136): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://api.gap.im/sendMessage')
+ 4 APPPATH\Libraries\GapAPI\Send\SendConfig.php(149): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://api.gap.im/sendMessage', [...])
+ 5 APPPATH\Libraries\GapAPI\Send\Send.php(22): App\Libraries\GapAPI\Send\SendConfig->request()
+ 6 APPPATH\Libraries\GapAPI\GapAPI.php(19): App\Libraries\GapAPI\Send\Send->send_text(Object(App\Libraries\GapAPI\Handlers\FormParams))
+ 7 APPPATH\Controllers\Home.php(14): App\Libraries\GapAPI\GapAPI->send_text('18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496')
+ 8 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 9 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-13 20:21:30 --> 22 : The requested URL returned error: 400
+in SYSTEMPATH\HTTP\CURLRequest.php on line 655.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(655): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested URL returned error: 400')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(363): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(136): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://api.gap.im/sendMessage')
+ 4 APPPATH\Libraries\GapAPI\Send\SendConfig.php(149): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://api.gap.im/sendMessage', [...])
+ 5 APPPATH\Libraries\GapAPI\Send\Send.php(22): App\Libraries\GapAPI\Send\SendConfig->request()
+ 6 APPPATH\Libraries\GapAPI\GapAPI.php(19): App\Libraries\GapAPI\Send\Send->send_text(Object(App\Libraries\GapAPI\Handlers\FormParams))
+ 7 APPPATH\Controllers\Home.php(14): App\Libraries\GapAPI\GapAPI->send_text('18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496')
+ 8 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 9 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-13 20:23:53 --> Undefined array key "chat_id"
+in APPPATH\Controllers\Home.php on line 23.
+ 1 APPPATH\Controllers\Home.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "chat_id"', 'APPPATH\\Controllers\\Home.php', 23)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-13 20:24:37 --> Undefined array key "chat_id"
+in APPPATH\Controllers\Home.php on line 15.
+ 1 APPPATH\Controllers\Home.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "chat_id"', 'APPPATH\\Controllers\\Home.php', 15)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-13 20:33:13 --> Undefined array key "chat_id"
+in APPPATH\Controllers\Home.php on line 16.
+ 1 APPPATH\Controllers\Home.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "chat_id"', 'APPPATH\\Controllers\\Home.php', 16)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-13 20:34:34 --> Undefined array key "chat_id"
+in APPPATH\Controllers\Home.php on line 16.
+ 1 APPPATH\Controllers\Home.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "chat_id"', 'APPPATH\\Controllers\\Home.php', 16)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-13 20:35:41 --> Undefined array key "chat_id"
+in APPPATH\Controllers\Home.php on line 16.
+ 1 APPPATH\Controllers\Home.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "chat_id"', 'APPPATH\\Controllers\\Home.php', 16)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-13 20:38:15 --> Undefined array key "chat_id"
+in APPPATH\Controllers\Home.php on line 16.
+ 1 APPPATH\Controllers\Home.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "chat_id"', 'APPPATH\\Controllers\\Home.php', 16)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-13 20:39:40 --> Undefined array key "chat_id"
+in APPPATH\Controllers\Home.php on line 16.
+ 1 APPPATH\Controllers\Home.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "chat_id"', 'APPPATH\\Controllers\\Home.php', 16)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-13 20:40:58 --> Undefined array key "chat_id"
+in APPPATH\Controllers\Home.php on line 22.
+ 1 APPPATH\Controllers\Home.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "chat_id"', 'APPPATH\\Controllers\\Home.php', 22)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-13 20:41:08 --> Undefined array key "chat_id"
+in APPPATH\Controllers\Home.php on line 22.
+ 1 APPPATH\Controllers\Home.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "chat_id"', 'APPPATH\\Controllers\\Home.php', 22)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-13 20:41:52 --> Undefined array key "chat_id"
+in APPPATH\Controllers\Home.php on line 22.
+ 1 APPPATH\Controllers\Home.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "chat_id"', 'APPPATH\\Controllers\\Home.php', 22)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-13 20:44:41 --> Typed property App\Libraries\GapAPI\Send\SendConfig::$method must not be accessed before initialization
+in APPPATH\Libraries\GapAPI\Send\SendConfig.php on line 124.
+ 1 APPPATH\Libraries\GapAPI\Send\Send.php(22): App\Libraries\GapAPI\Send\SendConfig->request()
+ 2 APPPATH\Libraries\GapAPI\GapAPI.php(19): App\Libraries\GapAPI\Send\Send->send_text(Object(App\Libraries\GapAPI\Handlers\FormParams))
+ 3 APPPATH\Controllers\Home.php(15): App\Libraries\GapAPI\GapAPI->send_text('18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496')
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-13 20:46:03 --> Typed property App\Libraries\GapAPI\Send\SendConfig::$method must not be accessed before initialization
+in APPPATH\Libraries\GapAPI\Send\SendConfig.php on line 124.
+ 1 APPPATH\Libraries\GapAPI\Send\Send.php(22): App\Libraries\GapAPI\Send\SendConfig->request()
+ 2 APPPATH\Libraries\GapAPI\GapAPI.php(19): App\Libraries\GapAPI\Send\Send->send_text(Object(App\Libraries\GapAPI\Handlers\FormParams))
+ 3 APPPATH\Controllers\Home.php(15): App\Libraries\GapAPI\GapAPI->send_text('18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496')
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-13 20:46:15 --> Typed property App\Libraries\GapAPI\Send\SendConfig::$method must not be accessed before initialization
+in APPPATH\Libraries\GapAPI\Send\SendConfig.php on line 124.
+ 1 APPPATH\Libraries\GapAPI\Send\Send.php(22): App\Libraries\GapAPI\Send\SendConfig->request()
+ 2 APPPATH\Libraries\GapAPI\GapAPI.php(19): App\Libraries\GapAPI\Send\Send->send_text(Object(App\Libraries\GapAPI\Handlers\FormParams))
+ 3 APPPATH\Controllers\Home.php(15): App\Libraries\GapAPI\GapAPI->send_text('18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496')
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-13 20:47:47 --> 22 : The requested URL returned error: 400
+in SYSTEMPATH\HTTP\CURLRequest.php on line 655.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(655): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested URL returned error: 400')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(363): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(136): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://api.gap.im/sendMessage')
+ 4 APPPATH\Libraries\GapAPI\Send\SendConfig.php(124): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://api.gap.im/sendMessage', [...])
+ 5 APPPATH\Libraries\GapAPI\Send\Send.php(22): App\Libraries\GapAPI\Send\SendConfig->request()
+ 6 APPPATH\Libraries\GapAPI\GapAPI.php(19): App\Libraries\GapAPI\Send\Send->send_text(Object(App\Libraries\GapAPI\Handlers\FormParams))
+ 7 APPPATH\Controllers\Home.php(15): App\Libraries\GapAPI\GapAPI->send_text('18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496')
+ 8 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 9 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-13 20:48:03 --> 22 : The requested URL returned error: 400
+in SYSTEMPATH\HTTP\CURLRequest.php on line 655.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(655): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested URL returned error: 400')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(363): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(136): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://api.gap.im/sendMessage')
+ 4 APPPATH\Libraries\GapAPI\Send\SendConfig.php(124): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://api.gap.im/sendMessage', [...])
+ 5 APPPATH\Libraries\GapAPI\Send\Send.php(22): App\Libraries\GapAPI\Send\SendConfig->request()
+ 6 APPPATH\Libraries\GapAPI\GapAPI.php(19): App\Libraries\GapAPI\Send\Send->send_text(Object(App\Libraries\GapAPI\Handlers\FormParams))
+ 7 APPPATH\Controllers\Home.php(15): App\Libraries\GapAPI\GapAPI->send_text('18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496')
+ 8 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 9 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-13 20:48:04 --> 22 : The requested URL returned error: 400
+in SYSTEMPATH\HTTP\CURLRequest.php on line 655.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(655): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested URL returned error: 400')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(363): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(136): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://api.gap.im/sendMessage')
+ 4 APPPATH\Libraries\GapAPI\Send\SendConfig.php(124): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://api.gap.im/sendMessage', [...])
+ 5 APPPATH\Libraries\GapAPI\Send\Send.php(22): App\Libraries\GapAPI\Send\SendConfig->request()
+ 6 APPPATH\Libraries\GapAPI\GapAPI.php(19): App\Libraries\GapAPI\Send\Send->send_text(Object(App\Libraries\GapAPI\Handlers\FormParams))
+ 7 APPPATH\Controllers\Home.php(15): App\Libraries\GapAPI\GapAPI->send_text('18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496')
+ 8 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 9 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-13 20:49:05 --> App\Libraries\GapAPI\Send\Send::send_text(): Return value must be of type object, none returned
+in APPPATH\Libraries\GapAPI\Send\Send.php on line 23.
+ 1 APPPATH\Libraries\GapAPI\GapAPI.php(19): App\Libraries\GapAPI\Send\Send->send_text(Object(App\Libraries\GapAPI\Handlers\FormParams))
+ 2 APPPATH\Controllers\Home.php(15): App\Libraries\GapAPI\GapAPI->send_text('18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496')
+ 3 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 4 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-13 20:49:31 --> App\Libraries\GapAPI\Send\Send::send_text(): Return value must be of type object, none returned
+in APPPATH\Libraries\GapAPI\Send\Send.php on line 25.
+ 1 APPPATH\Libraries\GapAPI\GapAPI.php(19): App\Libraries\GapAPI\Send\Send->send_text(Object(App\Libraries\GapAPI\Handlers\FormParams))
+ 2 APPPATH\Controllers\Home.php(15): App\Libraries\GapAPI\GapAPI->send_text('18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496')
+ 3 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 4 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-13 20:50:00 --> App\Libraries\GapAPI\Send\Send::send_text(): Return value must be of type object, none returned
+in APPPATH\Libraries\GapAPI\Send\Send.php on line 25.
+ 1 APPPATH\Libraries\GapAPI\GapAPI.php(19): App\Libraries\GapAPI\Send\Send->send_text(Object(App\Libraries\GapAPI\Handlers\FormParams))
+ 2 APPPATH\Controllers\Home.php(15): App\Libraries\GapAPI\GapAPI->send_text('18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496')
+ 3 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 4 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-13 20:50:27 --> App\Libraries\GapAPI\Send\Send::send_text(): Return value must be of type object, none returned
+in APPPATH\Libraries\GapAPI\Send\Send.php on line 25.
+ 1 APPPATH\Libraries\GapAPI\GapAPI.php(19): App\Libraries\GapAPI\Send\Send->send_text(Object(App\Libraries\GapAPI\Handlers\FormParams))
+ 2 APPPATH\Controllers\Home.php(15): App\Libraries\GapAPI\GapAPI->send_text('18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496')
+ 3 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 4 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-13 20:51:42 --> App\Libraries\GapAPI\Send\Send::send_text(): Return value must be of type object, none returned
+in APPPATH\Libraries\GapAPI\Send\Send.php on line 25.
+ 1 APPPATH\Libraries\GapAPI\GapAPI.php(19): App\Libraries\GapAPI\Send\Send->send_text(Object(App\Libraries\GapAPI\Handlers\FormParams))
+ 2 APPPATH\Controllers\Home.php(15): App\Libraries\GapAPI\GapAPI->send_text('18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496')
+ 3 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 4 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-13 20:51:59 --> App\Libraries\GapAPI\Send\SendConfig::request(): Return value must be of type object, none returned
+in APPPATH\Libraries\GapAPI\Send\SendConfig.php on line 126.
+ 1 APPPATH\Libraries\GapAPI\Send\Send.php(22): App\Libraries\GapAPI\Send\SendConfig->request()
+ 2 APPPATH\Libraries\GapAPI\GapAPI.php(19): App\Libraries\GapAPI\Send\Send->send_text(Object(App\Libraries\GapAPI\Handlers\FormParams))
+ 3 APPPATH\Controllers\Home.php(15): App\Libraries\GapAPI\GapAPI->send_text('18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496')
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-13 20:52:31 --> App\Libraries\GapAPI\Send\SendConfig::request(): Return value must be of type object, none returned
+in APPPATH\Libraries\GapAPI\Send\SendConfig.php on line 128.
+ 1 APPPATH\Libraries\GapAPI\Send\Send.php(22): App\Libraries\GapAPI\Send\SendConfig->request()
+ 2 APPPATH\Libraries\GapAPI\GapAPI.php(19): App\Libraries\GapAPI\Send\Send->send_text(Object(App\Libraries\GapAPI\Handlers\FormParams))
+ 3 APPPATH\Controllers\Home.php(15): App\Libraries\GapAPI\GapAPI->send_text('18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496')
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-13 20:53:58 --> App\Libraries\GapAPI\Send\SendConfig::request(): Return value must be of type object, none returned
+in APPPATH\Libraries\GapAPI\Send\SendConfig.php on line 128.
+ 1 APPPATH\Libraries\GapAPI\Send\Send.php(22): App\Libraries\GapAPI\Send\SendConfig->request()
+ 2 APPPATH\Libraries\GapAPI\GapAPI.php(19): App\Libraries\GapAPI\Send\Send->send_text(Object(App\Libraries\GapAPI\Handlers\FormParams))
+ 3 APPPATH\Controllers\Home.php(15): App\Libraries\GapAPI\GapAPI->send_text('18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496')
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-13 20:55:30 --> Undefined array key "chat_id"
+in APPPATH\Controllers\Home.php on line 16.
+ 1 APPPATH\Controllers\Home.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "chat_id"', 'APPPATH\\Controllers\\Home.php', 16)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-13 22:00:04 --> 22 : The requested URL returned error: 405
+in SYSTEMPATH\HTTP\CURLRequest.php on line 655.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(655): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested URL returned error: 405')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(363): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(136): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://api.gap.im/sendMessage')
+ 4 APPPATH\Libraries\GapAPI\Send\SendConfig.php(128): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://api.gap.im/sendMessage', [...])
+ 5 APPPATH\Libraries\GapAPI\Send\Send.php(22): App\Libraries\GapAPI\Send\SendConfig->request()
+ 6 APPPATH\Libraries\GapAPI\GapAPI.php(19): App\Libraries\GapAPI\Send\Send->send_text(Object(App\Libraries\GapAPI\Handlers\FormParams))
+ 7 APPPATH\Controllers\Home.php(15): App\Libraries\GapAPI\GapAPI->send_text('18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496')
+ 8 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 9 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-13 22:01:00 --> Undefined array key "chat_id"
+in APPPATH\Controllers\Home.php on line 16.
+ 1 APPPATH\Controllers\Home.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "chat_id"', 'APPPATH\\Controllers\\Home.php', 16)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()

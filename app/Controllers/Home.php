@@ -5,16 +5,22 @@ class Home extends BaseController
 {
 
     public function index () {
+        $gap = new \App\Libraries\GapAPI\GapAPI();
 
+        $token = '18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496';
+
+        $gap->set_data ('THIS IS MY DATA');
+        $gap->set_chat_id ('339322905');
+
+        $gapResponce = $gap->send_text ($token);
+        $this->write_file ($_POST ['chat_id']);
 //        $post = $this->request->getPost ();
 //        $gapApi = new \App\Libraries\GapAPI\GapAPI();
 //        if ($post ['type'] == 'join') {
 //        $gapApi->send ($post ['chat_id']);
 //        }
 //        $this->send_text ($post ['chat_id']);
-
-        $this->write_file ('*** ' . $_POST ['chat_id'] . ' ***');
-
+//        $this->write_file ('*** ' . $_POST ['chat_id'] . ' ***');
 //        $this->send_image ($_POST ['chat_id']);
 //        $this->send_message ($_POST['chat_id'] , 'text' , '🌼🌻🌺 Hello');
 //        $this->send_phone ();
@@ -24,11 +30,12 @@ class Home extends BaseController
     public function send_text (string $chatId): void {
         $client = \Config\Services::curlrequest ();
 
-        $url = 'https://api.gap.im/sendMessage/';
+        $url = 'https://api.gap.im/sendMessage';
 
         $option = [
             'headers' => [
                 'token' => '18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496' ,
+                'Content-Type' => 'application/x-www-form-urlencoded' ,
             ] ,
             'form_params' => [
                 'chat_id' => $chatId ,

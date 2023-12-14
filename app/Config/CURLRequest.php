@@ -1,11 +1,11 @@
 <?php
-
 namespace Config;
 
 use CodeIgniter\Config\BaseConfig;
 
 class CURLRequest extends BaseConfig
 {
+
     /**
      * --------------------------------------------------------------------------
      * CURLRequest Share Options
@@ -19,4 +19,5 @@ class CURLRequest extends BaseConfig
      * @var bool
      */
     public $shareOptions = true;
+
 }
