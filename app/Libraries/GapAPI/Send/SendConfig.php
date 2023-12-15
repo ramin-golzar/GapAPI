@@ -2,6 +2,8 @@
 namespace App\Libraries\GapAPI\Send;
 
 use App\Libraries\GapAPI\Send\Handlers\URLs;
+use App\Libraries\GapAPI\Handlers\FormParams;
+use App\Libraries\GapAPI\Send\Handlers\Types;
 
 class SendConfig
 {
