@@ -115,6 +115,17 @@ class SendConfig
     }
 
     /**
+     * Sets the data type
+     *
+     * @param FormParams $params
+     * @param Types $type
+     * @return void
+     */
+    protected function set_type (FormParams &$params , Types $type): void {
+        $params->type = $type->name;
+    }
+
+    /**
      * Sending evetything except upload file
      *
      * @return object
