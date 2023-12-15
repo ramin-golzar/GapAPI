@@ -7,6 +7,17 @@ class PrepareParams
 {
 
     /**
+     * Holds the properties to be JSON
+     *
+     * @var array
+     */
+    private array $forJSON = [
+        'reply_keyboard' ,
+        'inline_keyboard' ,
+        'form' ,
+    ];
+
+    /**
      * Start preparing the parameters
      *
      * @return array|null
@@ -15,6 +26,8 @@ class PrepareParams
         $this->set_chat_id ($params);
 
         $ignoreNullParams = $this->ignoring_null_params ($params);
+
+        $this->json_encode ($ignoreNullParams);
 
         return $ignoreNullParams;
     }
@@ -26,15 +39,15 @@ class PrepareParams
      * @return array|null
      */
     private function ignoring_null_params (object &$params): array {
-        $result = [];
+        $arrayParams = (array) $params;
 
-        foreach ($params as $k => $v) {
-            if ($v) {
-                $result [$k] = $v;
+        foreach ($arrayParams as $k => $v) {
+            if (empty ($arrayParams [$k])) {
+                unset ($arrayParams [$k]);
             }
         }
 
-        return $result;
+        return $arrayParams;
     }
 
     /**
@@ -47,6 +60,18 @@ class PrepareParams
         $codes = new Codes();
 
         $params->chat_id = $params->chat_id ?? $codes->get_chat_id ();
+    }
+
+    private function json_encode (array &$params): void {
+        foreach ($params as $key => &$keyboard) {
+            if (in_array ($key , $this->forJSON)) {
+                if (is_array ($keyboard)) {
+                    $keyboard = json_encode (compact ('keyboard'));
+                } elseif (is_string ($key)) {
+                    echo '*** string ***';
+                }
+            }
+        }
     }
 
 }
