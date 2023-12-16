@@ -3,6 +3,8 @@ namespace App\Libraries\GapAPI\Send\Handlers;
 
 use App\Libraries\GapAPI\Handlers\Codes;
 use App\Libraries\GapAPI\Templates\ReplyKeyboard;
+use App\Libraries\GapAPI\Templates\InlineKeyboard;
+use App\Libraries\GapAPI\Templates\Form;
 
 class PrepareParams
 {
@@ -114,6 +116,8 @@ class PrepareParams
     private function get_template (string $className , string $propertyName): array {
         $temp = match ($className) {
             'reply_keyboard' => new ReplyKeyboard() ,
+            'inline_keyboard' => new InlineKeyboard() ,
+            'form' => new Form() ,
         };
 
         return $temp->$propertyName;
