@@ -2,6 +2,7 @@
 namespace App\Libraries\GapAPI\Send\Handlers;
 
 use App\Libraries\GapAPI\Handlers\Codes;
+use App\Libraries\GapAPI\Templates\ReplyKeyboard;
 
 class PrepareParams
 {
@@ -63,15 +64,32 @@ class PrepareParams
     }
 
     private function json_encode (array &$params): void {
-        foreach ($params as $key => &$keyboard) {
-            if (in_array ($key , $this->forJSON)) {
-                if (is_array ($keyboard)) {
-                    $keyboard = json_encode (compact ('keyboard'));
-                } elseif (is_string ($key)) {
-                    echo '*** string ***';
-                }
+        foreach ($params as $param => &$value) {
+            if (in_array ($param , $this->forJSON)) {
+                $this->json_method ($param , $value);
             }
         }
+    }
+
+    private function json_method (string &$param , array|string &$paramValue): void {
+        if (is_array ($paramValue)) {
+            $paramValue = json_encode ($this->compact ($param , $paramValue));
+        } elseif (is_string ($paramValue)) {
+            $paramValue = $this->load_template ($param , $paramValue);
+            $paramValue = json_encode ($this->compact ($param , $paramValue));
+        }
+    }
+
+    private function compact (string $param , array $keyboard): array {
+        return ($param === 'reply_keyboard') ? compact ('keyboard') : $keyboard;
+    }
+
+    private function load_template (string $className , string $propertyName): array {
+        $temp = match ($className) {
+            'reply_keyboard' => new ReplyKeyboard() ,
+        };
+
+        return $temp->$propertyName;
     }
 
 }
