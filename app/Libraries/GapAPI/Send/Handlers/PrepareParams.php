@@ -63,6 +63,12 @@ class PrepareParams
         $params->chat_id = $params->chat_id ?? $codes->get_chat_id ();
     }
 
+    /**
+     * JSON some properties
+     *
+     * @param array $params
+     * @return void
+     */
     private function json_encode (array &$params): void {
         foreach ($params as $param => &$value) {
             if (in_array ($param , $this->forJSON)) {
@@ -71,6 +77,13 @@ class PrepareParams
         }
     }
 
+    /**
+     * Deciding on the JSON method
+     *
+     * @param string $param
+     * @param array|string $paramValue
+     * @return void
+     */
     private function json_method (string &$param , array|string &$paramValue): void {
         if (is_array ($paramValue)) {
             $paramValue = json_encode ($this->compact ($param , $paramValue));
@@ -80,10 +93,24 @@ class PrepareParams
         }
     }
 
+    /**
+     * Only compacting the reply_keyboard param
+     *
+     * @param string $param
+     * @param array $keyboard
+     * @return array
+     */
     private function compact (string $param , array $keyboard): array {
         return ($param === 'reply_keyboard') ? compact ('keyboard') : $keyboard;
     }
 
+    /**
+     * Return an array of template
+     *
+     * @param string $className
+     * @param string $propertyName
+     * @return array
+     */
     private function load_template (string $className , string $propertyName): array {
         $temp = match ($className) {
             'reply_keyboard' => new ReplyKeyboard() ,
