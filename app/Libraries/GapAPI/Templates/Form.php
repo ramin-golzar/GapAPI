@@ -6,20 +6,19 @@ class Form
 
     public array $example = [
         [
-            'name' => 'username' ,
             'type' => 'text' ,
-            'lable' => 'User Name:' ,
+            'name' => 'name' ,
+            'label' => 'Your Name' ,
         ] ,
         [
-            'name' => 're_me' ,
-            'type' => 'radio' ,
-            'lable' => 'Remember Me' ,
+            'type' => 'textarea' ,
+            'name' => 'address' ,
+            'label' => 'Address' ,
         ] ,
         [
-            'name' => 'send' ,
             'type' => 'submit' ,
-            'text' => 'Send' ,
-        ]
+            'name' => 'send' ,
+        ] ,
     ];
 
 }
