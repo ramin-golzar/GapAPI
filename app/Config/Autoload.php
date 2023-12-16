@@ -43,13 +43,13 @@ class Autoload extends AutoloadConfig
     public $psr4 = [
         APP_NAMESPACE => APPPATH , // For custom app namespace
         'Config' => APPPATH . 'Config' ,
-        'Libraries' => APPPATH . 'Libraries' ,
-        'Libraries\GapAPI' => APPPATH . 'Libraries/GapAPI' ,
-        'Libraries\GapAPI\Handlers' => APPPATH . 'Libraries/GapAPI/Handlers' ,
-        'Libraries\GapAPI\Templates' => APPPATH . 'Libraries/GapAPI/Templates' ,
-        'Libraries\GapAPI\Send' => APPPATH . 'Libraries/GapAPI/Send' ,
-        'Libraries\GapAPI\Send\Handlers' => APPPATH . 'Libraries/GapAPI/Send/Handlers' ,
-        'Libraries\TestAPI' => APPPATH . 'Libraries/TestAPI' ,
+        'Libraries' => APPPATH . 'Libraries/' ,
+        'Libraries\GapAPI' => APPPATH . 'Libraries/GapAPI/' ,
+        'Libraries\GapAPI\Handlers' => APPPATH . 'Libraries/GapAPI/Handlers/' ,
+        'Libraries\GapAPI\Templates' => APPPATH . 'Libraries/GapAPI/Templates/' ,
+        'Libraries\GapAPI\Send' => APPPATH . 'Libraries/GapAPI/Send/' ,
+        'Libraries\GapAPI\Send\Handlers' => APPPATH . 'Libraries/GapAPI/Send/Handlers/' ,
+        'Libraries\TestAPI' => APPPATH . 'Libraries/TestAPI/' ,
     ];
 
     /**
