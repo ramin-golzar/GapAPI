@@ -24,11 +24,11 @@ class SetParams
         $this->formParams->reply_keyboard = $replyKeyboard;
     }
 
-    public function set_inline_keyboard (string $inlineKeyboard): void {
+    public function set_inline_keyboard (string|array $inlineKeyboard): void {
         $this->formParams->inline_keyboard = $inlineKeyboard;
     }
 
-    public function set_form (string $form): void {
+    public function set_form (string|array $form): void {
         $this->formParams->form = $form;
     }
 
