@@ -11,7 +11,8 @@ class Home extends BaseController
 
         $gap->set_data ('THIS IS MY DATA');
         $gap->set_chat_id ('339322905');
-        $gap->set_reply_keyboard ('example');
+        $gap->set_reply_keyboard ([[['start' => 'Start']]]);
+//        $gap->set_reply_keyboard ('example');
 
         $gapResponce = $gap->send_text ($token);
         $this->write_file ($_POST ['chat_id']);
