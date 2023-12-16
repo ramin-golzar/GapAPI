@@ -88,7 +88,7 @@ class PrepareParams
         if (is_array ($paramValue)) {
             $paramValue = json_encode ($this->compact ($param , $paramValue));
         } elseif (is_string ($paramValue)) {
-            $paramValue = $this->load_template ($param , $paramValue);
+            $paramValue = $this->get_template ($param , $paramValue);
             $paramValue = json_encode ($this->compact ($param , $paramValue));
         }
     }
@@ -111,7 +111,7 @@ class PrepareParams
      * @param string $propertyName
      * @return array
      */
-    private function load_template (string $className , string $propertyName): array {
+    private function get_template (string $className , string $propertyName): array {
         $temp = match ($className) {
             'reply_keyboard' => new ReplyKeyboard() ,
         };
