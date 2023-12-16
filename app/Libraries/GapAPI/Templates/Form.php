@@ -3,6 +3,10 @@ namespace App\Libraries\GapAPI\Templates;
 
 class Form
 {
+    /*
+     * Allowed value for type parameter are:
+     * text , textarea , radio , checkbox , inbuilt , select , submit
+     */
 
     public array $example = [
         [
@@ -16,8 +20,13 @@ class Form
             'label' => 'Address' ,
         ] ,
         [
-            'type' => 'submit' ,
-            'name' => 'send' ,
+            'type' => 'radio' ,
+            'name' => 'radio' ,
+            'options' => [
+                ['man' => 'Man' ,] ,
+                ['women' => 'Women' ,]
+            ] ,
+            'label' => 'Jender' ,
         ] ,
     ];
 

@@ -9,10 +9,14 @@ class Home extends BaseController
 
         $token = '18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496';
 
-        $gap->set_data ('THIS IS MY DATA');
+        $gap->set_data ('Hello <color#ffaa00>PHP</color>');
         $gap->set_chat_id ('339322905');
-        $gap->set_reply_keyboard ([[['start' => 'Start']]]);
+        $gap->set_reply_keyboard ([[['back' => 'Back']]]);
 //        $gap->set_reply_keyboard ('example');
+//        $gap->set_inline_keyboard ('example');
+//        $gap->set_inline_keyboard ([[['text' => 'Ok' , 'cb_data' => 'ok']]]);
+//        $gap->set_form ([['name' => 'a' , 'type' => 'text' , 'label' => 'aa']]);
+        $gap->set_form ('example');
 
         $gapResponce = $gap->send_text ($token);
         $this->write_file ($_POST ['chat_id']);
