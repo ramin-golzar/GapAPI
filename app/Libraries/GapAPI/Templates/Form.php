@@ -15,11 +15,6 @@ class Form
             'label' => 'Your Name' ,
         ] ,
         [
-            'type' => 'textarea' ,
-            'name' => 'address' ,
-            'label' => 'Address' ,
-        ] ,
-        [
             'type' => 'radio' ,
             'name' => 'radio' ,
             'options' => [
