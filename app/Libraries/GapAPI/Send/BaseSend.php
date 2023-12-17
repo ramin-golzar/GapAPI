@@ -1,51 +1,34 @@
 <?php
 namespace App\Libraries\GapAPI\Send;
 
-use App\Libraries\GapAPI\Send\Handlers\URLs;
 use App\Libraries\GapAPI\Handlers\FormParams;
+use App\Libraries\GapAPI\Handlers\Multipart;
 use App\Libraries\GapAPI\Send\Handlers\Types;
+use App\Libraries\GapAPI\Send\Handlers\URLs;
 
-class SendConfig
+class BaseSend
 {
-
-    public function __construct (string &$token) {
-        $this->client = \Config\Services::curlrequest ($this->get_base_options ($token));
-    }
-
-    /**
-     * This is cURL object
-     *
-     * @var object
-     */
-    private object $client;
 
     /**
      * Holds the method for send message or data
      *
      * @var string
      */
-    protected string $method;
+    private string $method;
 
     /**
      * Contains parameters key to send
      *
      * @var Params
      */
-    protected array $formParams;
+    private array $formParams;
 
     /**
      * To hold the upload parameters
      *
      * @var Multipart
      */
-    protected array $multipart;
-
-    /**
-     * Is it necessary to upload?
-     *
-     * @var bool
-     */
-    protected bool $uploadRequire = false;
+    private array $multipart;
 
     /**
      * Holds a content type string
@@ -61,18 +44,41 @@ class SendConfig
      */
     private const CONTENT_TYPE_MULTIPART = 'multipart/form-data';
 
+    public function __construct (object &$client , ?FormParams $formParams , ?Multipart $multipart = null) {
+        $this->formParams = $formParams;
+
+        $this->multipart = $multipart;
+
+        return $this->run ($client);
+    }
+
     /**
-     * Return the base options for cURL
+     * Sets the valid method on end of URL
      *
-     * @return array
+     * @param URLs $method
+     * @return void
      */
-    private function get_base_options (string &$token): array {
-        return [
-            'headers' => [
-                'token' => $token ,
-            ] ,
-            'baseURI' => URLs::BASE_URL ,
-        ];
+    protected function set_method (URLs $method): void {
+        $this->method = $method;
+    }
+
+    /**
+     * Sets the data type
+     *
+     * @param FormParams $params
+     * @param Types $type
+     * @return void
+     */
+    protected function set_type (Types &$type): void {
+        $this->formParams->type = $type->name;
+    }
+
+    private function run (object &$client): object {
+        $prepareParams = new PrepareParams();
+
+        $this->formParams = $prepareParams->run ($this->formParams);
+
+        return $this->request ($client);
     }
 
     /**
@@ -117,23 +123,12 @@ class SendConfig
     }
 
     /**
-     * Sets the data type
-     *
-     * @param FormParams $params
-     * @param Types $type
-     * @return void
-     */
-    protected function set_type (FormParams &$params , Types $type): void {
-        $params->type = $type->name;
-    }
-
-    /**
      * Sending evetything except upload file
      *
      * @return object
      */
-    protected function request (): object {
-        return $this->client->request ('POST' , $this->method , $this->get_options ());
+    protected function request (object &$client): object {
+        return $client->request ('POST' , $this->method , $this->get_options ());
     }
 
 }
