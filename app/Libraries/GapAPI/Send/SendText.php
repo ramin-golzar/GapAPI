@@ -1,28 +1,21 @@
 <?php
 namespace App\Libraries\GapAPI\Send;
 
-use App\Libraries\GapAPI\Send\SendConfig;
-use App\Libraries\GapAPI\Send\Handlers\URLs;
-use App\Libraries\GapAPI\Send\Handlers\PrepareParams;
+use App\Libraries\GapAPI\Send\BaseSend;
+use App\Libraries\GapAPI\Handlers\FormParams;
+use App\Libraries\GapAPI\Handlers\Multipart;
 use App\Libraries\GapAPI\Send\Handlers\Types;
+use App\Libraries\GapAPI\Send\Handlers\URLs;
 
-class Send extends SendConfig
+class SendText extends BaseSend
 {
 
-    public function __construct (string &$token) {
-        parent::__construct ($token);
-    }
+    public function __construct (object &$client , ?FormParams $formParams , ?Multipart $multipart = null) {
+        $this->set_method (URLs::SEND_ACTION);
 
-    public function send_text (object $formParams): object {
-        $this->method = URLs::SEND_MESSAGE;
+        $this->set_type (Types::text);
 
-        $this->set_type ($formParams , Types::text);
-
-        $prepareParams = new PrepareParams();
-
-        $this->formParams = $prepareParams->run ($formParams);
-
-        return $this->request ();
+        return parent::__construct ($client , $formParams , $multipart);
     }
 
 }
