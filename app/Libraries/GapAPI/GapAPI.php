@@ -1,11 +1,39 @@
 <?php
 namespace App\Libraries\GapAPI;
 
-use App\Libraries\GapAPI\Send\Send;
+use App\Libraries\GapAPI\Send\SendText;
 use App\Libraries\GapAPI\SetParams;
+use App\Libraries\GapAPI\Send\Handlers\URLs;
 
 class GapAPI extends SetParams
 {
+
+    /**
+     * This is cURL object
+     *
+     * @var object
+     */
+    private object $client;
+
+    public function __construct (string &$token) {
+        parent::__construct ();
+
+        $this->client = \Config\Services::curlrequest ($this->get_base_options ($token));
+    }
+
+    /**
+     * Return the base options for cURL
+     *
+     * @return array
+     */
+    private function get_base_options (string &$token): array {
+        return [
+            'headers' => [
+                'token' => $token ,
+            ] ,
+            'baseURI' => URLs::BASE_URL ,
+        ];
+    }
 
     /**
      * Sending evetything except upload file
@@ -13,12 +41,8 @@ class GapAPI extends SetParams
      * @param string $token
      * @return object
      */
-    public function send_text (string &$token): object {
-        $send = new Send ($token);
-
-        $response = $send->send_text ($this->formParams);
-
-        return $response;
+    public function send_text (): object {
+        return new SendText ($this->client , $this->formParams);
     }
 
 }
