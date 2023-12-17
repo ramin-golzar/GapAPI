@@ -28,6 +28,15 @@ class Form
             ] ,
             'label' => 'Jender' ,
         ] ,
+        [
+            'type' => 'select' ,
+            'name' => 'select_color' ,
+            'label' => 'Select a color' ,
+            'options' => [
+                ['red' => 'Red' ,] ,
+                ['green' => 'Green' ,]
+            ] ,
+        ] ,
     ];
 
 }
