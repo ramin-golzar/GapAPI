@@ -7,15 +7,17 @@ use App\Libraries\GapAPI\Handlers\Multipart;
 use App\Libraries\GapAPI\Send\Handlers\Types;
 use App\Libraries\GapAPI\Send\Handlers\URLs;
 
-class SendText extends BaseSend
+class SendMessage extends BaseSend
 {
 
-    public function __construct (object &$client , ?FormParams $formParams , ?Multipart $multipart = null) {
-        $this->set_method (URLs::SEND_ACTION);
+    public function __construct (object &$client , ?FormParams &$formParams , ?Multipart &$multipart = null) {
+        parent::__construct ($client , $formParams , $multipart);
+
+        $this->set_method (URLs::send_message);
 
         $this->set_type (Types::text);
 
-        return parent::__construct ($client , $formParams , $multipart);
+        return $this->request ();
     }
 
 }

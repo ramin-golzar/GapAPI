@@ -1,9 +1,9 @@
 <?php
 namespace App\Libraries\GapAPI;
 
-use App\Libraries\GapAPI\Send\SendText;
 use App\Libraries\GapAPI\SetParams;
 use App\Libraries\GapAPI\Send\Handlers\URLs;
+use App\Libraries\GapAPI\Send\SendMessage;
 
 class GapAPI extends SetParams
 {
@@ -31,7 +31,7 @@ class GapAPI extends SetParams
             'headers' => [
                 'token' => $token ,
             ] ,
-            'baseURI' => URLs::BASE_URL ,
+            'baseURI' => URLs::base_url->value ,
         ];
     }
 
@@ -42,7 +42,7 @@ class GapAPI extends SetParams
      * @return object
      */
     public function send_text (): object {
-        return new SendText ($this->client , $this->formParams);
+        return new SendMessage ($this->client , $this->formParams);
     }
 
 }

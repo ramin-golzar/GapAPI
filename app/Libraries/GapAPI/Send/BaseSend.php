@@ -5,6 +5,7 @@ use App\Libraries\GapAPI\Handlers\FormParams;
 use App\Libraries\GapAPI\Handlers\Multipart;
 use App\Libraries\GapAPI\Send\Handlers\Types;
 use App\Libraries\GapAPI\Send\Handlers\URLs;
+use App\Libraries\GapAPI\Send\Handlers\PrepareParams;
 
 class BaseSend
 {
@@ -21,14 +22,21 @@ class BaseSend
      *
      * @var Params
      */
-    private array $formParams;
+    private ?array $formParams = [];
 
     /**
      * To hold the upload parameters
      *
      * @var Multipart
      */
-    private array $multipart;
+    private ?array $multipart = [];
+
+    /**
+     * This is cURL request object
+     *
+     * @var object
+     */
+    public object $client;
 
     /**
      * Holds a content type string
@@ -44,12 +52,10 @@ class BaseSend
      */
     private const CONTENT_TYPE_MULTIPART = 'multipart/form-data';
 
-    public function __construct (object &$client , ?FormParams $formParams , ?Multipart $multipart = null) {
-        $this->formParams = $formParams;
+    public function __construct (object &$client , ?FormParams &$formParams , ?Multipart &$multipart = null) {
+        $this->prepare_params ($formParams , $multipart);
 
-        $this->multipart = $multipart;
-
-        return $this->run ($client);
+        $this->client = $client;
     }
 
     /**
@@ -59,26 +65,37 @@ class BaseSend
      * @return void
      */
     protected function set_method (URLs $method): void {
-        $this->method = $method;
+        $this->method = $method->value;
     }
 
     /**
      * Sets the data type
      *
-     * @param FormParams $params
      * @param Types $type
      * @return void
      */
-    protected function set_type (Types &$type): void {
-        $this->formParams->type = $type->name;
+    protected function set_type (Types $type): void {
+        $this->formParams ['type'] = $type->name;
     }
 
-    private function run (object &$client): object {
+    /**
+     * Initialize the formParams & multipar
+     * properties for send
+     *
+     * @param object $formParams
+     * @param object|null $multipart
+     * @return void
+     */
+    protected function prepare_params (object &$formParams , ?object &$multipart = null): void {
         $prepareParams = new PrepareParams();
 
-        $this->formParams = $prepareParams->run ($this->formParams);
+        if ($formParams) {
+            $this->formParams = $prepareParams->run ($formParams);
+        }
 
-        return $this->request ($client);
+        if ($multipart) {
+            $this->multipart = $prepareParams->run ($multipart);
+        }
     }
 
     /**
@@ -87,7 +104,7 @@ class BaseSend
      * @return array
      */
     private function get_options (): array {
-        if ($this->uploadRequire) {
+        if ($this->multipart) {
             return $this->get_upload_options ();
         } else {
             return $this->get_message_options ();
@@ -127,8 +144,8 @@ class BaseSend
      *
      * @return object
      */
-    protected function request (object &$client): object {
-        return $client->request ('POST' , $this->method , $this->get_options ());
+    protected function request (): object {
+        return $this->client->request ('POST' , $this->method , $this->get_options ());
     }
 
 }
