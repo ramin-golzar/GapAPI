@@ -62,7 +62,7 @@ class PrepareParams
     private function set_chat_id (object &$params): void {
         $codes = new Codes();
 
-        $params->chat_id = $params->chat_id ?? $codes->get_chat_id ();
+        $params->chat_id = $params->chat_id ?: $codes->get_chat_id ();
     }
 
     /**

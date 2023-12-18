@@ -5,9 +5,9 @@ class Home extends BaseController
 {
 
     public function index () {
-        $gap = new \App\Libraries\GapAPI\GapAPI();
-
         $token = '18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496';
+
+        $gap = new \App\Libraries\GapAPI\GapAPI ($token);
 
         $gap->set_data ('Hello <color#00bb00>PHP</color>');
         $gap->set_chat_id ('339322905');
@@ -16,9 +16,9 @@ class Home extends BaseController
 //        $gap->set_inline_keyboard ('example');
 //        $gap->set_inline_keyboard ([[['text' => 'Ok' , 'cb_data' => 'ok']]]);
 //        $gap->set_form ([['name' => 'a' , 'type' => 'text' , 'label' => 'aa']]);
-        $gap->set_form ('example');
+//        $gap->set_form ('example');
 
-        $gapResponce = $gap->send_text ($token);
+        $gapResponce = $gap->send_text ();
         $this->write_file ($_POST ['chat_id']);
 //        $post = $this->request->getPost ();
 //        $gapApi = new \App\Libraries\GapAPI\GapAPI();

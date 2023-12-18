@@ -1,0 +1,154 @@
+CRITICAL - 2023-12-16 22:07:55 --> Too few arguments to function App\Libraries\GapAPI\GapAPI::__construct(), 0 passed in E:\SoftWare\xampp-windows-x64-8.2.4-0-VS16-installer\htdocs\my_projects\GitHub\GapAPI\app\Controllers\Home.php on line 8 and exactly 1 expected
+in APPPATH\Libraries\GapAPI\GapAPI.php on line 18.
+ 1 APPPATH\Controllers\Home.php(8): App\Libraries\GapAPI\GapAPI->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-16 22:18:04 --> Too few arguments to function App\Libraries\GapAPI\GapAPI::__construct(), 0 passed in E:\SoftWare\xampp-windows-x64-8.2.4-0-VS16-installer\htdocs\my_projects\GitHub\GapAPI\app\Controllers\Home.php on line 8 and exactly 1 expected
+in APPPATH\Libraries\GapAPI\GapAPI.php on line 18.
+ 1 APPPATH\Controllers\Home.php(8): App\Libraries\GapAPI\GapAPI->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-16 22:28:19 --> Too few arguments to function App\Libraries\GapAPI\GapAPI::__construct(), 0 passed in E:\SoftWare\xampp-windows-x64-8.2.4-0-VS16-installer\htdocs\my_projects\GitHub\GapAPI\app\Controllers\Home.php on line 8 and exactly 1 expected
+in APPPATH\Libraries\GapAPI\GapAPI.php on line 18.
+ 1 APPPATH\Controllers\Home.php(8): App\Libraries\GapAPI\GapAPI->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-16 22:28:33 --> Too few arguments to function App\Libraries\GapAPI\GapAPI::__construct(), 0 passed in E:\SoftWare\xampp-windows-x64-8.2.4-0-VS16-installer\htdocs\my_projects\GitHub\GapAPI\app\Controllers\Home.php on line 8 and exactly 1 expected
+in APPPATH\Libraries\GapAPI\GapAPI.php on line 18.
+ 1 APPPATH\Controllers\Home.php(8): App\Libraries\GapAPI\GapAPI->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-16 22:28:47 --> Too few arguments to function App\Libraries\GapAPI\GapAPI::__construct(), 0 passed in E:\SoftWare\xampp-windows-x64-8.2.4-0-VS16-installer\htdocs\my_projects\GitHub\GapAPI\app\Controllers\Home.php on line 8 and exactly 1 expected
+in APPPATH\Libraries\GapAPI\GapAPI.php on line 18.
+ 1 APPPATH\Controllers\Home.php(8): App\Libraries\GapAPI\GapAPI->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-16 22:30:13 --> App\Libraries\GapAPI\Send\BaseSend::set_method(): Argument #1 ($method) must be of type App\Libraries\GapAPI\Send\Handlers\URLs, string given, called in E:\SoftWare\xampp-windows-x64-8.2.4-0-VS16-installer\htdocs\my_projects\GitHub\GapAPI\app\Libraries\GapAPI\Send\SendText.php on line 14
+in APPPATH\Libraries\GapAPI\Send\BaseSend.php on line 61.
+ 1 APPPATH\Libraries\GapAPI\Send\SendText.php(14): App\Libraries\GapAPI\Send\BaseSend->set_method('sendAction')
+ 2 APPPATH\Libraries\GapAPI\GapAPI.php(45): App\Libraries\GapAPI\Send\SendText->__construct(Object(CodeIgniter\HTTP\CURLRequest), Object(App\Libraries\GapAPI\Handlers\FormParams))
+ 3 APPPATH\Controllers\Home.php(21): App\Libraries\GapAPI\GapAPI->send_text()
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-16 22:35:26 --> Case base_url of non-backed enum App\Libraries\GapAPI\Send\Handlers\URLs must not have a value
+in APPPATH\Libraries\GapAPI\Send\Handlers\URLs.php on line 10.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-12-16 22:40:57 --> Undefined constant App\Libraries\GapAPI\Send\Handlers\URLs::BASE_URL
+in APPPATH\Libraries\GapAPI\GapAPI.php on line 34.
+ 1 APPPATH\Libraries\GapAPI\GapAPI.php(21): App\Libraries\GapAPI\GapAPI->get_base_options('18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496')
+ 2 APPPATH\Controllers\Home.php(10): App\Libraries\GapAPI\GapAPI->__construct('18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496')
+ 3 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 4 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-16 22:41:57 --> Undefined constant App\Libraries\GapAPI\Send\Handlers\URLs::SEND_ACTION
+in APPPATH\Libraries\GapAPI\Send\SendText.php on line 14.
+ 1 APPPATH\Libraries\GapAPI\GapAPI.php(45): App\Libraries\GapAPI\Send\SendText->__construct(Object(CodeIgniter\HTTP\CURLRequest), Object(App\Libraries\GapAPI\Handlers\FormParams))
+ 2 APPPATH\Controllers\Home.php(21): App\Libraries\GapAPI\GapAPI->send_text()
+ 3 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 4 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-16 22:43:10 --> CodeIgniter\HTTP\URI::setURI(): Argument #1 ($uri) must be of type ?string, App\Libraries\GapAPI\Send\Handlers\URLs given, called in E:\SoftWare\xampp-windows-x64-8.2.4-0-VS16-installer\htdocs\my_projects\GitHub\GapAPI\system\HTTP\CURLRequest.php on line 277
+in SYSTEMPATH\HTTP\URI.php on line 270.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(277): CodeIgniter\HTTP\URI->setURI(Object(App\Libraries\GapAPI\Send\Handlers\URLs))
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(119): CodeIgniter\HTTP\CURLRequest->parseOptions([...])
+ 3 SYSTEMPATH\Config\Services.php(193): CodeIgniter\HTTP\CURLRequest->__construct(Object(Config\App), Object(CodeIgniter\HTTP\URI), Object(CodeIgniter\HTTP\Response), [...])
+ 4 SYSTEMPATH\Config\BaseService.php(251): CodeIgniter\Config\Services::curlrequest([...], Object(CodeIgniter\HTTP\Response), Object(Config\App), false)
+ 5 SYSTEMPATH\Config\BaseService.php(192): CodeIgniter\Config\BaseService::__callStatic('curlrequest', [...])
+ 6 SYSTEMPATH\Config\Services.php(187): CodeIgniter\Config\BaseService::getSharedInstance('curlrequest', [...], null, null)
+ 7 SYSTEMPATH\Config\BaseService.php(251): CodeIgniter\Config\Services::curlrequest([...])
+ 8 APPPATH\Libraries\GapAPI\GapAPI.php(21): CodeIgniter\Config\BaseService::__callStatic('curlrequest', [...])
+ 9 APPPATH\Controllers\Home.php(10): App\Libraries\GapAPI\GapAPI->__construct('18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496')
+10 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+11 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-16 22:45:53 --> App\Libraries\GapAPI\Send\BaseSend::set_type(): Argument #1 ($type) cannot be passed by reference
+in APPPATH\Libraries\GapAPI\Send\SendText.php on line 16.
+ 1 APPPATH\Libraries\GapAPI\GapAPI.php(45): App\Libraries\GapAPI\Send\SendText->__construct(Object(CodeIgniter\HTTP\CURLRequest), Object(App\Libraries\GapAPI\Handlers\FormParams))
+ 2 APPPATH\Controllers\Home.php(21): App\Libraries\GapAPI\GapAPI->send_text()
+ 3 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 4 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-16 22:47:40 --> Attempt to assign property "type" on null
+in APPPATH\Libraries\GapAPI\Send\BaseSend.php on line 73.
+ 1 APPPATH\Libraries\GapAPI\Send\SendText.php(16): App\Libraries\GapAPI\Send\BaseSend->set_type(Object(App\Libraries\GapAPI\Send\Handlers\Types))
+ 2 APPPATH\Libraries\GapAPI\GapAPI.php(45): App\Libraries\GapAPI\Send\SendText->__construct(Object(CodeIgniter\HTTP\CURLRequest), Object(App\Libraries\GapAPI\Handlers\FormParams))
+ 3 APPPATH\Controllers\Home.php(21): App\Libraries\GapAPI\GapAPI->send_text()
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-16 22:59:51 --> Attempt to assign property "type" on null
+in APPPATH\Libraries\GapAPI\Send\BaseSend.php on line 73.
+ 1 APPPATH\Libraries\GapAPI\Send\SendText.php(16): App\Libraries\GapAPI\Send\BaseSend->set_type(Object(App\Libraries\GapAPI\Send\Handlers\Types))
+ 2 APPPATH\Libraries\GapAPI\GapAPI.php(45): App\Libraries\GapAPI\Send\SendText->__construct(Object(CodeIgniter\HTTP\CURLRequest), Object(App\Libraries\GapAPI\Handlers\FormParams))
+ 3 APPPATH\Controllers\Home.php(21): App\Libraries\GapAPI\GapAPI->send_text()
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-16 23:10:22 --> Cannot assign App\Libraries\GapAPI\Handlers\FormParams to property App\Libraries\GapAPI\Send\BaseSend::$formParams of type ?array
+in APPPATH\Libraries\GapAPI\Send\BaseSend.php on line 48.
+ 1 APPPATH\Libraries\GapAPI\Send\SendText.php(14): App\Libraries\GapAPI\Send\BaseSend->__construct(Object(App\Libraries\GapAPI\Handlers\FormParams), null)
+ 2 APPPATH\Libraries\GapAPI\GapAPI.php(45): App\Libraries\GapAPI\Send\SendText->__construct(Object(CodeIgniter\HTTP\CURLRequest), Object(App\Libraries\GapAPI\Handlers\FormParams))
+ 3 APPPATH\Controllers\Home.php(21): App\Libraries\GapAPI\GapAPI->send_text()
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-16 23:32:16 --> Class "App\Libraries\GapAPI\Send\PrepareParams" not found
+in APPPATH\Libraries\GapAPI\Send\BaseSend.php on line 75.
+ 1 APPPATH\Libraries\GapAPI\Send\BaseSend.php(49): App\Libraries\GapAPI\Send\BaseSend->prepare_params(Object(App\Libraries\GapAPI\Handlers\FormParams))
+ 2 APPPATH\Libraries\GapAPI\Send\SendText.php(14): App\Libraries\GapAPI\Send\BaseSend->__construct(Object(CodeIgniter\HTTP\CURLRequest), Object(App\Libraries\GapAPI\Handlers\FormParams), null)
+ 3 APPPATH\Libraries\GapAPI\GapAPI.php(45): App\Libraries\GapAPI\Send\SendText->__construct(Object(CodeIgniter\HTTP\CURLRequest), Object(App\Libraries\GapAPI\Handlers\FormParams))
+ 4 APPPATH\Controllers\Home.php(21): App\Libraries\GapAPI\GapAPI->send_text()
+ 5 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-16 23:33:27 --> App\Libraries\GapAPI\Send\BaseSend::prepare_params(): Return value must be of type object, none returned
+in APPPATH\Libraries\GapAPI\Send\BaseSend.php on line 79.
+ 1 APPPATH\Libraries\GapAPI\Send\BaseSend.php(50): App\Libraries\GapAPI\Send\BaseSend->prepare_params(Object(App\Libraries\GapAPI\Handlers\FormParams))
+ 2 APPPATH\Libraries\GapAPI\Send\SendText.php(14): App\Libraries\GapAPI\Send\BaseSend->__construct(Object(CodeIgniter\HTTP\CURLRequest), Object(App\Libraries\GapAPI\Handlers\FormParams), null)
+ 3 APPPATH\Libraries\GapAPI\GapAPI.php(45): App\Libraries\GapAPI\Send\SendText->__construct(Object(CodeIgniter\HTTP\CURLRequest), Object(App\Libraries\GapAPI\Handlers\FormParams))
+ 4 APPPATH\Controllers\Home.php(21): App\Libraries\GapAPI\GapAPI->send_text()
+ 5 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-16 23:34:31 --> Undefined property: App\Libraries\GapAPI\Send\SendText::$uploadRequire
+in APPPATH\Libraries\GapAPI\Send\BaseSend.php on line 87.
+ 1 APPPATH\Libraries\GapAPI\Send\BaseSend.php(87): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Libraries\\GapAPI\\Send\\SendText::$uploadRequire', 'APPPATH\\Libraries\\GapAPI\\Send\\BaseSend.php', 87)
+ 2 APPPATH\Libraries\GapAPI\Send\BaseSend.php(128): App\Libraries\GapAPI\Send\BaseSend->get_options()
+ 3 APPPATH\Libraries\GapAPI\Send\SendText.php(20): App\Libraries\GapAPI\Send\BaseSend->request()
+ 4 APPPATH\Libraries\GapAPI\GapAPI.php(45): App\Libraries\GapAPI\Send\SendText->__construct(Object(CodeIgniter\HTTP\CURLRequest), Object(App\Libraries\GapAPI\Handlers\FormParams))
+ 5 APPPATH\Controllers\Home.php(21): App\Libraries\GapAPI\GapAPI->send_text()
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-16 23:35:20 --> Typed property App\Libraries\GapAPI\Send\BaseSend::$multipart must not be accessed before initialization
+in APPPATH\Libraries\GapAPI\Send\BaseSend.php on line 87.
+ 1 APPPATH\Libraries\GapAPI\Send\BaseSend.php(128): App\Libraries\GapAPI\Send\BaseSend->get_options()
+ 2 APPPATH\Libraries\GapAPI\Send\SendText.php(20): App\Libraries\GapAPI\Send\BaseSend->request()
+ 3 APPPATH\Libraries\GapAPI\GapAPI.php(45): App\Libraries\GapAPI\Send\SendText->__construct(Object(CodeIgniter\HTTP\CURLRequest), Object(App\Libraries\GapAPI\Handlers\FormParams))
+ 4 APPPATH\Controllers\Home.php(21): App\Libraries\GapAPI\GapAPI->send_text()
+ 5 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
