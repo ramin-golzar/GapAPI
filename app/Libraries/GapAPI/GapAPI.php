@@ -6,6 +6,8 @@ use App\Libraries\GapAPI\Send\Handlers\URLs;
 use App\Libraries\GapAPI\Send\SendMessage;
 use App\Libraries\GapAPI\Send\Contact;
 use App\Libraries\GapAPI\Send\Location;
+use App\Libraries\GapAPI\Send\Action;
+use App\Libraries\GapAPI\Send\AnswerCallback;
 
 class GapAPI extends SetParams
 {
@@ -59,6 +61,20 @@ class GapAPI extends SetParams
         $this->set_location ($lat , $long , $description);
 
         return new Location ($this->client , $this->formParams);
+    }
+
+    public function send_action (): object {
+        return new Action ($this->client , $this->formParams);
+    }
+
+    public function send_answer_callback (string $text , string $callbackId , bool $showAlert = false): object {
+        $this->set_text ($text);
+
+        $this->set_callback_id ($callbackId);
+
+        $this->set_show_alert ($showAlert);
+
+        return new AnswerCallback ($this->client , $this->formParams);
     }
 
 }

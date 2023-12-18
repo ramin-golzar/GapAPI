@@ -39,6 +39,18 @@ class SetParams
         $this->formParams->data = json_encode ($data);
     }
 
+    protected function set_text (string &$text): void {
+        $this->formParams->text = $text;
+    }
+
+    protected function set_callback_id (string &$callbackId): void {
+        $this->formParams->callback_id = $callbackId;
+    }
+
+    protected function set_show_alert (bool $showAlert): void {
+        $this->formParams->show_alert = $showAlert;
+    }
+
     public function set_reply_keyboard (string|array $replyKeyboard): void {
         $this->formParams->reply_keyboard = $replyKeyboard;
     }

@@ -12,5 +12,6 @@ enum Types
     case file;
     case contact;
     case location;
+    case typing;
 
 }

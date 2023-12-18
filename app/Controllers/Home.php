@@ -11,10 +11,12 @@ class Home extends BaseController
 
 //        $gap->set_data ('Hello <color#00bb00>PHP</color>');
         $gap->set_chat_id ('339322905');
-        $gap->set_reply_keyboard ([[['back' => 'Back']]]);
+//        $gap->set_reply_keyboard ([[['back' => 'Back']]]);
 //        $gap->send_contact ('+981111111111' , 'RAMIN');
 //        $gap->send_location ('1.22' , '2.11' , 'mashad');
-        $gap->send_text ('HHHHH');
+//        $gap->send_text ('HHHHH');
+//        $gap->send_action ();
+        $gap->send_answer_callback ('aaa' , '122112' , true);
 //        $gap->set_reply_keyboard ('example');
 //        $gap->set_inline_keyboard ('example');
 //        $gap->set_inline_keyboard ([[['text' => 'Ok' , 'cb_data' => 'ok']]]);
