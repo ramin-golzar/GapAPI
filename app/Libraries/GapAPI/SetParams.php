@@ -16,12 +16,27 @@ class SetParams
         $this->formParams->chat_id = $chatId;
     }
 
-    public function set_data (string $data): void {
+    protected function set_data (string $data): void {
         $this->formParams->data = $data;
     }
 
-    public function set_contact (string $phone , string $name): void {
-        $this->formParams->data = json_encode (['phone' => $phone , 'name' => $name ,]);
+    protected function set_contact (string &$phone , string &$name): void {
+        $data = [
+            'phone' => $phone ,
+            'name' => $name ,
+        ];
+
+        $this->formParams->data = json_encode ($data);
+    }
+
+    protected function set_location (string &$lat , string &$long , string &$description): void {
+        $data = [
+            'lat' => $lat ,
+            'lang' => $long ,
+            'desc' => $description ,
+        ];
+
+        $this->formParams->data = json_encode ($data);
     }
 
     public function set_reply_keyboard (string|array $replyKeyboard): void {

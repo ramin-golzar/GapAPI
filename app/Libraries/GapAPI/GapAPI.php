@@ -5,6 +5,7 @@ use App\Libraries\GapAPI\SetParams;
 use App\Libraries\GapAPI\Send\Handlers\URLs;
 use App\Libraries\GapAPI\Send\SendMessage;
 use App\Libraries\GapAPI\Send\Contact;
+use App\Libraries\GapAPI\Send\Location;
 
 class GapAPI extends SetParams
 {
@@ -42,12 +43,22 @@ class GapAPI extends SetParams
      * @param string $token
      * @return object
      */
-    public function send_text (): object {
+    public function send_text (string $text): object {
+        $this->set_data ($text);
+
         return new SendMessage ($this->client , $this->formParams);
     }
 
-    public function send_contact (): object {
+    public function send_contact (string $phone , string $name): object {
+        $this->set_contact ($phone , $name);
+
         return new Contact ($this->client , $this->formParams);
+    }
+
+    public function send_location (string $lat , string $long , string $description): object {
+        $this->set_location ($lat , $long , $description);
+
+        return new Location ($this->client , $this->formParams);
     }
 
 }

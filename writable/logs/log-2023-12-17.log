@@ -183,3 +183,78 @@ in APPPATH\Controllers\Home.php on line 25.
  3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
  4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-17 21:13:28 --> Undefined property: App\Libraries\GapAPI\Handlers\Codes::$request
+in APPPATH\Libraries\GapAPI\Handlers\Codes.php on line 13.
+ 1 APPPATH\Libraries\GapAPI\Handlers\Codes.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Libraries\\GapAPI\\Handlers\\Codes::$request', 'APPPATH\\Libraries\\GapAPI\\Handlers\\Codes.php', 13)
+ 2 APPPATH\Libraries\GapAPI\Send\Handlers\PrepareParams.php(65): App\Libraries\GapAPI\Handlers\Codes->get_chat_id()
+ 3 APPPATH\Libraries\GapAPI\Send\Handlers\PrepareParams.php(29): App\Libraries\GapAPI\Send\Handlers\PrepareParams->set_chat_id(Object(App\Libraries\GapAPI\Handlers\FormParams))
+ 4 APPPATH\Libraries\GapAPI\Send\BaseSend.php(93): App\Libraries\GapAPI\Send\Handlers\PrepareParams->run(Object(App\Libraries\GapAPI\Handlers\FormParams))
+ 5 APPPATH\Libraries\GapAPI\Send\BaseSend.php(56): App\Libraries\GapAPI\Send\BaseSend->prepare_params(Object(App\Libraries\GapAPI\Handlers\FormParams), null)
+ 6 APPPATH\Libraries\GapAPI\Send\Location.php(11): App\Libraries\GapAPI\Send\BaseSend->__construct(Object(CodeIgniter\HTTP\CURLRequest), Object(App\Libraries\GapAPI\Handlers\FormParams), null)
+ 7 APPPATH\Libraries\GapAPI\GapAPI.php(57): App\Libraries\GapAPI\Send\Location->__construct(Object(CodeIgniter\HTTP\CURLRequest), Object(App\Libraries\GapAPI\Handlers\FormParams))
+ 8 APPPATH\Controllers\Home.php(14): App\Libraries\GapAPI\GapAPI->send_location('111', '1111', 'this is my local')
+ 9 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+10 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-17 21:13:37 --> Undefined property: App\Libraries\GapAPI\Handlers\Codes::$request
+in APPPATH\Libraries\GapAPI\Handlers\Codes.php on line 13.
+ 1 APPPATH\Libraries\GapAPI\Handlers\Codes.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Libraries\\GapAPI\\Handlers\\Codes::$request', 'APPPATH\\Libraries\\GapAPI\\Handlers\\Codes.php', 13)
+ 2 APPPATH\Libraries\GapAPI\Send\Handlers\PrepareParams.php(65): App\Libraries\GapAPI\Handlers\Codes->get_chat_id()
+ 3 APPPATH\Libraries\GapAPI\Send\Handlers\PrepareParams.php(29): App\Libraries\GapAPI\Send\Handlers\PrepareParams->set_chat_id(Object(App\Libraries\GapAPI\Handlers\FormParams))
+ 4 APPPATH\Libraries\GapAPI\Send\BaseSend.php(93): App\Libraries\GapAPI\Send\Handlers\PrepareParams->run(Object(App\Libraries\GapAPI\Handlers\FormParams))
+ 5 APPPATH\Libraries\GapAPI\Send\BaseSend.php(56): App\Libraries\GapAPI\Send\BaseSend->prepare_params(Object(App\Libraries\GapAPI\Handlers\FormParams), null)
+ 6 APPPATH\Libraries\GapAPI\Send\Location.php(11): App\Libraries\GapAPI\Send\BaseSend->__construct(Object(CodeIgniter\HTTP\CURLRequest), Object(App\Libraries\GapAPI\Handlers\FormParams), null)
+ 7 APPPATH\Libraries\GapAPI\GapAPI.php(57): App\Libraries\GapAPI\Send\Location->__construct(Object(CodeIgniter\HTTP\CURLRequest), Object(App\Libraries\GapAPI\Handlers\FormParams))
+ 8 APPPATH\Controllers\Home.php(14): App\Libraries\GapAPI\GapAPI->send_location('111', '1111', 'this is my local')
+ 9 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+10 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-17 21:24:18 --> Undefined property: App\Libraries\GapAPI\Handlers\Codes::$request
+in APPPATH\Libraries\GapAPI\Handlers\Codes.php on line 13.
+ 1 APPPATH\Libraries\GapAPI\Handlers\Codes.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Libraries\\GapAPI\\Handlers\\Codes::$request', 'APPPATH\\Libraries\\GapAPI\\Handlers\\Codes.php', 13)
+ 2 APPPATH\Libraries\GapAPI\Send\Handlers\PrepareParams.php(65): App\Libraries\GapAPI\Handlers\Codes->get_chat_id()
+ 3 APPPATH\Libraries\GapAPI\Send\Handlers\PrepareParams.php(29): App\Libraries\GapAPI\Send\Handlers\PrepareParams->set_chat_id(Object(App\Libraries\GapAPI\Handlers\FormParams))
+ 4 APPPATH\Libraries\GapAPI\Send\BaseSend.php(93): App\Libraries\GapAPI\Send\Handlers\PrepareParams->run(Object(App\Libraries\GapAPI\Handlers\FormParams))
+ 5 APPPATH\Libraries\GapAPI\Send\BaseSend.php(56): App\Libraries\GapAPI\Send\BaseSend->prepare_params(Object(App\Libraries\GapAPI\Handlers\FormParams), null)
+ 6 APPPATH\Libraries\GapAPI\Send\Location.php(11): App\Libraries\GapAPI\Send\BaseSend->__construct(Object(CodeIgniter\HTTP\CURLRequest), Object(App\Libraries\GapAPI\Handlers\FormParams), null)
+ 7 APPPATH\Libraries\GapAPI\GapAPI.php(57): App\Libraries\GapAPI\Send\Location->__construct(Object(CodeIgniter\HTTP\CURLRequest), Object(App\Libraries\GapAPI\Handlers\FormParams))
+ 8 APPPATH\Controllers\Home.php(14): App\Libraries\GapAPI\GapAPI->send_location('111', '1111', 'this is my local')
+ 9 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+10 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-17 21:26:34 --> Undefined property: App\Libraries\GapAPI\Handlers\Codes::$request
+in APPPATH\Libraries\GapAPI\Handlers\Codes.php on line 13.
+ 1 APPPATH\Libraries\GapAPI\Handlers\Codes.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Libraries\\GapAPI\\Handlers\\Codes::$request', 'APPPATH\\Libraries\\GapAPI\\Handlers\\Codes.php', 13)
+ 2 APPPATH\Libraries\GapAPI\Send\Handlers\PrepareParams.php(65): App\Libraries\GapAPI\Handlers\Codes->get_chat_id()
+ 3 APPPATH\Libraries\GapAPI\Send\Handlers\PrepareParams.php(29): App\Libraries\GapAPI\Send\Handlers\PrepareParams->set_chat_id(Object(App\Libraries\GapAPI\Handlers\FormParams))
+ 4 APPPATH\Libraries\GapAPI\Send\BaseSend.php(93): App\Libraries\GapAPI\Send\Handlers\PrepareParams->run(Object(App\Libraries\GapAPI\Handlers\FormParams))
+ 5 APPPATH\Libraries\GapAPI\Send\BaseSend.php(56): App\Libraries\GapAPI\Send\BaseSend->prepare_params(Object(App\Libraries\GapAPI\Handlers\FormParams), null)
+ 6 APPPATH\Libraries\GapAPI\Send\Location.php(13): App\Libraries\GapAPI\Send\BaseSend->__construct(Object(CodeIgniter\HTTP\CURLRequest), Object(App\Libraries\GapAPI\Handlers\FormParams), null)
+ 7 APPPATH\Libraries\GapAPI\GapAPI.php(57): App\Libraries\GapAPI\Send\Location->__construct(Object(CodeIgniter\HTTP\CURLRequest), Object(App\Libraries\GapAPI\Handlers\FormParams))
+ 8 APPPATH\Controllers\Home.php(14): App\Libraries\GapAPI\GapAPI->send_location('111', '1111', 'this is my local')
+ 9 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+10 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-17 21:27:38 --> Undefined array key "chat_id"
+in APPPATH\Controllers\Home.php on line 24.
+ 1 APPPATH\Controllers\Home.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "chat_id"', 'APPPATH\\Controllers\\Home.php', 24)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-17 21:45:14 --> Call to protected method App\Libraries\GapAPI\SetParams::set_contact() from scope App\Controllers\Home
+in APPPATH\Controllers\Home.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 2 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-17 21:45:28 --> Call to protected method App\Libraries\GapAPI\SetParams::set_contact() from scope App\Controllers\Home
+in APPPATH\Controllers\Home.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 2 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
