@@ -20,6 +20,10 @@ class SetParams
         $this->formParams->data = $data;
     }
 
+    public function set_contact (string $phone , string $name): void {
+        $this->formParams->data = json_encode (['phone' => $phone , 'name' => $name ,]);
+    }
+
     public function set_reply_keyboard (string|array $replyKeyboard): void {
         $this->formParams->reply_keyboard = $replyKeyboard;
     }

@@ -4,6 +4,7 @@ namespace App\Libraries\GapAPI;
 use App\Libraries\GapAPI\SetParams;
 use App\Libraries\GapAPI\Send\Handlers\URLs;
 use App\Libraries\GapAPI\Send\SendMessage;
+use App\Libraries\GapAPI\Send\Contact;
 
 class GapAPI extends SetParams
 {
@@ -43,6 +44,10 @@ class GapAPI extends SetParams
      */
     public function send_text (): object {
         return new SendMessage ($this->client , $this->formParams);
+    }
+
+    public function send_contact (): object {
+        return new Contact ($this->client , $this->formParams);
     }
 
 }

@@ -10,5 +10,6 @@ enum Types
     case audio;
     case voice;
     case file;
+    case contact;
 
 }

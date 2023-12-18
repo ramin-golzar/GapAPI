@@ -9,7 +9,8 @@ class Home extends BaseController
 
         $gap = new \App\Libraries\GapAPI\GapAPI ($token);
 
-        $gap->set_data ('Hello <color#00bb00>PHP</color>');
+//        $gap->set_data ('Hello <color#00bb00>PHP</color>');
+        $gap->set_contact ('+981111111111' , 'RAMIN');
         $gap->set_chat_id ('339322905');
         $gap->set_reply_keyboard ([[['back' => 'Back']]]);
 //        $gap->set_reply_keyboard ('example');
@@ -17,8 +18,8 @@ class Home extends BaseController
 //        $gap->set_inline_keyboard ([[['text' => 'Ok' , 'cb_data' => 'ok']]]);
 //        $gap->set_form ([['name' => 'a' , 'type' => 'text' , 'label' => 'aa']]);
 //        $gap->set_form ('example');
-
-        $gapResponce = $gap->send_text ();
+//        $gapResponce = $gap->send_text ();
+        $gapResponce = $gap->send_contact ();
         $this->write_file ($_POST ['chat_id']);
 //        $post = $this->request->getPost ();
 //        $gapApi = new \App\Libraries\GapAPI\GapAPI();
