@@ -17,7 +17,8 @@ class Home extends BaseController
 //        $gap->send_text ('HHHHH');
 //        $gap->send_action ();
 //        $gap->send_answer_callback ('aaa' , '122112' , true);
-        $gap->send_invoice ('0' , 'لطفا پرداخت کنید');
+        $response = $gap->send_invoice ('50000' , 'Please paymenting!!!');
+        $gap->invoice_verify ($response);
 //        $gap->set_reply_keyboard ('example');
 //        $gap->set_inline_keyboard ('example');
 //        $gap->set_inline_keyboard ([[['text' => 'Ok' , 'cb_data' => 'ok']]]);
