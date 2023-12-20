@@ -8,6 +8,8 @@ use App\Libraries\GapAPI\Send\Contact;
 use App\Libraries\GapAPI\Send\Location;
 use App\Libraries\GapAPI\Send\Action;
 use App\Libraries\GapAPI\Send\AnswerCallback;
+use App\Libraries\GapAPI\Send\Invoice;
+use App\Libraries\GapAPI\Send\Handlers\Currency;
 
 class GapAPI extends SetParams
 {
@@ -75,6 +77,18 @@ class GapAPI extends SetParams
         $this->set_show_alert ($showAlert);
 
         return new AnswerCallback ($this->client , $this->formParams);
+    }
+
+    public function send_invoice (string $amount , string $description , Currency $currency = Currency::rial , string $expirTime = '86400'): object {
+        $this->formParams->amount = $amount;
+
+        $this->formParams->currency = $currency->value;
+
+        $this->formParams->description = $description;
+
+        $this->formParams->expir_time = $expirTime;
+
+        return new Invoice ($this->client , $this->formParams);
     }
 
 }

@@ -6,7 +6,7 @@ use App\Libraries\GapAPI\Handlers\FormParams;
 class SetParams
 {
 
-    public FormParams $formParams;
+    protected FormParams $formParams;
 
     public function __construct () {
         $this->formParams = new FormParams();

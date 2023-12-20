@@ -16,7 +16,8 @@ class Home extends BaseController
 //        $gap->send_location ('1.22' , '2.11' , 'mashad');
 //        $gap->send_text ('HHHHH');
 //        $gap->send_action ();
-        $gap->send_answer_callback ('aaa' , '122112' , true);
+//        $gap->send_answer_callback ('aaa' , '122112' , true);
+        $gap->send_invoice ('0' , 'لطفا پرداخت کنید');
 //        $gap->set_reply_keyboard ('example');
 //        $gap->set_inline_keyboard ('example');
 //        $gap->set_inline_keyboard ([[['text' => 'Ok' , 'cb_data' => 'ok']]]);
@@ -114,7 +115,9 @@ class Home extends BaseController
 //        $this->write_file ("\n\r\n\r" . 'Send Message Code: ' . $response->getStatusCode () . "\n\r\n\r");
     }
 
-    private function send_message (string $chat_id , string $type , string|array $data): void {
+    private function send_message (
+            string $chat_id , string $type , string|array $data
+    ): void {
         $client = \Config\Services::curlrequest ();
 
         $url = 'https://api.gap.im/sendMessage/';
