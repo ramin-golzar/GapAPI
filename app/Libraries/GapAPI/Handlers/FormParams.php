@@ -17,5 +17,6 @@ class FormParams
     public string $currency = '';
     public string $description = '';
     public string $expir_time = '';
+    public string $ref_id = '';
 
 }
