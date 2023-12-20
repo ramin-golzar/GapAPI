@@ -10,6 +10,7 @@ use App\Libraries\GapAPI\Send\Action;
 use App\Libraries\GapAPI\Send\AnswerCallback;
 use App\Libraries\GapAPI\Send\Invoice;
 use App\Libraries\GapAPI\Send\Handlers\Currency;
+use App\Libraries\GapAPI\Send\InvoiceVerify;
 
 class GapAPI extends SetParams
 {
@@ -89,6 +90,15 @@ class GapAPI extends SetParams
         $this->formParams->expir_time = $expirTime;
 
         return new Invoice ($this->client , $this->formParams);
+    }
+
+    public function invoice_verify (object $invoiceResponse): object {
+        if ($invoiceResponse->statusCode () == 200) {
+            $getJSON = json_decode ($response->getJSON ());
+            $this->formParams->ref_id = $getJSON ['id'];
+        }
+
+        return new InvoiceVerify ($this->client , $this->formParams);
     }
 
 }
