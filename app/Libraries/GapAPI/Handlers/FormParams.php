@@ -13,5 +13,9 @@ class FormParams
     public string $text = '';
     public string $callback_id = '';
     public bool $show_alert = false;
+    public string $amount = '';
+    public string $currency = '';
+    public string $description = '';
+    public string $expir_time = '';
 
 }
