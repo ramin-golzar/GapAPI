@@ -144,7 +144,7 @@ class BaseSend
      *
      * @return object
      */
-    protected function request (): object {
+    public function request (): object {
         return $this->client->request ('POST' , $this->method , $this->get_options ());
     }
 

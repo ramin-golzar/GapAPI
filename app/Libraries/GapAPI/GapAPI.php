@@ -51,54 +51,59 @@ class GapAPI extends SetParams
     public function send_text (string $text): object {
         $this->set_data ($text);
 
-        return new SendMessage ($this->client , $this->formParams);
+        $sendMessage = new SendMessage ($this->client , $this->formParams);
+
+        return $this->request ($sendMessage);
     }
 
     public function send_contact (string $phone , string $name): object {
         $this->set_contact ($phone , $name);
 
-        return new Contact ($this->client , $this->formParams);
+        $contact = new Contact ($this->client , $this->formParams);
+
+        return $this->request ($contact);
     }
 
     public function send_location (string $lat , string $long , string $description): object {
         $this->set_location ($lat , $long , $description);
 
-        return new Location ($this->client , $this->formParams);
+        $location = new Location ($this->client , $this->formParams);
+
+        return $this->request ($location);
     }
 
     public function send_action (): object {
-        return new Action ($this->client , $this->formParams);
+        $action = new Action ($this->client , $this->formParams);
+
+        return $this->request ($action);
     }
 
     public function send_answer_callback (string $text , string $callbackId , bool $showAlert = false): object {
-        $this->set_text ($text);
+        $this->set_answer_callback ($text , $callbackId , $showAlert);
 
-        $this->set_callback_id ($callbackId);
+        $answerCallback = new AnswerCallback ($this->client , $this->formParams);
 
-        $this->set_show_alert ($showAlert);
-
-        return new AnswerCallback ($this->client , $this->formParams);
+        return $this->request ($answerCallback);
     }
 
-    public function send_invoice (string $amount , string $description , Currency $currency = Currency::rial , string $expirTime = '86400'): object {
-        $this->formParams->amount = $amount;
+    public function send_invoice (string $amount , string $description , string $expirTime = '86400' , Currency $currency = Currency::rial): object {
+        $this->set_invoice ($amount , $description , $expirTime , $currency);
 
-        $this->formParams->currency = $currency->value;
+        $invoice = new Invoice ($this->client , $this->formParams);
 
-        $this->formParams->description = $description;
-
-        $this->formParams->expir_time = $expirTime;
-
-        return new Invoice ($this->client , $this->formParams);
+        return $this->request ($invoice);
     }
 
-    public function invoice_verify (object $invoiceResponse): object {
-        if ($invoiceResponse->statusCode () == 200) {
-            $getJSON = json_decode ($response->getJSON ());
-            $this->formParams->ref_id = $getJSON ['id'];
-        }
+    public function invoice_verify (object $invoiceResponse = null): object {
+//        if ($invoiceResponse->getStatusCode () == 200) {
+//            $resultDecoded = json_decode ($resultDecoded->getJSON ());
+//            $this->formParams->ref_id = $resultDecoded ['id'];
+        $this->formParams->ref_id = '65885d7aa7824f74552e4a02';
+//        }
 
-        return new InvoiceVerify ($this->client , $this->formParams);
+        $invoiceVeryfy = new InvoiceVerify ($this->client , $this->formParams);
+
+        return $this->request ($invoiceVeryfy);
     }
 
 }

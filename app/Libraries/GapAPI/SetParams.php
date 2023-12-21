@@ -2,11 +2,12 @@
 namespace App\Libraries\GapAPI;
 
 use App\Libraries\GapAPI\Handlers\FormParams;
+use App\Libraries\GapAPI\Send\Handlers\Currency;
 
 class SetParams
 {
 
-    protected FormParams $formParams;
+    public FormParams $formParams;
 
     public function __construct () {
         $this->formParams = new FormParams();
@@ -43,12 +44,17 @@ class SetParams
         $this->formParams->text = $text;
     }
 
-    protected function set_callback_id (string &$callbackId): void {
+    protected function set_answer_callback (string &$text , string &$callbackId , bool &$showAlert = false): void {
+        $this->formParams->data = $text;
         $this->formParams->callback_id = $callbackId;
+        $this->formParams->show_alert = $showAlert;
     }
 
-    protected function set_show_alert (bool $showAlert): void {
-        $this->formParams->show_alert = $showAlert;
+    protected function set_invoice (string &$amount , string &$description , string &$expirTime = '86400' , Currency $currency = Currency::rial): void {
+        $this->formParams->amount = $amount;
+        $this->formParams->currency = $currency->value;
+        $this->formParams->description = $description;
+        $this->formParams->expir_time = $expirTime;
     }
 
     public function set_reply_keyboard (string|array $replyKeyboard): void {
@@ -61,6 +67,20 @@ class SetParams
 
     public function set_form (string|array $form): void {
         $this->formParams->form = $form;
+    }
+
+    private function reset_form_params (): void {
+        unset ($this->formParams);
+
+        $this->formParams = new FormParams();
+    }
+
+    protected function request (object &$sendClass): object {
+        $response = $sendClass->request ();
+
+        $this->reset_form_params ();
+
+        return $response;
     }
 
 }

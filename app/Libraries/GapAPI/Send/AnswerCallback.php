@@ -13,8 +13,6 @@ class AnswerCallback extends BaseSend
         parent::__construct ($client , $formParams , $multipart);
 
         $this->set_method (URLs::answer_callback);
-
-        return $this->request ();
     }
 
 }

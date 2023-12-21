@@ -13,8 +13,6 @@ class Invoice extends BaseSend
         parent::__construct ($client , $formParams , $multipart);
 
         $this->set_method (URLs::invoice);
-
-        return $this->request ();
     }
 
 }

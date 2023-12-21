@@ -13,8 +13,6 @@ class Contact extends BaseSend
         $this->set_type (Types::contact);
 
         $this->set_method (URLs::send_message);
-
-        return $this->request ();
     }
 
 }

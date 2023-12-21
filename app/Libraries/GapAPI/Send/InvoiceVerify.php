@@ -11,8 +11,6 @@ class InvoiceVerify extends BaseSend
         parent::__construct ($client , $formParams);
 
         $this->set_method (URLs::invoice_verify);
-
-        return $this->request ();
     }
 
 }

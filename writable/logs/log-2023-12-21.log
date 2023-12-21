@@ -1,0 +1,228 @@
+CRITICAL - 2023-12-21 07:38:50 --> Call to undefined method App\Libraries\GapAPI\Send\Invoice::statusCode()
+in APPPATH\Libraries\GapAPI\GapAPI.php on line 96.
+ 1 APPPATH\Controllers\Home.php(21): App\Libraries\GapAPI\GapAPI->invoice_verify(Object(App\Libraries\GapAPI\Send\Invoice))
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 07:39:27 --> 22 : The requested URL returned error: 500
+in SYSTEMPATH\HTTP\CURLRequest.php on line 655.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(655): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested URL returned error: 500')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(363): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(136): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://api.gap.im/invoice')
+ 4 APPPATH\Libraries\GapAPI\Send\BaseSend.php(148): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://api.gap.im/invoice', [...])
+ 5 APPPATH\Libraries\GapAPI\Send\Invoice.php(17): App\Libraries\GapAPI\Send\BaseSend->request()
+ 6 APPPATH\Libraries\GapAPI\GapAPI.php(92): App\Libraries\GapAPI\Send\Invoice->__construct(Object(CodeIgniter\HTTP\CURLRequest), Object(App\Libraries\GapAPI\Handlers\FormParams))
+ 7 APPPATH\Controllers\Home.php(20): App\Libraries\GapAPI\GapAPI->send_invoice('50000', 'Please paymenting!!!', Object(App\Libraries\GapAPI\Send\Handlers\Currency), '300')
+ 8 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 9 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 07:39:38 --> Call to undefined method App\Libraries\GapAPI\Send\Invoice::statusCode()
+in APPPATH\Libraries\GapAPI\GapAPI.php on line 96.
+ 1 APPPATH\Controllers\Home.php(21): App\Libraries\GapAPI\GapAPI->invoice_verify(Object(App\Libraries\GapAPI\Send\Invoice))
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 07:43:35 --> 22 : The requested URL returned error: 500
+in SYSTEMPATH\HTTP\CURLRequest.php on line 655.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(655): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested URL returned error: 500')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(363): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(136): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://api.gap.im/invoice')
+ 4 APPPATH\Libraries\GapAPI\Send\BaseSend.php(148): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://api.gap.im/invoice', [...])
+ 5 APPPATH\Libraries\GapAPI\Send\Invoice.php(17): App\Libraries\GapAPI\Send\BaseSend->request()
+ 6 APPPATH\Libraries\GapAPI\GapAPI.php(92): App\Libraries\GapAPI\Send\Invoice->__construct(Object(CodeIgniter\HTTP\CURLRequest), Object(App\Libraries\GapAPI\Handlers\FormParams))
+ 7 APPPATH\Controllers\Home.php(20): App\Libraries\GapAPI\GapAPI->send_invoice('50000', 'Please paymenting!!!', Object(App\Libraries\GapAPI\Send\Handlers\Currency), '300')
+ 8 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 9 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 07:52:24 --> Call to undefined method App\Libraries\GapAPI\Send\Invoice::getStatusCode()
+in APPPATH\Libraries\GapAPI\GapAPI.php on line 96.
+ 1 APPPATH\Controllers\Home.php(22): App\Libraries\GapAPI\GapAPI->invoice_verify(Object(App\Libraries\GapAPI\Send\Invoice))
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 07:54:55 --> Undefined variable $response
+in APPPATH\Controllers\Home.php on line 22.
+ 1 APPPATH\Controllers\Home.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $response', 'APPPATH\\Controllers\\Home.php', 22)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 07:55:27 --> Call to undefined method App\Libraries\GapAPI\Send\SendMessage::getStatusCode()
+in APPPATH\Libraries\GapAPI\GapAPI.php on line 96.
+ 1 APPPATH\Controllers\Home.php(22): App\Libraries\GapAPI\GapAPI->invoice_verify(Object(App\Libraries\GapAPI\Send\SendMessage))
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 07:57:46 --> Undefined array key "chat_id"
+in APPPATH\Controllers\Home.php on line 33.
+ 1 APPPATH\Controllers\Home.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "chat_id"', 'APPPATH\\Controllers\\Home.php', 33)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 08:01:07 --> Call to undefined method App\Libraries\GapAPI\Send\SendMessage::getStatusCode()
+in APPPATH\Controllers\Home.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 2 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 08:01:25 --> Call to undefined method App\Libraries\GapAPI\Send\SendMessage::getStatusCode()
+in APPPATH\Controllers\Home.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 2 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 08:17:27 --> Call to undefined method App\Libraries\GapAPI\Send\SendMessage::getJSON()
+in APPPATH\Controllers\Home.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 2 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 08:27:00 --> Undefined array key "chat_id"
+in APPPATH\Controllers\Home.php on line 33.
+ 1 APPPATH\Controllers\Home.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "chat_id"', 'APPPATH\\Controllers\\Home.php', 33)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 09:04:31 --> Undefined array key "chat_id"
+in APPPATH\Controllers\Home.php on line 33.
+ 1 APPPATH\Controllers\Home.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "chat_id"', 'APPPATH\\Controllers\\Home.php', 33)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 09:06:39 --> Undefined variable $msg
+in APPPATH\Controllers\Home.php on line 21.
+ 1 APPPATH\Controllers\Home.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $msg', 'APPPATH\\Controllers\\Home.php', 21)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 09:07:07 --> App\Libraries\GapAPI\GapAPI::send_invoice(): Argument #3 ($expirTime) must be of type string, App\Libraries\GapAPI\Send\Handlers\Currency given, called in E:\SoftWare\xampp-windows-x64-8.2.4-0-VS16-installer\htdocs\my_projects\GitHub\GapAPI\app\Controllers\Home.php on line 21
+in APPPATH\Libraries\GapAPI\GapAPI.php on line 89.
+ 1 APPPATH\Controllers\Home.php(21): App\Libraries\GapAPI\GapAPI->send_invoice('50000', 'خرید بسته 
+ مهلت پرداخت 5 دقیقه', Object(App\Libraries\GapAPI\Send\Handlers\Currency), '300')
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 09:08:12 --> Undefined array key "chat_id"
+in APPPATH\Controllers\Home.php on line 33.
+ 1 APPPATH\Controllers\Home.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "chat_id"', 'APPPATH\\Controllers\\Home.php', 33)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 09:58:26 --> Undefined array key "chat_id"
+in APPPATH\Controllers\Home.php on line 33.
+ 1 APPPATH\Controllers\Home.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "chat_id"', 'APPPATH\\Controllers\\Home.php', 33)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 10:03:36 --> Undefined array key "chat_id"
+in APPPATH\Controllers\Home.php on line 33.
+ 1 APPPATH\Controllers\Home.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "chat_id"', 'APPPATH\\Controllers\\Home.php', 33)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 10:05:22 --> Undefined property: App\Libraries\GapAPI\Handlers\Codes::$request
+in APPPATH\Libraries\GapAPI\Handlers\Codes.php on line 13.
+ 1 APPPATH\Libraries\GapAPI\Handlers\Codes.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Libraries\\GapAPI\\Handlers\\Codes::$request', 'APPPATH\\Libraries\\GapAPI\\Handlers\\Codes.php', 13)
+ 2 APPPATH\Libraries\GapAPI\Send\Handlers\PrepareParams.php(65): App\Libraries\GapAPI\Handlers\Codes->get_chat_id()
+ 3 APPPATH\Libraries\GapAPI\Send\Handlers\PrepareParams.php(29): App\Libraries\GapAPI\Send\Handlers\PrepareParams->set_chat_id(Object(App\Libraries\GapAPI\Handlers\FormParams))
+ 4 APPPATH\Libraries\GapAPI\Send\BaseSend.php(93): App\Libraries\GapAPI\Send\Handlers\PrepareParams->run(Object(App\Libraries\GapAPI\Handlers\FormParams))
+ 5 APPPATH\Libraries\GapAPI\Send\BaseSend.php(56): App\Libraries\GapAPI\Send\BaseSend->prepare_params(Object(App\Libraries\GapAPI\Handlers\FormParams), null)
+ 6 APPPATH\Libraries\GapAPI\Send\Invoice.php(13): App\Libraries\GapAPI\Send\BaseSend->__construct(Object(CodeIgniter\HTTP\CURLRequest), Object(App\Libraries\GapAPI\Handlers\FormParams), null)
+ 7 APPPATH\Libraries\GapAPI\GapAPI.php(96): App\Libraries\GapAPI\Send\Invoice->__construct(Object(CodeIgniter\HTTP\CURLRequest), Object(App\Libraries\GapAPI\Handlers\FormParams))
+ 8 APPPATH\Controllers\Home.php(21): App\Libraries\GapAPI\GapAPI->send_invoice('50000', 'خرید بسته 
+ مهلت پرداخت 5 دقیقه', '300')
+ 9 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+10 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 10:08:48 --> Undefined array key "chat_id"
+in APPPATH\Controllers\Home.php on line 34.
+ 1 APPPATH\Controllers\Home.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "chat_id"', 'APPPATH\\Controllers\\Home.php', 34)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 10:19:15 --> Undefined property: App\Libraries\GapAPI\Handlers\Codes::$request
+in APPPATH\Libraries\GapAPI\Handlers\Codes.php on line 13.
+ 1 APPPATH\Libraries\GapAPI\Handlers\Codes.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Libraries\\GapAPI\\Handlers\\Codes::$request', 'APPPATH\\Libraries\\GapAPI\\Handlers\\Codes.php', 13)
+ 2 APPPATH\Libraries\GapAPI\Send\Handlers\PrepareParams.php(65): App\Libraries\GapAPI\Handlers\Codes->get_chat_id()
+ 3 APPPATH\Libraries\GapAPI\Send\Handlers\PrepareParams.php(29): App\Libraries\GapAPI\Send\Handlers\PrepareParams->set_chat_id(Object(App\Libraries\GapAPI\Handlers\FormParams))
+ 4 APPPATH\Libraries\GapAPI\Send\BaseSend.php(93): App\Libraries\GapAPI\Send\Handlers\PrepareParams->run(Object(App\Libraries\GapAPI\Handlers\FormParams))
+ 5 APPPATH\Libraries\GapAPI\Send\BaseSend.php(56): App\Libraries\GapAPI\Send\BaseSend->prepare_params(Object(App\Libraries\GapAPI\Handlers\FormParams), null)
+ 6 APPPATH\Libraries\GapAPI\Send\Location.php(13): App\Libraries\GapAPI\Send\BaseSend->__construct(Object(CodeIgniter\HTTP\CURLRequest), Object(App\Libraries\GapAPI\Handlers\FormParams), null)
+ 7 APPPATH\Libraries\GapAPI\GapAPI.php(70): App\Libraries\GapAPI\Send\Location->__construct(Object(CodeIgniter\HTTP\CURLRequest), Object(App\Libraries\GapAPI\Handlers\FormParams))
+ 8 APPPATH\Controllers\Home.php(16): App\Libraries\GapAPI\GapAPI->send_location('1.22', '2.11', 'mashad')
+ 9 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+10 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 10:23:57 --> Undefined array key "chat_id"
+in APPPATH\Controllers\Home.php on line 34.
+ 1 APPPATH\Controllers\Home.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "chat_id"', 'APPPATH\\Controllers\\Home.php', 34)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 10:26:14 --> 22 : The requested URL returned error: 500
+in SYSTEMPATH\HTTP\CURLRequest.php on line 655.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(655): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested URL returned error: 500')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(363): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(136): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://api.gap.im/invoice')
+ 4 APPPATH\Libraries\GapAPI\Send\BaseSend.php(148): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://api.gap.im/invoice', [...])
+ 5 APPPATH\Libraries\GapAPI\SetParams.php(79): App\Libraries\GapAPI\Send\BaseSend->request()
+ 6 APPPATH\Libraries\GapAPI\GapAPI.php(94): App\Libraries\GapAPI\SetParams->request(Object(App\Libraries\GapAPI\Send\Invoice))
+ 7 APPPATH\Controllers\Home.php(22): App\Libraries\GapAPI\GapAPI->send_invoice('50000', 'خرید بسته 
+ مهلت پرداخت 5 دقیقه', '300')
+ 8 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 9 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 10:34:14 --> Undefined array key "chat_id"
+in APPPATH\Controllers\Home.php on line 34.
+ 1 APPPATH\Controllers\Home.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "chat_id"', 'APPPATH\\Controllers\\Home.php', 34)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 10:38:27 --> Undefined variable $response
+in APPPATH\Controllers\Home.php on line 26.
+ 1 APPPATH\Controllers\Home.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $response', 'APPPATH\\Controllers\\Home.php', 26)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 10:39:20 --> Undefined variable $response
+in APPPATH\Controllers\Home.php on line 26.
+ 1 APPPATH\Controllers\Home.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $response', 'APPPATH\\Controllers\\Home.php', 26)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 10:39:44 --> Call to a member function getStatusCode() on null
+in APPPATH\Libraries\GapAPI\GapAPI.php on line 98.
+ 1 APPPATH\Controllers\Home.php(26): App\Libraries\GapAPI\GapAPI->invoice_verify()
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-21 10:40:42 --> Undefined array key "chat_id"
+in APPPATH\Controllers\Home.php on line 37.
+ 1 APPPATH\Controllers\Home.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "chat_id"', 'APPPATH\\Controllers\\Home.php', 37)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()

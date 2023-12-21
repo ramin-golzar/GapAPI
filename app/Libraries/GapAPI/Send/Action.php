@@ -15,8 +15,6 @@ class Action extends BaseSend
         $this->set_type (Types::typing);
 
         $this->set_method (URLs::send_action);
-
-        return $this->request ();
     }
 
 }
