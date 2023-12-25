@@ -11,6 +11,7 @@ use App\Libraries\GapAPI\Send\AnswerCallback;
 use App\Libraries\GapAPI\Send\Invoice;
 use App\Libraries\GapAPI\Send\Handlers\Currency;
 use App\Libraries\GapAPI\Send\InvoiceVerify;
+use App\Libraries\GapAPI\Send\InvoiceInquiry;
 
 class GapAPI extends SetParams
 {
@@ -94,16 +95,20 @@ class GapAPI extends SetParams
         return $this->request ($invoice);
     }
 
-    public function invoice_verify (object $invoiceResponse = null): object {
-//        if ($invoiceResponse->getStatusCode () == 200) {
-//            $resultDecoded = json_decode ($resultDecoded->getJSON ());
-//            $this->formParams->ref_id = $resultDecoded ['id'];
-        $this->formParams->ref_id = '65885d7aa7824f74552e4a02';
-//        }
+    public function send_invoice_verify (string $invoiceId): object {
+        $this->formParams->ref_id = $invoiceId;
 
         $invoiceVeryfy = new InvoiceVerify ($this->client , $this->formParams);
 
         return $this->request ($invoiceVeryfy);
+    }
+
+    public function send_invoice_inquiry (string $invoiceId): object {
+        $this->set_invoice_inquiry ($invoiceId);
+
+        $invoiceInquiry = new InvoiceInquiry ($this->client , $this->formParams);
+
+        return $this->request ($invoiceInquiry);
     }
 
 }

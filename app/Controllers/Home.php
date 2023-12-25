@@ -10,23 +10,29 @@ class Home extends BaseController
         $gap = new \App\Libraries\GapAPI\GapAPI ($token);
 
 //        $gap->set_data ('Hello <color#00bb00>PHP</color>');
-        $gap->set_chat_id ('339322905');
+//        $gap->set_chat_id ('339322905');
 //        $gap->set_reply_keyboard ([[['back' => 'Back']]]);
 //        $gap->send_contact ('+981111111111' , 'RAMIN');
-        $gap->send_location ('1.22' , '2.11' , 'mashad');
+//        $gap->send_location ('1.22' , '2.11' , 'mashad');
 //        $response = $gap->send_text ('HHHHH');
 //        $gap->send_action ();
 //        $gap->send_answer_callback ('aaa' , '122112' , true);
-//        $msg = "خرید بسته \n مهلت پرداخت 5 دقیقه";
+        $msg = "خرید بسته \n مهلت پرداخت 5 دقیقه";
         $gap->set_chat_id ('339322905');
-//        $response = $gap->send_invoice ('50000' , $msg , '300');
-//        echo'<pre><b>';
-//        print_r ($response->getJSON ());
-//        echo'</b></pre>';
-        $aa = $gap->invoice_verify ();
+        $response = $gap->send_invoice ('50000' , $msg , '300');
+
+        $json = $response->getJSON ();
+        $gap->set_chat_id ('339322905');
+        $decoded = json_decode (json_decode ($json , true) , true);
         echo'<pre><b>';
-        print_r ($aa->getJSON ());
+        print_r ($decoded);
         echo'</b></pre>';
+//        $gap->send_invoice_inquiry ($decoded ['id']);
+//        $gap->set_chat_id ('339322905');
+//        $aa = $gap->invoice_verify ();
+//        echo'<pre><b>';
+//        print_r ($aa->getJSON ());
+//        echo'</b></pre>';
 //        $gap->set_reply_keyboard ('example');
 //        $gap->set_inline_keyboard ('example');
 //        $gap->set_inline_keyboard ([[['text' => 'Ok' , 'cb_data' => 'ok']]]);

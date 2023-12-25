@@ -57,6 +57,10 @@ class SetParams
         $this->formParams->expir_time = $expirTime;
     }
 
+    protected function set_invoice_inquiry (string $invoiceId): void {
+        $this->formParams->ref_id = $invoiceId;
+    }
+
     public function set_reply_keyboard (string|array $replyKeyboard): void {
         $this->formParams->reply_keyboard = $replyKeyboard;
     }
