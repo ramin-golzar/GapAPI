@@ -13,4 +13,8 @@ class Codes
         return esc ($this->request->getPost ('chat_id')) ?: null;
     }
 
+    public function base64 (string $chatId): string {
+        return base64_encode ($chatId);
+    }
+
 }
