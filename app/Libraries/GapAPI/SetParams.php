@@ -69,6 +69,27 @@ class SetParams
         $this->formParams->inline_keyboard = $inlineKeyboard;
     }
 
+    public function set_payment_keyboard (string $text , string $amount , string $desc , Currency $currency = Currency::rial): string {
+        $base64 = $this->base64 ();
+
+        $paymentKeyboard = [
+            'text' => $text ,
+            'amount' => $amount ,
+            'currency' => $currency ,
+            'ref_id' => $base64 ,
+            'desc' => $desc ,
+        ];
+
+        array_push ($this->formParams->paymentKeyboard , $paymentKeyboard);
+
+        return $base64;
+    }
+
+    private function base64 (): string {
+        /* ToDo: must added a chat id to it code */
+        return base64_encode (uniqid ());
+    }
+
     public function set_form (string|array $form): void {
         $this->formParams->form = $form;
     }
