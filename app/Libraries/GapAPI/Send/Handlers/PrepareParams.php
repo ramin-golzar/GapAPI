@@ -1,7 +1,6 @@
 <?php
 namespace App\Libraries\GapAPI\Send\Handlers;
 
-use App\Libraries\GapAPI\Handlers\Codes;
 use App\Libraries\GapAPI\Templates\ReplyKeyboard;
 use App\Libraries\GapAPI\Templates\InlineKeyboard;
 use App\Libraries\GapAPI\Templates\Form;
@@ -10,23 +9,12 @@ class PrepareParams
 {
 
     /**
-     * Holds the properties to be JSON
-     *
-     * @var array
-     */
-    private array $forJSON = [
-        'reply_keyboard' ,
-        'inline_keyboard' ,
-        'form' ,
-    ];
-
-    /**
      * Start preparing the parameters
      *
      * @return array|null
      */
     public function run (object &$params): array {
-        $this->set_chat_id ($params);
+        /* ToDo: set the chat id, if not set */
 
         $ignoreNullParams = $this->ignoring_null_params ($params);
 
@@ -54,56 +42,76 @@ class PrepareParams
     }
 
     /**
-     * Setting a value for chat_id parameter
-     *
-     * @param Params $params
-     * @return string|null
-     */
-    private function set_chat_id (object &$params): void {
-        $codes = new Codes();
-
-        $params->chat_id = $params->chat_id ?: $codes->get_chat_id ();
-    }
-
-    /**
      * JSON some properties
      *
      * @param array $params
      * @return void
      */
     private function json_encode (array &$params): void {
-        foreach ($params as $param => &$value) {
-            if (in_array ($param , $this->forJSON)) {
-                $this->json_method ($param , $value);
+        $this->encode_reply_keyboard ($params)
+            ->encode_inline_keyboard ($params)
+            ->encode_form ($params);
+    }
+
+    private function encode_reply_keyboard (array &$params): object {
+        if (!isset ($params['reply_keyboard'])) {
+            return;
+        } else {
+            $replyKeyboard = $params ['reply_keyboard'];
+        }
+
+        if (is_array ($replyKeyboard)) {
+            $params ['reply_keyboard'] = ['keyboard' => json_encode ($replyKeyboard)];
+        } elseif (is_string ($replyKeyboard)) {
+            $keyboard = $this->get_template ('ReplyKeyboard' , $replyKeyboard);
+            $params ['reply_keyboard'] = json_encode (compact ('keyboard'));
+        }
+
+        return $this;
+    }
+
+    private function encode_inline_keyboard (array &$params): object {
+        if (!isset ($params['inline_keyboard'])) {
+            return;
+        } else {
+            $inlineKeyboard = $params ['inline_keyboard'];
+        }
+
+        if (is_array ($inlineKeyboard)) {
+            $this->push_peyment_keyboard ($params , $inlineKeyboard);
+            $params ['inline_keyboard'] = json_encode ($inlineKeyboard);
+        } elseif (is_string ($inlineKeyboard)) {
+            $inlineKeyboard = $this->get_template ('InlineKeyboard' , $inlineKeyboard);
+            $this->push_peyment_keyboard ($params , $inlineKeyboard);
+            $params ['inline_keyboard'] = json_encode ($inlineKeyboard);
+        }
+
+        return $this;
+    }
+
+    private function push_peyment_keyboard (array &$params , array &$inlineKeyboard): void {
+        if (isset ($params ['paymentKeyboard'])) {
+            foreach ($params ['paymentKeyboard'] as $keyboard) {
+                array_push ($inlineKeyboard , $keyboard);
             }
         }
     }
 
-    /**
-     * Deciding on the JSON method
-     *
-     * @param string $param
-     * @param array|string $paramValue
-     * @return void
-     */
-    private function json_method (string &$param , array|string &$paramValue): void {
-        if (is_array ($paramValue)) {
-            $paramValue = json_encode ($this->compact ($param , $paramValue));
-        } elseif (is_string ($paramValue)) {
-            $paramValue = $this->get_template ($param , $paramValue);
-            $paramValue = json_encode ($this->compact ($param , $paramValue));
+    private function encode_form (array &$params): object {
+        if (!isset ($params['form'])) {
+            return;
+        } else {
+            $form = $params ['form'];
         }
-    }
 
-    /**
-     * Only compacting the reply_keyboard param
-     *
-     * @param string $param
-     * @param array $keyboard
-     * @return array
-     */
-    private function compact (string $param , array $keyboard): array {
-        return ($param === 'reply_keyboard') ? compact ('keyboard') : $keyboard;
+        if (is_array ($form)) {
+            $params ['form'] = json_encode ($form);
+        } elseif (is_string ($form)) {
+            $form = $this->get_template ('Form' , $form);
+            $params ['form'] = json_encode ($form);
+        }
+
+        return $this;
     }
 
     /**
