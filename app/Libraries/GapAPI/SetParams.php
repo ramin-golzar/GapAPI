@@ -75,7 +75,7 @@ class SetParams
         $paymentKeyboard = [
             'text' => $text ,
             'amount' => $amount ,
-            'currency' => $currency ,
+            'currency' => $currency->value ,
             'ref_id' => $base64 ,
             'desc' => $desc ,
         ];
