@@ -10,23 +10,25 @@ class Home extends BaseController
         $gap = new \App\Libraries\GapAPI\GapAPI ($token);
 
 //        $gap->set_data ('Hello <color#00bb00>PHP</color>');
-//        $gap->set_chat_id ('339322905');
-//        $gap->set_reply_keyboard ([[['back' => 'Back']]]);
+        $gap->set_chat_id ('339322905');
+        $gap->set_reply_keyboard ([[['back' => 'Back']]]);
+//        $gap->set_reply_keyboard ('example');
+        $gap->set_inline_keyboard ('example');
+        $gap->set_payment_keyboard ('Pack 1 *** 5000 Rial' , '50000' , 'lsfjldsf');
 //        $gap->send_contact ('+981111111111' , 'RAMIN');
 //        $gap->send_location ('1.22' , '2.11' , 'mashad');
-//        $response = $gap->send_text ('HHHHH');
+        $response = $gap->send_text ('GGGGGGG');
 //        $gap->send_action ();
 //        $gap->send_answer_callback ('aaa' , '122112' , true);
-        $msg = "خرید بسته \n مهلت پرداخت 5 دقیقه";
-        $gap->set_chat_id ('339322905');
-        $response = $gap->send_invoice ('50000' , $msg , '300');
-
-        $json = $response->getJSON ();
-        $gap->set_chat_id ('339322905');
-        $decoded = json_decode (json_decode ($json , true) , true);
-        echo'<pre><b>';
-        print_r ($decoded);
-        echo'</b></pre>';
+//        $msg = "خرید بسته \n مهلت پرداخت 5 دقیقه";
+//        $gap->set_chat_id ('339322905');
+//        $response = $gap->send_invoice ('50000' , $msg , '300');
+//        $json = $response->getJSON ();
+//        $gap->set_chat_id ('339322905');
+//        $decoded = json_decode (json_decode ($json , true) , true);
+//        echo'<pre><b>';
+//        print_r ($decoded);
+//        echo'</b></pre>';
 //        $gap->send_invoice_inquiry ($decoded ['id']);
 //        $gap->set_chat_id ('339322905');
 //        $aa = $gap->invoice_verify ();
@@ -131,7 +133,7 @@ class Home extends BaseController
     }
 
     private function send_message (
-            string $chat_id , string $type , string|array $data
+        string $chat_id , string $type , string|array $data
     ): void {
         $client = \Config\Services::curlrequest ();
 
