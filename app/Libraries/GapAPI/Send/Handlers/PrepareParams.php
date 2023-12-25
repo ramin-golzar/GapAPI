@@ -55,15 +55,18 @@ class PrepareParams
 
     private function encode_reply_keyboard (array &$params): object {
         if (!isset ($params['reply_keyboard'])) {
-            return;
+            return $this;
         } else {
             $replyKeyboard = $params ['reply_keyboard'];
         }
 
         if (is_array ($replyKeyboard)) {
-            $params ['reply_keyboard'] = ['keyboard' => json_encode ($replyKeyboard)];
+            $replyKeyboard = ['keyboard' => $replyKeyboard];
+
+            $params ['reply_keyboard'] = json_encode ($replyKeyboard);
         } elseif (is_string ($replyKeyboard)) {
             $keyboard = $this->get_template ('ReplyKeyboard' , $replyKeyboard);
+
             $params ['reply_keyboard'] = json_encode (compact ('keyboard'));
         }
 
@@ -72,17 +75,20 @@ class PrepareParams
 
     private function encode_inline_keyboard (array &$params): object {
         if (!isset ($params['inline_keyboard'])) {
-            return;
+            return $this;
         } else {
             $inlineKeyboard = $params ['inline_keyboard'];
         }
 
         if (is_array ($inlineKeyboard)) {
             $this->push_peyment_keyboard ($params , $inlineKeyboard);
+
             $params ['inline_keyboard'] = json_encode ($inlineKeyboard);
         } elseif (is_string ($inlineKeyboard)) {
             $inlineKeyboard = $this->get_template ('InlineKeyboard' , $inlineKeyboard);
+
             $this->push_peyment_keyboard ($params , $inlineKeyboard);
+
             $params ['inline_keyboard'] = json_encode ($inlineKeyboard);
         }
 
@@ -92,14 +98,14 @@ class PrepareParams
     private function push_peyment_keyboard (array &$params , array &$inlineKeyboard): void {
         if (isset ($params ['paymentKeyboard'])) {
             foreach ($params ['paymentKeyboard'] as $keyboard) {
-                array_push ($inlineKeyboard , $keyboard);
+                array_push ($inlineKeyboard , [$keyboard]);
             }
         }
     }
 
     private function encode_form (array &$params): object {
         if (!isset ($params['form'])) {
-            return;
+            return $this;
         } else {
             $form = $params ['form'];
         }
@@ -123,9 +129,9 @@ class PrepareParams
      */
     private function get_template (string $className , string $propertyName): array {
         $temp = match ($className) {
-            'reply_keyboard' => new ReplyKeyboard() ,
-            'inline_keyboard' => new InlineKeyboard() ,
-            'form' => new Form() ,
+            'ReplyKeyboard' => new ReplyKeyboard() ,
+            'InlineKeyboard' => new InlineKeyboard() ,
+            'Form' => new Form() ,
         };
 
         return $temp->$propertyName;
