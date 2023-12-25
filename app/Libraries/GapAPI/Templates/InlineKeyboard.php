@@ -9,28 +9,26 @@ class InlineKeyboard
      * ref_id , desc
      */
 
-
     // This is a example for inline keyboard template
 
-    /*
-      public array $example = [
-      [
-      [
-      'text' => 'File' ,
-      'cb_data' => 'get film' ,
-      ] ,
-      [
-      'text' => 'Photo' ,
-      'cb_data' => 'get photo' ,
-      ]
-      ] ,
-      [
-      [
-      'text' => 'Cancel' ,
-      'cb_data' => 'cancel' ,
-      ]
-      ]
-      ];
-     */
+
+    public array $example = [
+        [
+            [
+                'text' => 'File' ,
+                'cb_data' => 'get film' ,
+            ] ,
+            [
+                'text' => 'Photo' ,
+                'cb_data' => 'get photo' ,
+            ]
+        ] ,
+        [
+            [
+                'text' => 'Cancel' ,
+                'cb_data' => 'cancel' ,
+            ]
+        ]
+    ];
 
 }
