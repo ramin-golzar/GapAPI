@@ -18,5 +18,6 @@ class FormParams
     public string $description = '';
     public string $expir_time = '';
     public string $ref_id = '';
+    public array $paymentKeyboard = [];
 
 }
