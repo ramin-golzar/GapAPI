@@ -16,7 +16,7 @@ class Home extends BaseController
         $gap->send_text ('Hello GAP');
 
         $gap->set_chat_id ('339322905');
-        $pay = $gap->send_payment_verify ($refId);
+        $pay = $gap->send_payment_inquiry ($refId);
         echo'<pre><b>';
         print_r ($pay->getJSON ());
         echo'</b></pre>';

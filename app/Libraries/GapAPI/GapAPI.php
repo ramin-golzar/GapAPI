@@ -13,6 +13,7 @@ use App\Libraries\GapAPI\Send\Handlers\Currency;
 use App\Libraries\GapAPI\Send\InvoiceVerify;
 use App\Libraries\GapAPI\Send\InvoiceInquiry;
 use App\Libraries\GapAPI\Send\PaymentVerify;
+use App\Libraries\GapAPI\Send\PaymentInquiry;
 
 class GapAPI extends SetParams
 {
@@ -118,6 +119,14 @@ class GapAPI extends SetParams
         $paymentVerify = new PaymentVerify ($this->client , $this->formParams);
 
         return $this->request ($paymentVerify);
+    }
+
+    public function send_payment_inquiry (string $refId): object {
+        $this->set_payment_inquiry ($refId);
+
+        $paymentInquiry = new PaymentInquiry ($this->client , $this->formParams);
+
+        return $this->request ($paymentInquiry);
     }
 
 }
