@@ -11,15 +11,9 @@ class Home extends BaseController
 
         $gap->set_chat_id ('339322905');
 
-        $gap->set_reply_keyboard ([[['Start' => 'Start']]]);
+        $gap->set_reply_keyboard ([[['Start' => 'Start'] , ['$contact' => 'Your Phone']]]);
         $refId = $gap->set_payment_keyboard ('Payment' , '2' , 'this is payment');
         $gap->send_text ('Hello GAP');
-
-        $gap->set_chat_id ('339322905');
-        $pay = $gap->send_payment_inquiry ($refId);
-        echo'<pre><b>';
-        print_r ($pay->getJSON ());
-        echo'</b></pre>';
 
         /* -------------------------------------------------------------------------------- */
         $post = $this->request->getPost ();

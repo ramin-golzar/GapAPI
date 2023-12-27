@@ -8,7 +8,9 @@ class FormParams
     public string $type = '';
     public string $data = '';
     public string|array $reply_keyboard = '';
+    public array $infoKeyboard = [];
     public string|array $inline_keyboard = '';
+    public array $paymentKeyboard = [];
     public string|array $form = '';
     public string $text = '';
     public string $callback_id = '';
@@ -18,6 +20,5 @@ class FormParams
     public string $description = '';
     public string $expir_time = '';
     public string $ref_id = '';
-    public array $paymentKeyboard = [];
 
 }
