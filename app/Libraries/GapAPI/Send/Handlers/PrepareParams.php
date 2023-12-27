@@ -16,7 +16,7 @@ class PrepareParams
     public function run (object &$params): array {
         /* ToDo: set the chat id, if not set */
 
-        $ignoreNullParams = $this->ignoring_null_params ($params);
+        $ignoreNullParams = $this->ignore_empty_params ($params);
 
         $this->json_encode ($ignoreNullParams);
 
@@ -24,12 +24,12 @@ class PrepareParams
     }
 
     /**
-     * Ignoring the null parameters
+     * Ignoring the empty parameters
      *
      * @param Params $params
      * @return array|null
      */
-    private function ignoring_null_params (object &$params): array {
+    private function ignore_empty_params (object &$params): array {
         $arrayParams = (array) $params;
 
         foreach ($arrayParams as $k => $v) {
@@ -53,6 +53,12 @@ class PrepareParams
             ->encode_form ($params);
     }
 
+    /**
+     * JSON encoding the reply keyboard
+     *
+     * @param array $params
+     * @return object
+     */
     private function encode_reply_keyboard (array &$params): object {
         if (!isset ($params['reply_keyboard'])) {
             return $this;
@@ -73,6 +79,12 @@ class PrepareParams
         return $this;
     }
 
+    /**
+     * JSON encoding the inline keyboard
+     *
+     * @param array $params
+     * @return object
+     */
     private function encode_inline_keyboard (array &$params): object {
         if (!isset ($params['inline_keyboard']) && !isset ($params ['paymentKeyboard'])) {
             return $this;
@@ -98,6 +110,13 @@ class PrepareParams
         return $this;
     }
 
+    /**
+     * Push the payment keybord in to the inline keyboard
+     *
+     * @param array $params
+     * @param array $inlineKeyboard
+     * @return void
+     */
     private function push_peyment_keyboard (array &$params , array &$inlineKeyboard): void {
         if (isset ($params ['paymentKeyboard'])) {
             foreach ($params ['paymentKeyboard'] as $keyboard) {
@@ -106,6 +125,12 @@ class PrepareParams
         }
     }
 
+    /**
+     * JSON encoding the form
+     *
+     * @param array $params
+     * @return object
+     */
     private function encode_form (array &$params): object {
         if (!isset ($params['form'])) {
             return $this;
@@ -126,7 +151,7 @@ class PrepareParams
     /**
      * Return an array of template
      *
-     * @param string $className
+     * @param string $className <p>Allowed: ReplyKeyboard , InlineKeyboard , Form</p>
      * @param string $propertyName
      * @return array
      */
