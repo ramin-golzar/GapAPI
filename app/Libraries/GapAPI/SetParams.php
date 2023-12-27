@@ -73,6 +73,14 @@ class SetParams
         $this->formParams->reply_keyboard = $replyKeyboard;
     }
 
+    public function set_contact_keyboard (string $text): void {
+        $this->formParams->infoKeyboard [0] [1] = ['$contact' => $text ,];
+    }
+
+    public function set_location_keyboard (string $text): void {
+        $this->formParams->infoKeyboard [0] [1] = ['$location' => $text ,];
+    }
+
     public function set_inline_keyboard (string|array $inlineKeyboard): void {
         $this->formParams->inline_keyboard = $inlineKeyboard;
     }
