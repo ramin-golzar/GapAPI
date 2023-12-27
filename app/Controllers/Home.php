@@ -9,20 +9,20 @@ class Home extends BaseController
 
         $gap = new \App\Libraries\GapAPI\GapAPI ($token);
 
-//        $gap->set_data ('Hello <color#00bb00>PHP</color>');
         $gap->set_chat_id ('339322905');
-        $gap->set_reply_keyboard ([[['back' => 'Back']]]);
-//        $gap->set_reply_keyboard ('example');
-//        $gap->set_inline_keyboard ('example');
-        $base = $gap->set_payment_keyboard ('بسته 10تایی لینک - 5000 تومان' , '50000' , 'lsfjldsf');
-        echo'<pre><b>';
-        print_r ($base);
-        echo'</b></pre>';
-//        $gap->send_contact ('+981111111111' , 'RAMIN');
-//        $gap->send_location ('1.22' , '2.11' , 'mashad');
-        $response = $gap->send_text ('GGGGGGG');
-//        $gap->send_action ();
-//        $gap->send_answer_callback ('aaa' , '122112' , true);
+
+        $gap->set_reply_keyboard ([[['Start' => 'Start']]]);
+        $gap->set_inline_keyboard ('example');
+        $gap->send_text ('Hello GAP');
+        /* -------------------------------------------------------------------------------- */
+        $post = $this->request->getPost ();
+        if ($post ['type'] == 'triggerButton') {
+            $decoded = json_decode ($post['data'] , true);
+
+            $gap->set_chat_id ('339322905');
+            $gap->send_answer_callback ('This is answer callback.' , $decoded['callback_id'] , false);
+        }
+        /* -------------------------------------------------------------------------------- */
 //        $msg = "خرید بسته \n مهلت پرداخت 5 دقیقه";
 //        $gap->set_chat_id ('339322905');
 //        $response = $gap->send_invoice ('50000' , $msg , '300');
@@ -45,7 +45,7 @@ class Home extends BaseController
 //        $gap->set_form ('example');
 //        $gapResponce = $gap->send_text ();
 //        $gapResponce = $gap->send_contact ();
-        $this->write_file ($_POST ['chat_id']);
+        $this->write_file ($decoded ['callback_id']);
 //        $post = $this->request->getPost ();
 //        $gapApi = new \App\Libraries\GapAPI\GapAPI();
 //        if ($post ['type'] == 'join') {

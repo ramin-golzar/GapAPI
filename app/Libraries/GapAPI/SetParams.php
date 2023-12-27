@@ -45,7 +45,7 @@ class SetParams
     }
 
     protected function set_answer_callback (string &$text , string &$callbackId , bool &$showAlert = false): void {
-        $this->formParams->data = $text;
+        $this->formParams->text = $text;
         $this->formParams->callback_id = $callbackId;
         $this->formParams->show_alert = $showAlert;
     }
