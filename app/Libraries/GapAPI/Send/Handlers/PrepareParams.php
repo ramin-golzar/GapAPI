@@ -74,8 +74,11 @@ class PrepareParams
     }
 
     private function encode_inline_keyboard (array &$params): object {
-        if (!isset ($params['inline_keyboard'])) {
+        if (!isset ($params['inline_keyboard']) && !isset ($params ['paymentKeyboard'])) {
             return $this;
+        } elseif (!isset ($params['inline_keyboard']) && isset ($params ['paymentKeyboard'])) {
+            $params ['inline_keyboard'] = [];
+            $inlineKeyboard = $params ['inline_keyboard'];
         } else {
             $inlineKeyboard = $params ['inline_keyboard'];
         }

@@ -13,8 +13,11 @@ class Home extends BaseController
         $gap->set_chat_id ('339322905');
         $gap->set_reply_keyboard ([[['back' => 'Back']]]);
 //        $gap->set_reply_keyboard ('example');
-        $gap->set_inline_keyboard ('example');
-        $gap->set_payment_keyboard ('Pack 1 *** 5000 Rial' , '50000' , 'lsfjldsf');
+//        $gap->set_inline_keyboard ('example');
+        $base = $gap->set_payment_keyboard ('بسته 10تایی لینک - 5000 تومان' , '50000' , 'lsfjldsf');
+        echo'<pre><b>';
+        print_r ($base);
+        echo'</b></pre>';
 //        $gap->send_contact ('+981111111111' , 'RAMIN');
 //        $gap->send_location ('1.22' , '2.11' , 'mashad');
         $response = $gap->send_text ('GGGGGGG');
