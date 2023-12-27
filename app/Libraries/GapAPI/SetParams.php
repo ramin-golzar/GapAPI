@@ -61,6 +61,10 @@ class SetParams
         $this->formParams->ref_id = $invoiceId;
     }
 
+    protected function set_payment_verify (string &$refId): void {
+        $this->formParams->ref_id = $refId;
+    }
+
     public function set_reply_keyboard (string|array $replyKeyboard): void {
         $this->formParams->reply_keyboard = $replyKeyboard;
     }
