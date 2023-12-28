@@ -81,6 +81,11 @@ class SetParams
         array_push ($this->formParams->info_keyboard , [['$location' => $text]]);
     }
 
+    protected function set_edit_message (string &$messageId , string &$newData): void {
+        $this->formParams->message_id = $messageId;
+        $this->formParams->data = $newData;
+    }
+
     public function set_inline_keyboard (string|array $inlineKeyboard): void {
         $this->formParams->inline_keyboard = $inlineKeyboard;
     }

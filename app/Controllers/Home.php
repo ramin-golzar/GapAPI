@@ -12,10 +12,10 @@ class Home extends BaseController
         $gap->set_chat_id ('339322905');
 
         $gap->set_reply_keyboard ([[['Start' => 'Start']]]);
-//        $gap->set_contact_keyboard ('Your Mobile');
-//        $gap->set_location_keyboard ('Please send your location');
 
         $gap->send_text ('Hello GAP');
+        $gap->set_chat_id ('339322905');
+        $gap->send_edit_message ('111' , 'aaa');
 
         /* -------------------------------------------------------------------------------- */
 //        $post = $this->request->getPost ();

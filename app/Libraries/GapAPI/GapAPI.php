@@ -14,6 +14,7 @@ use App\Libraries\GapAPI\Send\InvoiceVerify;
 use App\Libraries\GapAPI\Send\InvoiceInquiry;
 use App\Libraries\GapAPI\Send\PaymentVerify;
 use App\Libraries\GapAPI\Send\PaymentInquiry;
+use App\Libraries\GapAPI\Send\EditMessage;
 
 class GapAPI extends SetParams
 {
@@ -127,6 +128,14 @@ class GapAPI extends SetParams
         $paymentInquiry = new PaymentInquiry ($this->client , $this->formParams);
 
         return $this->request ($paymentInquiry);
+    }
+
+    public function send_edit_message (string $messageId , string $newData): object {
+        $this->set_edit_message ($messageId , $newData);
+
+        $editMessage = new EditMessage ($this->client , $this->formParams);
+
+        return $this->request ($editMessage);
     }
 
 }
