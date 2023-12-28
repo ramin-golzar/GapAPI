@@ -8,7 +8,7 @@ class FormParams
     public string $type = '';
     public string $data = '';
     public string|array $reply_keyboard = '';
-    public array $infoKeyboard = [];
+    public array $info_keyboard = [];
     public string|array $inline_keyboard = '';
     public array $paymentKeyboard = [];
     public string|array $form = '';

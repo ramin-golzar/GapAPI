@@ -11,18 +11,20 @@ class Home extends BaseController
 
         $gap->set_chat_id ('339322905');
 
-        $gap->set_reply_keyboard ([[['Start' => 'Start'] , ['$contact' => 'Your Phone']]]);
-        $refId = $gap->set_payment_keyboard ('Payment' , '2' , 'this is payment');
+        $gap->set_reply_keyboard ([[['Start' => 'Start']]]);
+//        $gap->set_contact_keyboard ('Your Mobile');
+//        $gap->set_location_keyboard ('Please send your location');
+
         $gap->send_text ('Hello GAP');
 
         /* -------------------------------------------------------------------------------- */
-        $post = $this->request->getPost ();
-        if ($post ['type'] == 'triggerButton') {
-            $decoded = json_decode ($post['data'] , true);
-
-            $gap->set_chat_id ('339322905');
-            $gap->send_answer_callback ('This is answer callback.' , $decoded['callback_id'] , false);
-        }
+//        $post = $this->request->getPost ();
+//        if ($post ['type'] == 'triggerButton') {
+//            $decoded = json_decode ($post['data'] , true);
+//
+//            $gap->set_chat_id ('339322905');
+//            $gap->send_answer_callback ('This is answer callback.' , $decoded['callback_id'] , false);
+//        }
         /* -------------------------------------------------------------------------------- */
 //        $msg = "خرید بسته \n مهلت پرداخت 5 دقیقه";
 //        $gap->set_chat_id ('339322905');
@@ -46,7 +48,7 @@ class Home extends BaseController
 //        $gap->set_form ('example');
 //        $gapResponce = $gap->send_text ();
 //        $gapResponce = $gap->send_contact ();
-        $this->write_file ($decoded ['callback_id']);
+        $this->write_file ('GAP');
 //        $post = $this->request->getPost ();
 //        $gapApi = new \App\Libraries\GapAPI\GapAPI();
 //        if ($post ['type'] == 'join') {

@@ -60,23 +60,51 @@ class PrepareParams
      * @return object
      */
     private function encode_reply_keyboard (array &$params): object {
-        if (!isset ($params['reply_keyboard'])) {
+        if (!$this->exit_endoding_reply_keyboard ($params)) {
             return $this;
-        } else {
-            $replyKeyboard = $params ['reply_keyboard'];
         }
 
-        if (is_array ($replyKeyboard)) {
-            $replyKeyboard = ['keyboard' => $replyKeyboard];
+        $infoKeyboard = $this->get_info_keyboard ($params);
 
-            $params ['reply_keyboard'] = json_encode ($replyKeyboard);
-        } elseif (is_string ($replyKeyboard)) {
-            $keyboard = $this->get_template ('ReplyKeyboard' , $replyKeyboard);
+        $replyKeyboard = $this->get_reply_keyboard ($params);
 
-            $params ['reply_keyboard'] = json_encode (compact ('keyboard'));
-        }
+        $this->completion_reply_keyboard ($params , $replyKeyboard , $infoKeyboard);
 
         return $this;
+    }
+
+    private function exit_endoding_reply_keyboard (array &$params): bool {
+        if (!isset ($params ['reply_keyboard']) && !isset ($params ['info_keyboard'])) {
+            return false;
+        }
+
+        return true;
+    }
+
+    private function get_info_keyboard (array &$params): array {
+        return isset ($params ['info_keyboard']) ? $params ['info_keyboard'] : [];
+    }
+
+    private function get_reply_keyboard (array &$params): array {
+        if (!isset ($params ['reply_keyboard'])) {
+            return [];
+        } else {
+            if (is_array ($params ['reply_keyboard'])) {
+                return $params ['reply_keyboard'];
+            } elseif (is_string ($params ['reply_keyboard'])) {
+                return $this->get_template ('ReplyKeyboard' , $params ['reply_keyboard']);
+            }
+        }
+    }
+
+    private function completion_reply_keyboard (array &$params , array &$replyKeyboard , array &$infoKeyboard): void {
+        $keyboard ['keyboard'] = array_merge ($replyKeyboard , $infoKeyboard);
+
+        if (!empty ($keyboard)) {
+            $params ['reply_keyboard'] = json_encode ($keyboard);
+        }
+
+        unset ($params ['info_keyboard']);
     }
 
     /**
