@@ -73,6 +73,12 @@ class PrepareParams
         return $this;
     }
 
+    /**
+     * Exit condition from function encode_reply_keyboard
+     *
+     * @param array $params
+     * @return bool
+     */
     private function exit_endoding_reply_keyboard (array &$params): bool {
         if (!isset ($params ['reply_keyboard']) && !isset ($params ['info_keyboard'])) {
             return false;
@@ -81,10 +87,22 @@ class PrepareParams
         return true;
     }
 
+    /**
+     * returning info_keyboard value as an array
+     *
+     * @param array $params
+     * @return array
+     */
     private function get_info_keyboard (array &$params): array {
         return isset ($params ['info_keyboard']) ? $params ['info_keyboard'] : [];
     }
 
+    /**
+     * Returning reply_keyboard value as an array
+     *
+     * @param array $params
+     * @return array
+     */
     private function get_reply_keyboard (array &$params): array {
         if (!isset ($params ['reply_keyboard'])) {
             return [];
@@ -97,6 +115,15 @@ class PrepareParams
         }
     }
 
+    /**
+     * Merge the reply_keyboard & info_keyboard,
+     * and JSON them
+     *
+     * @param array $params
+     * @param array $replyKeyboard
+     * @param array $infoKeyboard
+     * @return void
+     */
     private function completion_reply_keyboard (array &$params , array &$replyKeyboard , array &$infoKeyboard): void {
         $keyboard ['keyboard'] = array_merge ($replyKeyboard , $infoKeyboard);
 
