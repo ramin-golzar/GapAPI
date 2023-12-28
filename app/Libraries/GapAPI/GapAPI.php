@@ -15,6 +15,7 @@ use App\Libraries\GapAPI\Send\InvoiceInquiry;
 use App\Libraries\GapAPI\Send\PaymentVerify;
 use App\Libraries\GapAPI\Send\PaymentInquiry;
 use App\Libraries\GapAPI\Send\EditMessage;
+use App\Libraries\GapAPI\Send\DeleteMessage;
 
 class GapAPI extends SetParams
 {
@@ -136,6 +137,14 @@ class GapAPI extends SetParams
         $editMessage = new EditMessage ($this->client , $this->formParams);
 
         return $this->request ($editMessage);
+    }
+
+    public function send_delete_message (string $messageId): object {
+        $this->set_delete_message ($messageId);
+
+        $deleteMessage = new DeleteMessage ($this->client , $this->formParams);
+
+        return $this->request ($deleteMessage);
     }
 
 }

@@ -86,6 +86,10 @@ class SetParams
         $this->formParams->data = $newData;
     }
 
+    protected function set_delete_message (string &$messageId): void {
+        $this->formParams->message_id = $messageId;
+    }
+
     public function set_inline_keyboard (string|array $inlineKeyboard): void {
         $this->formParams->inline_keyboard = $inlineKeyboard;
     }

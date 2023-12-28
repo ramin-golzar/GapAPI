@@ -15,7 +15,7 @@ class Home extends BaseController
 
         $gap->send_text ('Hello GAP');
         $gap->set_chat_id ('339322905');
-        $gap->send_edit_message ('111' , 'aaa');
+        $gap->send_delete_message ('111');
 
         /* -------------------------------------------------------------------------------- */
 //        $post = $this->request->getPost ();
