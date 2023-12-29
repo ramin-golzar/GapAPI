@@ -11,11 +11,10 @@ class Home extends BaseController
 
         $gap->set_chat_id ('339322905');
 
-        $gap->set_reply_keyboard ([[['Start' => 'Start']]]);
-
-        $gap->send_text ('Hello GAP');
-        $gap->set_chat_id ('339322905');
-        $gap->send_delete_message ('111');
+        $gap->set_reply_keyboard ([[['Test' => 'Test']]]);
+//        $gap->set_payment_keyboard ('AA' , '2' , 'aaaa');
+        $gap->send_contact ('+98111111111' , 'aaa');
+//        $gap->send_text ('Testing API');
 
         /* -------------------------------------------------------------------------------- */
 //        $post = $this->request->getPost ();
