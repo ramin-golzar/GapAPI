@@ -6,5 +6,6 @@ enum Currency: string
 
     case rial = 'IRR';
     case dollar = 'USD';
+    case gapcy = 'coin';
 
 }
