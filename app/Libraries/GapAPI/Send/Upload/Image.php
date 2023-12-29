@@ -1,5 +1,5 @@
 <?php
-namespace App\Libraries\GapAPI\Send;
+namespace App\Libraries\GapAPI\Send\Upload;
 
 use App\Libraries\GapAPI\Handlers\FormParams;
 use App\Libraries\GapAPI\Handlers\Multipart;

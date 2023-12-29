@@ -49,6 +49,7 @@ class Autoload extends AutoloadConfig
         'Libraries\GapAPI\Templates' => APPPATH . 'Libraries/GapAPI/Templates/' ,
         'Libraries\GapAPI\Send' => APPPATH . 'Libraries/GapAPI/Send/' ,
         'Libraries\GapAPI\Send\Handlers' => APPPATH . 'Libraries/GapAPI/Send/Handlers/' ,
+        'Libraries\GapAPI\Send\Upload' => APPPATH . 'Libraries/GapAPI/Send/Upload/' ,
         'Libraries\TestAPI' => APPPATH . 'Libraries/TestAPI/' ,
     ];
 
