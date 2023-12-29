@@ -96,9 +96,7 @@ class BaseSend
         }
 
         if ($multipart) {
-            /* ToDo: be jaye prepare_param bayad func
-             * monaseb nevesht */
-//            $this->multipart = $prepareParams->run ($multipart);
+            $this->multipart = $prepareParams->run ($multipart);
         }
     }
 

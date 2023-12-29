@@ -9,6 +9,13 @@ class PrepareParams
 {
 
     /**
+     * Is it necessary to JSON
+     *
+     * @var bool
+     */
+    private bool $JSONRequired = true;
+
+    /**
      * Start preparing the parameters
      *
      * @return array|null
@@ -16,11 +23,26 @@ class PrepareParams
     public function run (object &$params): array {
         /* ToDo: set the chat id, if not set */
 
+        $this->json_required ($params);
+
         $ignoreNullParams = $this->ignore_empty_params ($params);
 
         $this->json_encode ($ignoreNullParams);
 
         return $ignoreNullParams;
+    }
+
+    /**
+     * Setting the $JSONRequired property
+     *
+     * @param object $params
+     * @return void
+     */
+    private function json_required (object &$params): void {
+        $this->JSONRequired = match (get_class ($params)) {
+            'FormParams' => true ,
+            'Multipart' => false ,
+        };
     }
 
     /**
@@ -48,9 +70,11 @@ class PrepareParams
      * @return void
      */
     private function json_encode (array &$params): void {
-        $this->encode_reply_keyboard ($params)
-            ->encode_inline_keyboard ($params)
-            ->encode_form ($params);
+        if ($this->JSONRequired) {
+            $this->encode_reply_keyboard ($params)
+                ->encode_inline_keyboard ($params)
+                ->encode_form ($params);
+        }
     }
 
     /**
