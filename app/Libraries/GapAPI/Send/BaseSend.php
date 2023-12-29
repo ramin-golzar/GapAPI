@@ -38,6 +38,8 @@ class BaseSend
      */
     public object $client;
 
+    /* ToDo: convert those constants to enum file */
+
     /**
      * Holds a content type string
      *
@@ -94,7 +96,9 @@ class BaseSend
         }
 
         if ($multipart) {
-            $this->multipart = $prepareParams->run ($multipart);
+            /* ToDo: be jaye prepare_param bayad func
+             * monaseb nevesht */
+//            $this->multipart = $prepareParams->run ($multipart);
         }
     }
 
