@@ -11,3 +11,11 @@ in SYSTEMPATH\HTTP\CURLRequest.php on line 655.
  9 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
 10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
 11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-29 11:19:40 --> Attempt to assign property "image" on null
+in APPPATH\Libraries\GapAPI\SetParams.php on line 131.
+ 1 APPPATH\Libraries\GapAPI\GapAPI.php(152): App\Libraries\GapAPI\SetParams->set_image('FCPATH\\Images\\s.jpg', 'OK')
+ 2 APPPATH\Controllers\Home.php(15): App\Libraries\GapAPI\GapAPI->send_image('FCPATH\\Images\\s.jpg', 'OK')
+ 3 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 4 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()

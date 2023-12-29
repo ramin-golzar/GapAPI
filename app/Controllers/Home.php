@@ -11,9 +11,8 @@ class Home extends BaseController
 
         $gap->set_chat_id ('339322905');
 
-        $gap->set_reply_keyboard ([[['Test' => 'Test']]]);
-
-        $gap->send_text ('Testing API');
+        $file = FCPATH . 'Images/s.jpg';
+        $gap->send_image ($file , 'OK');
 
         /* -------------------------------------------------------------------------------- */
 //        $post = $this->request->getPost ();

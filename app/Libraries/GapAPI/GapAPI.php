@@ -16,6 +16,7 @@ use App\Libraries\GapAPI\Send\PaymentVerify;
 use App\Libraries\GapAPI\Send\PaymentInquiry;
 use App\Libraries\GapAPI\Send\EditMessage;
 use App\Libraries\GapAPI\Send\DeleteMessage;
+use App\Libraries\GapAPI\Send\Upload\Image;
 
 class GapAPI extends SetParams
 {
@@ -145,6 +146,22 @@ class GapAPI extends SetParams
         $deleteMessage = new DeleteMessage ($this->client , $this->formParams);
 
         return $this->request ($deleteMessage);
+    }
+
+    public function send_image (string $imagePath , string $description = ''): string {
+        $this->set_image ($imagePath , $description);
+
+        $image = new Image ($this->client , null , $this->multipart);
+
+        $imageResponse = $this->request ($image);
+        echo'<pre><b>';
+        print_r ($imageResponse);
+        echo'</b></pre>';
+        $this->formParams->data = $imageResponse->getJSON ();
+
+        $sendMessage = new SendMessage ($this->client , $this->formParams);
+
+        return $this->request ($sendMessage);
     }
 
 }
