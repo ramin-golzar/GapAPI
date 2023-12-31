@@ -21,8 +21,6 @@ class PrepareParams
      * @return array|null
      */
     public function run (object &$params): array {
-        /* ToDo: set the chat id, if not set */
-
         $this->json_required ($params);
 
         $ignoreNullParams = $this->ignore_empty_params ($params);

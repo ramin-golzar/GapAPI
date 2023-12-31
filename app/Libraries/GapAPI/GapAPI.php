@@ -22,7 +22,7 @@ use App\Libraries\GapAPI\Receive\Receive;
 class GapAPI extends SetParams
 {
 
-    private object $receive;
+    protected object $receive;
 
     /**
      * This is cURL object
@@ -37,6 +37,8 @@ class GapAPI extends SetParams
         $this->client = \Config\Services::curlrequest ($this->get_base_options ($token));
 
         $this->receive = new Receive ($request);
+
+        $this->set_chat_id ();
     }
 
     /**
@@ -161,6 +163,9 @@ class GapAPI extends SetParams
 
         $image = new Image ($this->client , $formParams , $this->multipart);
 
+        /* ToDo: ehtemalan mishavad dar inja
+         * as object receive va method get_chat_id
+         * estefade kard */
         $chatId = $this->multipart->chat_id;
 
         $imageResponse = $this->request ($image);

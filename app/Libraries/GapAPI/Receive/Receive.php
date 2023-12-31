@@ -7,7 +7,7 @@ class Receive
     private object $request;
 
     public function __construct (object $request) {
-        $this->request = (object) $request;
+        $this->request = (object) $request->getPost ();
     }
 
     public function get_chat_id (): string|false {
