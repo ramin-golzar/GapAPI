@@ -17,9 +17,12 @@ use App\Libraries\GapAPI\Send\PaymentInquiry;
 use App\Libraries\GapAPI\Send\EditMessage;
 use App\Libraries\GapAPI\Send\DeleteMessage;
 use App\Libraries\GapAPI\Send\Upload\Image;
+use App\Libraries\GapAPI\Receive\Receive;
 
 class GapAPI extends SetParams
 {
+
+    private object $receive;
 
     /**
      * This is cURL object
@@ -28,10 +31,12 @@ class GapAPI extends SetParams
      */
     private object $client;
 
-    public function __construct (string &$token) {
+    public function __construct (string &$token , object &$request) {
         parent::__construct ();
 
         $this->client = \Config\Services::curlrequest ($this->get_base_options ($token));
+
+        $this->receive = new Receive ($request);
     }
 
     /**
@@ -170,25 +175,3 @@ class GapAPI extends SetParams
     }
 
 }
-
-// this code fot test the connection
-/*
-    public function send (string $chatId): void {
-        $client = \Config\Services::curlrequest ();
-
-        $url = 'https://api.gap.im/sendMessage/';
-
-        $option = [
-            'headers' => [
-                'token' => '18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496' ,
-            ] ,
-            'form_params' => [
-                'chat_id' => $chatId ,
-                'type' => 'text' ,
-                'data' => 'Hello, Welcome to my robot' ,
-            ] ,
-        ];
-
-        $response = $client->request ('POST' , $url , $option);
-    }
- */
