@@ -147,10 +147,6 @@ class BaseSend
      * @return object
      */
     public function request (): object {
-        echo'<pre><b>';
-        print_r ($this->get_options ());
-        print_r ($this->method);
-        echo'</b></pre>';
         return $this->client->request ('POST' , $this->method , $this->get_options ());
     }
 

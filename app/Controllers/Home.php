@@ -9,10 +9,10 @@ class Home extends BaseController
 
         $gap = new \App\Libraries\GapAPI\GapAPI ($token);
 
-        $gap->set_chat_id ('339322905' , true);
+        $gap->set_chat_id ('339322905');
 
-        $file = FCPATH . 'Images/s.jpg';
-        $gap->send_image ($file , 'OK');
+        $gap->set_reply_keyboard ([[['Start' => 'Start']]]);
+        $gap->send_text ('AAAAAA');
 
         /* -------------------------------------------------------------------------------- */
 //        $post = $this->request->getPost ();
