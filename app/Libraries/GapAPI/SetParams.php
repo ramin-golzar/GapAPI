@@ -17,11 +17,13 @@ class SetParams
         $this->multipart = new Multipart();
     }
 
-    public function set_chat_id (string|int $chatId , bool $forUpload = false): void {
-        if ($forUpload) { // for multipart
-            $this->multipart->chat_id = $chatId;
-        } else { // for formParams
+    public function set_chat_id (string|int $chatId = ''): void {
+        if ($chatId) {
             $this->formParams->chat_id = $chatId;
+            $this->multipart->chat_id = $chatId;
+        } else {
+            $this->formParams->chat_id = $this->receive->get_chat_id ();
+            $this->multipart->chat_id = $this->receive->get_chat_id ();
         }
     }
 
