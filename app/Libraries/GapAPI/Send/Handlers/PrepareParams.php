@@ -39,7 +39,7 @@ class PrepareParams
      * @return void
      */
     private function json_required (object &$params): void {
-        $this->JSONRequired = match (get_class ($params)) {
+        $this->JSONRequired = match (basename (get_class ($params))) {
             'FormParams' => true ,
             'Multipart' => false ,
         };

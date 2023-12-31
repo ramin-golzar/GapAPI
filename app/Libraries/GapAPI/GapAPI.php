@@ -148,16 +148,24 @@ class GapAPI extends SetParams
         return $this->request ($deleteMessage);
     }
 
-    public function send_image (string $imagePath , string $description = ''): string {
+    public function send_image (string $imagePath , string $description = ''): object {
         $this->set_image ($imagePath , $description);
 
-        $image = new Image ($this->client , null , $this->multipart);
+        /* ToDo: this code not standard */
+        $formParams = null;
+
+        $image = new Image ($this->client , $formParams , $this->multipart);
+
+        $chatId = $this->multipart->chat_id;
 
         $imageResponse = $this->request ($image);
-        echo'<pre><b>';
-        print_r ($imageResponse);
-        echo'</b></pre>';
-        $this->formParams->data = $imageResponse->getJSON ();
+
+        $this->formParams->chat_id = $chatId;
+        /* ToDo:  */
+        $json = json_decode ($imageResponse->getJSON () , true);
+//        $json = json_decode ($json , true);
+//        $json = json_encode ($json);
+        $this->formParams->data = $json;
 
         $sendMessage = new SendMessage ($this->client , $this->formParams);
 

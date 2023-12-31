@@ -88,7 +88,7 @@ class BaseSend
      * @param object|null $multipart
      * @return void
      */
-    protected function prepare_params (object &$formParams , ?object &$multipart = null): void {
+    protected function prepare_params (?object &$formParams , ?object &$multipart = null): void {
         $prepareParams = new PrepareParams();
 
         if ($formParams) {
@@ -147,6 +147,10 @@ class BaseSend
      * @return object
      */
     public function request (): object {
+        echo'<pre><b>';
+        print_r ($this->get_options ());
+        print_r ($this->method);
+        echo'</b></pre>';
         return $this->client->request ('POST' , $this->method , $this->get_options ());
     }
 

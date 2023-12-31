@@ -10,8 +10,8 @@ use App\Libraries\GapAPI\Send\Handlers\Types;
 class Image extends BaseSend
 {
 
-    public function __construct (object &$client , ?FormParams &$formParams , ?Multipart &$multipart = null) {
-        parent::__construct ($client , null , $multipart);
+    public function __construct (object &$client , ?FormParams &$formParams = null , ?Multipart &$multipart = null) {
+        parent::__construct ($client , $formParams , $multipart);
 
         $this->set_type (Types::image);
 

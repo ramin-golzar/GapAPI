@@ -13,7 +13,7 @@ class SendMessage extends BaseSend
 
         $this->set_method (URLs::send_message);
 
-        $this->set_type (Types::text);
+        $this->set_type (Types::file);
     }
 
 }

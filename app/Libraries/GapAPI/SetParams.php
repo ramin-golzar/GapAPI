@@ -8,15 +8,21 @@ use App\Libraries\GapAPI\Send\Handlers\Currency;
 class SetParams
 {
 
-    protected FormParams $formParams;
-    protected Multipart $multipart;
+    protected ?FormParams $formParams;
+    protected ?Multipart $multipart;
 
     public function __construct () {
         $this->formParams = new FormParams();
+
+        $this->multipart = new Multipart();
     }
 
-    public function set_chat_id (string|int $chatId): void {
-        $this->formParams->chat_id = $chatId;
+    public function set_chat_id (string|int $chatId , bool $forUpload = false): void {
+        if ($forUpload) { // for multipart
+            $this->multipart->chat_id = $chatId;
+        } else { // for formParams
+            $this->formParams->chat_id = $chatId;
+        }
     }
 
     protected function set_data (string $data): void {
@@ -127,7 +133,7 @@ class SetParams
         $this->formParams = new FormParams();
     }
 
-    protected function set_image (string &$imagePath , string &$description = ''): string {
+    protected function set_image (string &$imagePath , string &$description = ''): void {
         $this->multipart->image = new \CURLFile ($imagePath);
 
         $this->multipart->desc = $description;
