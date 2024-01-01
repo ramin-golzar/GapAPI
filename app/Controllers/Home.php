@@ -9,10 +9,18 @@ class Home extends BaseController
 
         $gap = new \App\Libraries\GapAPI\GapAPI ($token , $this->request);
 
-        $gap->set_chat_id ('339322905');
+//        $gap->set_chat_id ('339322905');
 
-        $gap->set_reply_keyboard ([[['Start' => 'Start']]]);
-        $gap->send_text ('AAAAAA');
+        $text = $gap->receive->get_data (\App\Libraries\GapAPI\Receive\Types::text);
+
+        if ($text == 'hello') {
+            $gap->set_reply_keyboard ([[['Start' => 'Start']]]);
+            $gap->send_text ('The Message is Successfully');
+        } else {
+            $gap->set_reply_keyboard ([[['Back' => 'Back']]]);
+            $gap->send_text ('The Message is Failed');
+        }
+
 
         /* -------------------------------------------------------------------------------- */
 //        $post = $this->request->getPost ();

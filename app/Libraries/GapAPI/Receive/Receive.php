@@ -1,11 +1,21 @@
 <?php
 namespace App\Libraries\GapAPI\Receive;
 
-class Receive extends BaseReceive
+class Receive
 {
 
+    private object $post;
+
     public function __construct (object &$request) {
-        parent::__construct ($request);
+        $this->post = (object) $request->getPost ();
+    }
+
+    public function is_joined (): bool {
+        return $this->check_type (Types::join);
+    }
+
+    public function is_leaved (): bool {
+        return $this->check_type (Types::leave);
     }
 
     public function get_chat_id (): string|false {
@@ -20,6 +30,35 @@ class Receive extends BaseReceive
         $fromDecoded = json_decode ($this->post->from);
 
         return $fromKey ? $fromDecoded [$fromKey] : $fromDecoded;
+    }
+
+    public function get_data (Types $type , bool &$decoding = false , string $dataKey = ''): string|array|false {
+        if ($this->check_type ($type)) {
+            return $this->data_analysis ($decoding , $dataKey);
+        }
+    }
+
+    private function check_type (Types $type): string|false {
+        if (isset ($this->post->type) && $this->post->type == $type->name) {
+            return true;
+        }
+
+        return false;
+    }
+
+    private function data_analysis (bool &$decoding = false , string $dataKey = ''): string|array|false {
+        if (!isset ($this->post->data)) {
+            return false;
+        } elseif (isset ($this->post->data) && !$decoding) {
+            return $this->post->data;
+        } elseif (isset ($this->post->data) && $decoding) {
+            if ($dataKey) {
+                $dataDecoded = json_decode ($this->post->data , true);
+                return $dataDecoded [$dataKey];
+            } else {
+                return $dataDecoded;
+            }
+        }
     }
 
 }
