@@ -1,13 +1,11 @@
 <?php
 namespace App\Libraries\GapAPI\Receive;
 
-class Receive
+class Receive extends BaseReceive
 {
 
-    private object $post;
-
-    public function __construct (object $request) {
-        $this->post = (object) $request->getPost ();
+    public function __construct (object &$request) {
+        parent::__construct ($request);
     }
 
     public function get_chat_id (): string|false {
