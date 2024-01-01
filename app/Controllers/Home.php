@@ -1,6 +1,8 @@
 <?php
 namespace App\Controllers;
 
+use App\Libraries\GapAPI\Receive\Types;
+
 class Home extends BaseController
 {
 
@@ -11,15 +13,8 @@ class Home extends BaseController
 
 //        $gap->set_chat_id ('339322905');
 
-        $text = $gap->receive->get_data (\App\Libraries\GapAPI\Receive\Types::text);
 
-        if ($text == 'hello') {
-            $gap->set_reply_keyboard ([[['Start' => 'Start']]]);
-            $gap->send_text ('The Message is Successfully');
-        } else {
-            $gap->set_reply_keyboard ([[['Back' => 'Back']]]);
-            $gap->send_text ('The Message is Failed');
-        }
+
 
 
         /* -------------------------------------------------------------------------------- */

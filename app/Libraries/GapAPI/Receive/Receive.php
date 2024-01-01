@@ -32,10 +32,12 @@ class Receive
         return $fromKey ? $fromDecoded [$fromKey] : $fromDecoded;
     }
 
-    public function get_data (Types $type , bool &$decoding = false , string $dataKey = ''): string|array|false {
+    public function get_data (Types $type , bool $decoding = false , string $dataKey = ''): string|array|false {
         if ($this->check_type ($type)) {
             return $this->data_analysis ($decoding , $dataKey);
         }
+
+        return false;
     }
 
     private function check_type (Types $type): string|false {
@@ -52,12 +54,9 @@ class Receive
         } elseif (isset ($this->post->data) && !$decoding) {
             return $this->post->data;
         } elseif (isset ($this->post->data) && $decoding) {
-            if ($dataKey) {
-                $dataDecoded = json_decode ($this->post->data , true);
-                return $dataDecoded [$dataKey];
-            } else {
-                return $dataDecoded;
-            }
+            $dataDecoded = json_decode ($this->post->data , true);
+
+            return $dataKey ? $dataDecoded [$dataKey] : $dataDecoded;
         }
     }
 
