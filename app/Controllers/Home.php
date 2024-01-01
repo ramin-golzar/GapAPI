@@ -13,9 +13,9 @@ class Home extends BaseController
 
 //        $gap->set_chat_id ('339322905');
 
-
-
-
+        $gap->set_inline_keyboard ('example')
+            ->set_reply_keyboard ('example')
+            ->send_text ('JJJJJJJJJJJJJJJJ');
 
         /* -------------------------------------------------------------------------------- */
 //        $post = $this->request->getPost ();
