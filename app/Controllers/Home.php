@@ -9,57 +9,17 @@ class Home extends BaseController
     public function index () {
         $token = '18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496';
 
+        $chatId = '339322905';
+
         $gap = new \App\Libraries\GapAPI\GapAPI ($token , $this->request);
 
-//        $gap->set_chat_id ('339322905');
+        /* -------------------------------------------------------------------------------- */
 
-        $gap->set_inline_keyboard ('example')
-            ->set_reply_keyboard ('example')
-            ->send_text ('JJJJJJJJJJJJJJJJ');
+
 
         /* -------------------------------------------------------------------------------- */
-//        $post = $this->request->getPost ();
-//        if ($post ['type'] == 'triggerButton') {
-//            $decoded = json_decode ($post['data'] , true);
-//
-//            $gap->set_chat_id ('339322905');
-//            $gap->send_answer_callback ('This is answer callback.' , $decoded['callback_id'] , false);
-//        }
-        /* -------------------------------------------------------------------------------- */
-//        $msg = "خرید بسته \n مهلت پرداخت 5 دقیقه";
-//        $gap->set_chat_id ('339322905');
-//        $response = $gap->send_invoice ('50000' , $msg , '300');
-//        $json = $response->getJSON ();
-//        $gap->set_chat_id ('339322905');
-//        $decoded = json_decode (json_decode ($json , true) , true);
-//        echo'<pre><b>';
-//        print_r ($decoded);
-//        echo'</b></pre>';
-//        $gap->send_invoice_inquiry ($decoded ['id']);
-//        $gap->set_chat_id ('339322905');
-//        $aa = $gap->invoice_verify ();
-//        echo'<pre><b>';
-//        print_r ($aa->getJSON ());
-//        echo'</b></pre>';
-//        $gap->set_reply_keyboard ('example');
-//        $gap->set_inline_keyboard ('example');
-//        $gap->set_inline_keyboard ([[['text' => 'Ok' , 'cb_data' => 'ok']]]);
-//        $gap->set_form ([['name' => 'a' , 'type' => 'text' , 'label' => 'aa']]);
-//        $gap->set_form ('example');
-//        $gapResponce = $gap->send_text ();
-//        $gapResponce = $gap->send_contact ();
+
         $this->write_file ('GAP');
-//        $post = $this->request->getPost ();
-//        $gapApi = new \App\Libraries\GapAPI\GapAPI();
-//        if ($post ['type'] == 'join') {
-//        $gapApi->send ($post ['chat_id']);
-//        }
-//        $this->send_text ($post ['chat_id']);
-//        $this->write_file ('*** ' . $_POST ['chat_id'] . ' ***');
-//        $this->send_image ($_POST ['chat_id']);
-//        $this->send_message ($_POST['chat_id'] , 'text' , '🌼🌻🌺 Hello');
-//        $this->send_phone ();
-//        $this->send_location ();
     }
 
     public function send_text (string $chatId): void {
@@ -166,18 +126,6 @@ class Home extends BaseController
         $content = "\r\n $text \r\n";
 
         file_put_contents (WRITEPATH . 'uploads/sendtext.txt' , $content , FILE_APPEND);
-    }
-
-    private function send_phone (): void {
-        $data = json_encode (['phone' => '091111111' , 'name' => 'HasanAli' ,]);
-
-        $this->send_message ($_POST['chat_id'] , 'contact' , $data);
-    }
-
-    private function send_location (): void {
-        $data = json_encode (['long' => '10.1222' , 'lat' => '20.5553' , 'desc' => 'Mshhad' ,]);
-
-        $this->send_message ($_POST['chat_id'] , 'location' , $data);
     }
 
 }
