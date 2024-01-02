@@ -18,7 +18,6 @@ use App\Libraries\GapAPI\Send\EditMessage;
 use App\Libraries\GapAPI\Send\DeleteMessage;
 use App\Libraries\GapAPI\Send\Upload\Image;
 use App\Libraries\GapAPI\Receive\Receive;
-use App\Libraries\GapAPI\Receive\Types;
 
 class GapAPI extends SetParams
 {

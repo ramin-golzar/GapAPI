@@ -1,6 +1,8 @@
 <?php
 namespace App\Libraries\GapAPI\Receive;
 
+use App\Libraries\GapAPI\ReceiveTypes;
+
 class Receive
 {
 
@@ -11,11 +13,11 @@ class Receive
     }
 
     public function is_joined (): bool {
-        return $this->check_type (Types::join);
+        return $this->check_type (ReceiveTypes::join);
     }
 
     public function is_leaved (): bool {
-        return $this->check_type (Types::leave);
+        return $this->check_type (ReceiveTypes::leave);
     }
 
     public function get_chat_id (): string|false {
@@ -32,7 +34,7 @@ class Receive
         return $fromKey ? $fromDecoded [$fromKey] : $fromDecoded;
     }
 
-    public function get_data (Types $type , bool $decoding = false , string $dataKey = ''): string|array|false {
+    public function get_data (ReceiveTypes $type , bool $decoding = false , string $dataKey = ''): string|array|false {
         if ($this->check_type ($type)) {
             return $this->data_analysis ($decoding , $dataKey);
         }
@@ -40,7 +42,7 @@ class Receive
         return false;
     }
 
-    private function check_type (Types $type): string|false {
+    private function check_type (ReceiveTypes $type): string|false {
         if (isset ($this->post->type) && $this->post->type == $type->name) {
             return true;
         }

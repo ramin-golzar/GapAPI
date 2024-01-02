@@ -1,7 +1,7 @@
 <?php
-namespace App\Libraries\GapAPI\Receive;
+namespace App\Libraries\GapAPI;
 
-enum Types
+enum ReceiveTypes
 {
 
     case join;

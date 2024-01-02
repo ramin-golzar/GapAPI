@@ -1,7 +1,7 @@
 <?php
 namespace App\Controllers;
 
-use App\Libraries\GapAPI\Receive\Types;
+use App\Libraries\GapAPI\ReceiveTypes;
 
 class Home extends BaseController
 {
