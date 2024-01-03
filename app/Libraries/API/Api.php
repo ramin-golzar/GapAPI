@@ -148,6 +148,7 @@ class Api
 
         $params = compact ('chat_id');
         $params['data'] = $image;
+
         if ($reply_keyboard) {
             $params['reply_keyboard'] = $reply_keyboard;
         }
@@ -491,6 +492,8 @@ class Api
         if ($method == 'sendMessage') {
             $this->lastMessage = $params;
         }
+
+        $params['data'] = '{"SID":"84c5f0cd5bb74870a8ab5e4ca2046a6b.jpg","filename":"s.jpg","filesize":845941,"type":"image","width":1024,"height":768,"duration":0,"desc":""}';
 
         $curl = curl_init ();
         curl_setopt ($curl , CURLOPT_URL , $this->baseURL . $method);

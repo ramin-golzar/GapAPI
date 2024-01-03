@@ -22,55 +22,44 @@ class Home extends BaseController
          */
 
         $imagePath = FCPATH . '/Images/s.jpg';
-//
-//        $gap->set_chat_id ($chatId);
-//
-//        log_message ('alert' , 'send image');
-//        $uploadImage = $gap->send_image ($imagePath , 'OK OK OK');
-//
-//        $post = json_encode ($this->request->getPost ());
-//        log_message ('alert' , 'status code: ' . $uploadImage->getStatusCode ());
-//        log_message ('alert' , 'get json: ' . $uploadImage->getJSON ());
-//        log_message ('alert' , 'post: ' . $post);
-//        log_message ('alert' , 'get body: ' . $uploadImage->getBody ());
 
-        /* ----------------------------------------------------------------------
-         * Step two of uploading
-         * ----------------------------------------------------------------------
-         */
+        $gap->set_chat_id ($chatId);
+        log_message ('alert' , 'start of send image');
+        $uploadImage = $gap->send_image ($imagePath , 'SSSSSS');
+        log_message ('alert' , 'end of send image');
+        $this->gapAPI ($chatId , $token , $uploadImage);
 
-        $image = $gap->receive->get_data (ReceiveTypes::image);
-        log_message ('alert' , 'GET IMAGE IS SUCCESS');
-        log_message ('alert' , $image);
+        /* -------------------------------------------------------------------------------- */
 
-        $uploadURL = 'https://api.gap.im/upload';
-        $sendMessageURL = 'https://api.gap.im/sendMessage';
+//        $this->write_file ('GAP');
+//        $this->api ($chatId , $token , $imagePath);
+    }
+
+    private function api (string $chatId , string $token , string $imagePath): void {
+        $api = new \App\Libraries\API\Api ($token);
+
+        $api->sendImage ($chatId , $imagePath);
+    }
+
+    private function gapAPI (string $chatId , string $token , ?object $uploadImage = null): void {
+        $img = '{"SID":"84c5f0cd5bb74870a8ab5e4ca2046a6b.jpg","filename":"s.jpg","filesize":845941,"type":"image","width":1024,"height":768,"duration":0,"desc":""}';
+        log_message ('alert' , $uploadImage->getBody ());
+        $sendMessageURL = 'sendMessage';
 
         $curl = \Config\Services::curlrequest ();
 
         $options = [
             'headers' => [
-                'token' => $token ,
+                'Content-Type' => 'application/x-www-form-urlencoded' ,
             ] ,
             'form_params' => [
                 'chat_id' => $chatId ,
+                'data' => $uploadImage->getBody () ,
                 'type' => 'image' ,
-                'data' => json_encode ($image) ,
             ] ,
         ];
 
-        log_message ('alert' , 'start send message');
         $ok = $curl->request ('POST' , $sendMessageURL , $options);
-        log_message ('alert' , 'end of send message');
-
-        $post = json_encode ($this->request->getPost ());
-        log_message ('alert' , 'step 2 - status code: ' . $ok->getStatusCode ());
-        log_message ('alert' , 'step 2 - get body: ' . $ok->getBody ());
-        log_message ('alert' , 'step 2 - post: ' . $post);
-
-        /* -------------------------------------------------------------------------------- */
-
-        $this->write_file ('GAP');
     }
 
     public function send_text (string $chatId): void {

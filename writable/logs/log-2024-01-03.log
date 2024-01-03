@@ -1,0 +1,476 @@
+CRITICAL - 2024-01-03 08:09:47 --> Class "App\Controllers\Exception" not found
+in APPPATH\Controllers\Home.php on line 79.
+ 1 APPPATH\Controllers\Home.php(75): App\Controllers\Home->api('339322905', '18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496', 'FCPATH\\Images\\s.jpg')
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-03 08:10:54 --> Ramin Error
+in APPPATH\Controllers\Home.php on line 79.
+ 1 APPPATH\Controllers\Home.php(75): App\Controllers\Home->api('339322905', '18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496', 'FCPATH\\Images\\s.jpg')
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-03 08:14:21 --> Undefined array key "type"
+in APPPATH\Libraries\API\Api.php on line 532.
+ 1 APPPATH\Libraries\API\Api.php(532): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "type"', 'APPPATH\\Libraries\\API\\Api.php', 532)
+ 2 APPPATH\Libraries\API\Api.php(146): App\Libraries\API\Api->uploadFile('image', 'FCPATH\\Images\\s.jpg', 'ROOTPATH\\public')
+ 3 APPPATH\Controllers\Home.php(81): App\Libraries\API\Api->sendImage('339322905', 'FCPATH\\Images\\s.jpg')
+ 4 APPPATH\Controllers\Home.php(75): App\Controllers\Home->api('339322905', '18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496', 'FCPATH\\Images\\s.jpg')
+ 5 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ALERT - 2024-01-03 08:15:27 --> image
+ALERT - 2024-01-03 08:15:27 --> {"SID":"ddad0e3c093f403a9881b7494c2f8166.jpg","filename":"s.jpg","filesize":845941,"type":"image","width":1024,"height":768,"duration":0,"desc":""}
+ALERT - 2024-01-03 08:18:33 --> image
+ALERT - 2024-01-03 08:18:33 --> {"SID":"dc7d979f6e72424f843abac02352d5d9.jpg","filename":"s.jpg","filesize":845941,"type":"image","width":1024,"height":768,"duration":0,"desc":""}
+ALERT - 2024-01-03 08:18:33 --> {"chat_id":"339322905","data":"{\"SID\":\"dc7d979f6e72424f843abac02352d5d9.jpg\",\"filename\":\"s.jpg\",\"filesize\":845941,\"type\":\"image\",\"width\":1024,\"height\":768,\"duration\":0,\"desc\":\"\"}"}
+CRITICAL - 2024-01-03 08:54:56 --> Undefined array key "type"
+in APPPATH\Libraries\API\Api.php on line 533.
+ 1 APPPATH\Libraries\API\Api.php(533): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "type"', 'APPPATH\\Libraries\\API\\Api.php', 533)
+ 2 APPPATH\Libraries\API\Api.php(146): App\Libraries\API\Api->uploadFile('image', 'FCPATH\\Images\\s.jpg', 'ROOTPATH\\public')
+ 3 APPPATH\Controllers\Home.php(81): App\Libraries\API\Api->sendImage('339322905', 'FCPATH\\Images\\s.jpg')
+ 4 APPPATH\Controllers\Home.php(75): App\Controllers\Home->api('339322905', '18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496', 'FCPATH\\Images\\s.jpg')
+ 5 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ALERT - 2024-01-03 08:55:43 --> {"chat_id":"339322905","data":"{\"SID\":\"3c708111ab944a1890dc9ab6f8ba4757.jpg\",\"filename\":\"s.jpg\",\"filesize\":845941,\"type\":\"image\",\"width\":1024,\"height\":768,\"duration\":0,\"desc\":\"\"}","type":"image"}
+CRITICAL - 2024-01-03 09:10:05 --> Undefined variable $gap
+in APPPATH\Controllers\Home.php on line 26.
+ 1 APPPATH\Controllers\Home.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $gap', 'APPPATH\\Controllers\\Home.php', 26)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-03 09:11:29 --> Undefined property: stdClass::$chat_id
+in APPPATH\Libraries\GapAPI\Receive\Receive.php on line 24.
+ 1 APPPATH\Libraries\GapAPI\Receive\Receive.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$chat_id', 'APPPATH\\Libraries\\GapAPI\\Receive\\Receive.php', 24)
+ 2 APPPATH\Libraries\GapAPI\SetParams.php(25): App\Libraries\GapAPI\Receive\Receive->get_chat_id()
+ 3 APPPATH\Libraries\GapAPI\GapAPI.php(41): App\Libraries\GapAPI\SetParams->set_chat_id()
+ 4 APPPATH\Controllers\Home.php(14): App\Libraries\GapAPI\GapAPI->__construct('18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496', Object(CodeIgniter\HTTP\IncomingRequest))
+ 5 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-03 09:12:44 --> 6 : Could not resolve host: api.gap.im
+in SYSTEMPATH\HTTP\CURLRequest.php on line 655.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(655): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('6', 'Could not resolve host: api.gap.im')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(363): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(136): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://api.gap.im/upload')
+ 4 APPPATH\Libraries\GapAPI\Send\BaseSend.php(150): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://api.gap.im/upload', [...])
+ 5 APPPATH\Libraries\GapAPI\SetParams.php(157): App\Libraries\GapAPI\Send\BaseSend->request()
+ 6 APPPATH\Libraries\GapAPI\GapAPI.php(171): App\Libraries\GapAPI\SetParams->request(Object(App\Libraries\GapAPI\Send\Upload\Image))
+ 7 APPPATH\Controllers\Home.php(28): App\Libraries\GapAPI\GapAPI->send_image('FCPATH\\Images\\s.jpg')
+ 8 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 9 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-03 09:12:46 --> App\Controllers\Home::gapAPI(): Argument #3 ($imagePath) must be of type string, CodeIgniter\HTTP\Response given, called in E:\SoftWare\xampp-windows-x64-8.2.4-0-VS16-installer\htdocs\my_projects\GitHub\GapAPI\app\Controllers\Home.php on line 30
+in APPPATH\Controllers\Home.php on line 43.
+ 1 APPPATH\Controllers\Home.php(30): App\Controllers\Home->gapAPI('339322905', '18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496', Object(CodeIgniter\HTTP\Response))
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-03 09:17:03 --> App\Controllers\Home::gapAPI(): Argument #3 ($uploadImage) must be of type string, CodeIgniter\HTTP\Response given, called in E:\SoftWare\xampp-windows-x64-8.2.4-0-VS16-installer\htdocs\my_projects\GitHub\GapAPI\app\Controllers\Home.php on line 30
+in APPPATH\Controllers\Home.php on line 43.
+ 1 APPPATH\Controllers\Home.php(30): App\Controllers\Home->gapAPI('339322905', '18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496', Object(CodeIgniter\HTTP\Response))
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-03 09:19:44 --> Undefined property: stdClass::$chat_id
+in APPPATH\Libraries\GapAPI\Receive\Receive.php on line 24.
+ 1 APPPATH\Libraries\GapAPI\Receive\Receive.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$chat_id', 'APPPATH\\Libraries\\GapAPI\\Receive\\Receive.php', 24)
+ 2 APPPATH\Libraries\GapAPI\SetParams.php(25): App\Libraries\GapAPI\Receive\Receive->get_chat_id()
+ 3 APPPATH\Libraries\GapAPI\GapAPI.php(41): App\Libraries\GapAPI\SetParams->set_chat_id()
+ 4 APPPATH\Controllers\Home.php(14): App\Libraries\GapAPI\GapAPI->__construct('18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496', Object(CodeIgniter\HTTP\IncomingRequest))
+ 5 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-03 09:20:10 --> 22 : The requested URL returned error: 405
+in SYSTEMPATH\HTTP\CURLRequest.php on line 655.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(655): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested URL returned error: 405')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(363): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(136): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://api.gap.im/upload')
+ 4 APPPATH\Libraries\GapAPI\Send\BaseSend.php(150): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://api.gap.im/upload', [...])
+ 5 APPPATH\Libraries\GapAPI\SetParams.php(157): App\Libraries\GapAPI\Send\BaseSend->request()
+ 6 APPPATH\Libraries\GapAPI\GapAPI.php(171): App\Libraries\GapAPI\SetParams->request(Object(App\Libraries\GapAPI\Send\Upload\Image))
+ 7 APPPATH\Controllers\Home.php(28): App\Libraries\GapAPI\GapAPI->send_image('FCPATH\\Images\\s.jpg')
+ 8 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 9 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-03 09:20:14 --> App\Controllers\Home::gapAPI(): Argument #3 ($uploadImage) must be of type string, CodeIgniter\HTTP\Response given, called in E:\SoftWare\xampp-windows-x64-8.2.4-0-VS16-installer\htdocs\my_projects\GitHub\GapAPI\app\Controllers\Home.php on line 30
+in APPPATH\Controllers\Home.php on line 43.
+ 1 APPPATH\Controllers\Home.php(30): App\Controllers\Home->gapAPI('339322905', '18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496', Object(CodeIgniter\HTTP\Response))
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ALERT - 2024-01-03 09:21:24 --> start of send image
+CRITICAL - 2024-01-03 09:21:28 --> 22 : The requested URL returned error: 405
+in SYSTEMPATH\HTTP\CURLRequest.php on line 655.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(655): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested URL returned error: 405')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(363): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(136): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://api.gap.im/upload')
+ 4 APPPATH\Libraries\GapAPI\Send\BaseSend.php(150): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://api.gap.im/upload', [...])
+ 5 APPPATH\Libraries\GapAPI\SetParams.php(157): App\Libraries\GapAPI\Send\BaseSend->request()
+ 6 APPPATH\Libraries\GapAPI\GapAPI.php(171): App\Libraries\GapAPI\SetParams->request(Object(App\Libraries\GapAPI\Send\Upload\Image))
+ 7 APPPATH\Controllers\Home.php(28): App\Libraries\GapAPI\GapAPI->send_image('FCPATH\\Images\\s.jpg')
+ 8 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 9 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ALERT - 2024-01-03 09:33:15 --> start of send image
+ALERT - 2024-01-03 09:33:20 --> end of send image
+CRITICAL - 2024-01-03 09:33:20 --> App\Controllers\Home::gapAPI(): Argument #3 ($uploadImage) must be of type string, CodeIgniter\HTTP\Response given, called in E:\SoftWare\xampp-windows-x64-8.2.4-0-VS16-installer\htdocs\my_projects\GitHub\GapAPI\app\Controllers\Home.php on line 30
+in APPPATH\Controllers\Home.php on line 43.
+ 1 APPPATH\Controllers\Home.php(30): App\Controllers\Home->gapAPI('339322905', '18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496', Object(CodeIgniter\HTTP\Response))
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ALERT - 2024-01-03 09:35:15 --> start of send image
+ALERT - 2024-01-03 09:35:21 --> end of send image
+ALERT - 2024-01-03 09:35:21 --> chat id: 339322905
+ALERT - 2024-01-03 09:35:21 --> token: 18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496
+ALERT - 2024-01-03 09:35:21 --> data: "{\"SID\":\"f34c5a7fb6b447548cc3d1f06ab49b49.jpg\",\"filename\":\"s.jpg\",\"filesize\":845941,\"type\":\"image\",\"width\":1024,\"height\":768,\"duration\":0,\"desc\":[\"SSSSSS\"]}"
+CRITICAL - 2024-01-03 09:35:22 --> 22 : The requested URL returned error: 405
+in SYSTEMPATH\HTTP\CURLRequest.php on line 655.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(655): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested URL returned error: 405')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(363): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(136): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://api.gap.im/sendMessage')
+ 4 APPPATH\Controllers\Home.php(63): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://api.gap.im/sendMessage', [...])
+ 5 APPPATH\Controllers\Home.php(30): App\Controllers\Home->gapAPI('339322905', '18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496', Object(CodeIgniter\HTTP\Response))
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ALERT - 2024-01-03 09:36:39 --> start of send image
+ALERT - 2024-01-03 09:36:45 --> end of send image
+ALERT - 2024-01-03 09:36:45 --> chat id: 339322905
+ALERT - 2024-01-03 09:36:45 --> token: 18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496
+ALERT - 2024-01-03 09:36:45 --> data: {"SID":"b2dcdb681f1e450bb595ddab2951dd68.jpg","filename":"s.jpg","filesize":845941,"type":"image","width":1024,"height":768,"duration":0,"desc":["SSSSSS"]}
+CRITICAL - 2024-01-03 09:36:46 --> 22 : The requested URL returned error: 405
+in SYSTEMPATH\HTTP\CURLRequest.php on line 655.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(655): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested URL returned error: 405')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(363): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(136): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://api.gap.im/sendMessage')
+ 4 APPPATH\Controllers\Home.php(63): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://api.gap.im/sendMessage', [...])
+ 5 APPPATH\Controllers\Home.php(30): App\Controllers\Home->gapAPI('339322905', '18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496', Object(CodeIgniter\HTTP\Response))
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ALERT - 2024-01-03 09:40:02 --> start of send image
+ALERT - 2024-01-03 09:40:06 --> end of send image
+ALERT - 2024-01-03 09:40:06 --> chat id: 339322905
+ALERT - 2024-01-03 09:40:06 --> token: 18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496
+ALERT - 2024-01-03 09:40:06 --> data: {"SID":"1fd286050fe84d698efab8a335409643.jpg","filename":"s.jpg","filesize":845941,"type":"image","width":1024,"height":768,"duration":0,"desc":["SSSSSS"]}
+CRITICAL - 2024-01-03 09:40:06 --> 22 : The requested URL returned error: 405
+in SYSTEMPATH\HTTP\CURLRequest.php on line 655.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(655): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested URL returned error: 405')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(363): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(136): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://api.gap.im/sendMessage')
+ 4 APPPATH\Controllers\Home.php(63): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://api.gap.im/sendMessage', [...])
+ 5 APPPATH\Controllers\Home.php(30): App\Controllers\Home->gapAPI('339322905', '18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496', Object(CodeIgniter\HTTP\Response))
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ALERT - 2024-01-03 09:45:28 --> PARAMS: {"chat_id":"339322905","data":"{\"SID\":\"3f0f9a2a9eda49d9b9593a5d670efad0.jpg\",\"filename\":\"s.jpg\",\"filesize\":845941,\"type\":\"image\",\"width\":1024,\"height\":768,\"duration\":0,\"desc\":\"\"}","type":"image"}
+ALERT - 2024-01-03 09:47:35 --> start of send image
+ALERT - 2024-01-03 09:47:40 --> end of send image
+ALERT - 2024-01-03 09:47:40 --> chat id: 339322905
+ALERT - 2024-01-03 09:47:40 --> token: 18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496
+ALERT - 2024-01-03 09:47:40 --> data: {"SID":"ac79b955133c4dad8c05c2d488b9b6f7.jpg","filename":"s.jpg","filesize":845941,"type":"image","width":1024,"height":768,"duration":0,"desc":["SSSSSS"]}
+CRITICAL - 2024-01-03 09:47:41 --> 22 : The requested URL returned error: 405
+in SYSTEMPATH\HTTP\CURLRequest.php on line 655.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(655): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested URL returned error: 405')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(363): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(136): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://api.gap.im/sendMessage')
+ 4 APPPATH\Controllers\Home.php(66): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://api.gap.im/sendMessage', [...])
+ 5 APPPATH\Controllers\Home.php(30): App\Controllers\Home->gapAPI('339322905', '18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496', Object(CodeIgniter\HTTP\Response))
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ALERT - 2024-01-03 09:48:30 --> start of send image
+ALERT - 2024-01-03 09:48:33 --> end of send image
+ALERT - 2024-01-03 09:48:33 --> chat id: 339322905
+ALERT - 2024-01-03 09:48:33 --> token: 18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496
+ALERT - 2024-01-03 09:48:33 --> data: {"SID":"9396f9e6e815466883837c3d38f88de9.jpg","filename":"s.jpg","filesize":845941,"type":"image","width":1024,"height":768,"duration":0,"desc":["SSSSSS"]}
+CRITICAL - 2024-01-03 09:48:34 --> 22 : The requested URL returned error: 405
+in SYSTEMPATH\HTTP\CURLRequest.php on line 655.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(655): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested URL returned error: 405')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(363): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(136): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://api.gap.im/sendMessage')
+ 4 APPPATH\Controllers\Home.php(66): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://api.gap.im/sendMessage', [...])
+ 5 APPPATH\Controllers\Home.php(30): App\Controllers\Home->gapAPI('339322905', '18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496', Object(CodeIgniter\HTTP\Response))
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ALERT - 2024-01-03 09:49:44 --> start of send image
+CRITICAL - 2024-01-03 09:49:49 --> 22 : The requested URL returned error: 405
+in SYSTEMPATH\HTTP\CURLRequest.php on line 655.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(655): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested URL returned error: 405')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(363): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(136): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://api.gap.im/upload')
+ 4 APPPATH\Libraries\GapAPI\Send\BaseSend.php(150): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://api.gap.im/upload', [...])
+ 5 APPPATH\Libraries\GapAPI\SetParams.php(157): App\Libraries\GapAPI\Send\BaseSend->request()
+ 6 APPPATH\Libraries\GapAPI\GapAPI.php(171): App\Libraries\GapAPI\SetParams->request(Object(App\Libraries\GapAPI\Send\Upload\Image))
+ 7 APPPATH\Controllers\Home.php(28): App\Libraries\GapAPI\GapAPI->send_image('FCPATH\\Images\\s.jpg', 'SSSSSS')
+ 8 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 9 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ALERT - 2024-01-03 09:50:52 --> start of send image
+ALERT - 2024-01-03 09:50:57 --> end of send image
+ALERT - 2024-01-03 09:50:57 --> chat id: 339322905
+ALERT - 2024-01-03 09:50:57 --> token: 18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496
+ALERT - 2024-01-03 09:50:57 --> data: 
+CRITICAL - 2024-01-03 09:50:57 --> 22 : The requested URL returned error: 405
+in SYSTEMPATH\HTTP\CURLRequest.php on line 655.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(655): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested URL returned error: 405')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(363): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(136): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://api.gap.im/sendMessage')
+ 4 APPPATH\Controllers\Home.php(66): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://api.gap.im/sendMessage', [...])
+ 5 APPPATH\Controllers\Home.php(30): App\Controllers\Home->gapAPI('339322905', '18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496', Object(CodeIgniter\HTTP\Response))
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ALERT - 2024-01-03 09:51:49 --> start of send image
+ALERT - 2024-01-03 09:51:54 --> end of send image
+ALERT - 2024-01-03 09:51:54 --> chat id: 339322905
+ALERT - 2024-01-03 09:51:54 --> token: 18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496
+ALERT - 2024-01-03 09:51:54 --> data: 
+CRITICAL - 2024-01-03 09:51:55 --> 22 : The requested URL returned error: 405
+in SYSTEMPATH\HTTP\CURLRequest.php on line 655.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(655): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested URL returned error: 405')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(363): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(136): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://api.gap.im/sendMessage')
+ 4 APPPATH\Controllers\Home.php(66): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://api.gap.im/sendMessage', [...])
+ 5 APPPATH\Controllers\Home.php(30): App\Controllers\Home->gapAPI('339322905', '18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496', Object(CodeIgniter\HTTP\Response))
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ALERT - 2024-01-03 09:54:21 --> start of send image
+ALERT - 2024-01-03 09:54:25 --> end of send image
+ALERT - 2024-01-03 09:54:25 --> chat id: 339322905
+ALERT - 2024-01-03 09:54:25 --> token: 18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496
+ALERT - 2024-01-03 09:54:25 --> "data":"{"SID":"3f0f9a2a9eda49d9b9593a5d670efad0.jpg","filename":"s.jpg","filesize":845941,"type":"image","width":1024,"height":768,"duration":0,"desc":"aa"}"
+CRITICAL - 2024-01-03 09:54:26 --> 22 : The requested URL returned error: 405
+in SYSTEMPATH\HTTP\CURLRequest.php on line 655.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(655): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested URL returned error: 405')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(363): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(136): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://api.gap.im/sendMessage')
+ 4 APPPATH\Controllers\Home.php(66): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://api.gap.im/sendMessage', [...])
+ 5 APPPATH\Controllers\Home.php(30): App\Controllers\Home->gapAPI('339322905', '18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496', Object(CodeIgniter\HTTP\Response))
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-03 09:58:57 --> Undefined property: stdClass::$chat_id
+in APPPATH\Libraries\GapAPI\Receive\Receive.php on line 24.
+ 1 APPPATH\Libraries\GapAPI\Receive\Receive.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$chat_id', 'APPPATH\\Libraries\\GapAPI\\Receive\\Receive.php', 24)
+ 2 APPPATH\Libraries\GapAPI\SetParams.php(25): App\Libraries\GapAPI\Receive\Receive->get_chat_id()
+ 3 APPPATH\Libraries\GapAPI\GapAPI.php(41): App\Libraries\GapAPI\SetParams->set_chat_id()
+ 4 APPPATH\Controllers\Home.php(14): App\Libraries\GapAPI\GapAPI->__construct('18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496', Object(CodeIgniter\HTTP\IncomingRequest))
+ 5 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-03 09:59:36 --> Invalid data passed: data
+in APPPATH\Libraries\API\Api.php on line 514.
+ 1 APPPATH\Libraries\API\Api.php(162): App\Libraries\API\Api->sendRequest('image', [...])
+ 2 APPPATH\Controllers\Home.php(41): App\Libraries\API\Api->sendImage('339322905', '{"SID":"358bf84a475b449a87aef34c4edad0e6.jpg","filename":"s.jpg","filesize":845941,"type":"image","width":1024,"height":768,"duration":0,"desc":""}')
+ 3 APPPATH\Controllers\Home.php(35): App\Controllers\Home->api('339322905', '18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496', 'FCPATH\\Images\\s.jpg')
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-03 10:00:04 --> Invalid data passed: data
+in APPPATH\Libraries\API\Api.php on line 514.
+ 1 APPPATH\Libraries\API\Api.php(162): App\Libraries\API\Api->sendRequest('image', [...])
+ 2 APPPATH\Controllers\Home.php(41): App\Libraries\API\Api->sendImage('339322905', '{"SID":"cd1d483783a04c01adae16f4c1fafb0b.jpg","filename":"s.jpg","filesize":845941,"type":"image","width":1024,"height":768,"duration":0,"desc":""}')
+ 3 APPPATH\Controllers\Home.php(35): App\Controllers\Home->api('339322905', '18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496', 'FCPATH\\Images\\s.jpg')
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ALERT - 2024-01-03 10:01:36 --> {"SID":"84c5f0cd5bb74870a8ab5e4ca2046a6b.jpg","filename":"s.jpg","filesize":845941,"type":"image","width":1024,"height":768,"duration":0,"desc":""}
+ALERT - 2024-01-03 10:13:07 --> start of send image
+ALERT - 2024-01-03 10:13:11 --> end of send image
+ALERT - 2024-01-03 10:13:11 --> chat id: 339322905
+ALERT - 2024-01-03 10:13:11 --> token: 18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496
+ALERT - 2024-01-03 10:13:11 --> {"SID":"84c5f0cd5bb74870a8ab5e4ca2046a6b.jpg","filename":"s.jpg","filesize":845941,"type":"image","width":1024,"height":768,"duration":0,"desc":""}
+CRITICAL - 2024-01-03 10:13:12 --> 22 : The requested URL returned error: 405
+in SYSTEMPATH\HTTP\CURLRequest.php on line 655.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(655): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested URL returned error: 405')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(363): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(136): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://api.gap.im/sendMessage')
+ 4 APPPATH\Controllers\Home.php(66): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://api.gap.im/sendMessage', [...])
+ 5 APPPATH\Controllers\Home.php(30): App\Controllers\Home->gapAPI('339322905', '18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496', Object(CodeIgniter\HTTP\Response))
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ALERT - 2024-01-03 10:13:33 --> start of send image
+ALERT - 2024-01-03 10:13:37 --> end of send image
+ALERT - 2024-01-03 10:13:37 --> chat id: 339322905
+ALERT - 2024-01-03 10:13:37 --> token: 18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496
+ALERT - 2024-01-03 10:13:37 --> {"SID":"84c5f0cd5bb74870a8ab5e4ca2046a6b.jpg","filename":"s.jpg","filesize":845941,"type":"image","width":1024,"height":768,"duration":0,"desc":""}
+CRITICAL - 2024-01-03 10:13:38 --> 22 : The requested URL returned error: 405
+in SYSTEMPATH\HTTP\CURLRequest.php on line 655.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(655): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested URL returned error: 405')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(363): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(136): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://api.gap.im/sendMessage')
+ 4 APPPATH\Controllers\Home.php(66): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://api.gap.im/sendMessage', [...])
+ 5 APPPATH\Controllers\Home.php(30): App\Controllers\Home->gapAPI('339322905', '18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496', Object(CodeIgniter\HTTP\Response))
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ALERT - 2024-01-03 10:19:30 --> start of send image
+ALERT - 2024-01-03 10:19:35 --> end of send image
+ALERT - 2024-01-03 10:19:35 --> chat id: 339322905
+ALERT - 2024-01-03 10:19:35 --> token: 18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496
+ALERT - 2024-01-03 10:19:35 --> {"SID":"84c5f0cd5bb74870a8ab5e4ca2046a6b.jpg","filename":"s.jpg","filesize":845941,"type":"image","width":1024,"height":768,"duration":0,"desc":""}
+CRITICAL - 2024-01-03 10:19:35 --> 22 : The requested URL returned error: 405
+in SYSTEMPATH\HTTP\CURLRequest.php on line 655.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(655): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested URL returned error: 405')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(363): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(136): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://api.gap.im/sendMessage')
+ 4 APPPATH\Controllers\Home.php(67): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://api.gap.im/sendMessage', [...])
+ 5 APPPATH\Controllers\Home.php(30): App\Controllers\Home->gapAPI('339322905', '18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496', Object(CodeIgniter\HTTP\Response))
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ALERT - 2024-01-03 10:20:20 --> start of send image
+ALERT - 2024-01-03 10:20:25 --> end of send image
+ALERT - 2024-01-03 10:20:25 --> chat id: 339322905
+ALERT - 2024-01-03 10:20:25 --> token: 18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496
+ALERT - 2024-01-03 10:20:25 --> {"SID":"84c5f0cd5bb74870a8ab5e4ca2046a6b.jpg","filename":"s.jpg","filesize":845941,"type":"image","width":1024,"height":768,"duration":0,"desc":""}
+CRITICAL - 2024-01-03 10:20:25 --> 22 : The requested URL returned error: 405
+in SYSTEMPATH\HTTP\CURLRequest.php on line 655.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(655): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested URL returned error: 405')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(363): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(136): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://api.gap.im/sendMessage')
+ 4 APPPATH\Controllers\Home.php(67): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://api.gap.im/sendMessage', [...])
+ 5 APPPATH\Controllers\Home.php(30): App\Controllers\Home->gapAPI('339322905', '18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496', Object(CodeIgniter\HTTP\Response))
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ALERT - 2024-01-03 10:47:23 --> start of send image
+CRITICAL - 2024-01-03 10:47:28 --> 22 : The requested URL returned error: 405
+in SYSTEMPATH\HTTP\CURLRequest.php on line 655.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(655): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested URL returned error: 405')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(363): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(136): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://api.gap.im/upload')
+ 4 APPPATH\Libraries\GapAPI\Send\BaseSend.php(150): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://api.gap.im/upload', [...])
+ 5 APPPATH\Libraries\GapAPI\SetParams.php(157): App\Libraries\GapAPI\Send\BaseSend->request()
+ 6 APPPATH\Libraries\GapAPI\GapAPI.php(171): App\Libraries\GapAPI\SetParams->request(Object(App\Libraries\GapAPI\Send\Upload\Image))
+ 7 APPPATH\Controllers\Home.php(28): App\Libraries\GapAPI\GapAPI->send_image('FCPATH\\Images\\s.jpg', 'SSSSSS')
+ 8 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 9 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ALERT - 2024-01-03 10:48:00 --> start of send image
+ALERT - 2024-01-03 10:48:03 --> end of send image
+CRITICAL - 2024-01-03 10:48:03 --> Call to a member function getBody() on null
+in APPPATH\Controllers\Home.php on line 58.
+ 1 APPPATH\Controllers\Home.php(30): App\Controllers\Home->gapAPI('339322905', '18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496')
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ALERT - 2024-01-03 10:48:36 --> start of send image
+ALERT - 2024-01-03 10:48:39 --> end of send image
+CRITICAL - 2024-01-03 10:48:39 --> Call to a member function getBody() on null
+in APPPATH\Controllers\Home.php on line 58.
+ 1 APPPATH\Controllers\Home.php(30): App\Controllers\Home->gapAPI('339322905', '18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496')
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ALERT - 2024-01-03 10:58:18 --> start of send image
+ALERT - 2024-01-03 10:58:22 --> end of send image
+CRITICAL - 2024-01-03 10:58:22 --> Call to a member function getBody() on null
+in APPPATH\Controllers\Home.php on line 57.
+ 1 APPPATH\Controllers\Home.php(30): App\Controllers\Home->gapAPI('339322905', '18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496')
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ALERT - 2024-01-03 10:58:28 --> start of send image
+ALERT - 2024-01-03 10:58:35 --> end of send image
+CRITICAL - 2024-01-03 10:58:35 --> Call to a member function getBody() on null
+in APPPATH\Controllers\Home.php on line 57.
+ 1 APPPATH\Controllers\Home.php(30): App\Controllers\Home->gapAPI('339322905', '18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496')
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ALERT - 2024-01-03 10:58:50 --> start of send image
+ALERT - 2024-01-03 10:58:56 --> end of send image
+CRITICAL - 2024-01-03 10:58:56 --> Call to a member function getBody() on null
+in APPPATH\Controllers\Home.php on line 54.
+ 1 APPPATH\Controllers\Home.php(30): App\Controllers\Home->gapAPI('339322905', '18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496')
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ALERT - 2024-01-03 10:59:13 --> start of send image
+ALERT - 2024-01-03 10:59:17 --> end of send image
+CRITICAL - 2024-01-03 10:59:17 --> Call to a member function getBody() on null
+in APPPATH\Controllers\Home.php on line 54.
+ 1 APPPATH\Controllers\Home.php(30): App\Controllers\Home->gapAPI('339322905', '18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496')
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ALERT - 2024-01-03 11:04:56 --> start of send image
+ALERT - 2024-01-03 11:04:59 --> end of send image
+CRITICAL - 2024-01-03 11:04:59 --> Call to a member function getBody() on null
+in APPPATH\Controllers\Home.php on line 57.
+ 1 APPPATH\Controllers\Home.php(30): App\Controllers\Home->gapAPI('339322905', '18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496')
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ALERT - 2024-01-03 11:06:48 --> start of send image
+ALERT - 2024-01-03 11:06:52 --> end of send image
+ALERT - 2024-01-03 11:07:07 --> start of send image
+ALERT - 2024-01-03 11:07:10 --> end of send image
+ALERT - 2024-01-03 11:08:00 --> start of send image
+ALERT - 2024-01-03 11:08:06 --> end of send image
+ALERT - 2024-01-03 11:08:29 --> start of send image
+ALERT - 2024-01-03 11:08:34 --> end of send image
+ALERT - 2024-01-03 11:09:39 --> start of send image
+ALERT - 2024-01-03 11:09:44 --> end of send image
+ALERT - 2024-01-03 11:09:44 --> {"SID":"304c7c7be9b64978b20c6b19d635e0a1.jpg","filename":"s.jpg","filesize":845941,"type":"image","width":1024,"height":768,"duration":0,"desc":["SSSSSS"]}
+ALERT - 2024-01-03 11:11:33 --> start of send image
+ALERT - 2024-01-03 11:11:36 --> end of send image
+ALERT - 2024-01-03 11:11:36 --> {"SID":"62587d61f248486ea910e03fa1ca694f.jpg","filename":"s.jpg","filesize":845941,"type":"image","width":1024,"height":768,"duration":0,"desc":["SSSSSS"]}
+ALERT - 2024-01-03 11:12:32 --> start of send image
+ALERT - 2024-01-03 11:12:39 --> end of send image
+ALERT - 2024-01-03 11:12:39 --> {"SID":"fbb674421e7d41a68f81925feb229316.jpg","filename":"s.jpg","filesize":845941,"type":"image","width":1024,"height":768,"duration":0,"desc":["SSSSSS"]}
+ALERT - 2024-01-03 11:14:09 --> start of send image
+ALERT - 2024-01-03 11:14:16 --> end of send image
+ALERT - 2024-01-03 11:14:16 --> {"SID":"c46e790af7fb4fa1b455c37c152f337a.jpg","filename":"s.jpg","filesize":845941,"type":"image","width":1024,"height":768,"duration":0,"desc":["SSSSSS"]}
+ALERT - 2024-01-03 11:14:31 --> start of send image
+ALERT - 2024-01-03 11:14:34 --> end of send image
+ALERT - 2024-01-03 11:14:34 --> {"SID":"6d776acde4454327b26443784fae32e8.jpg","filename":"s.jpg","filesize":845941,"type":"image","width":1024,"height":768,"duration":0,"desc":["SSSSSS"]}
+ALERT - 2024-01-03 11:15:23 --> start of send image
+ALERT - 2024-01-03 11:15:27 --> end of send image
+ALERT - 2024-01-03 11:15:27 --> {"SID":"c7521ed428ab4351a0c98c0e54ad8217.jpg","filename":"s.jpg","filesize":845941,"type":"image","width":1024,"height":768,"duration":0,"desc":["SSSSSS"]}
