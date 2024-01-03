@@ -170,13 +170,15 @@ class GapAPI extends SetParams
 
         $imageResponse = $this->request ($image);
 
-        $this->formParams->chat_id = $chatId;
+        return $imageResponse;
 
-        $this->formParams->data = $imageResponse->getJSON ();
-
-        $sendMessage = new SendMessage ($this->client , $this->formParams);
-
-        return $this->request ($sendMessage);
+//        $this->formParams->chat_id = $chatId;
+//
+//        $this->formParams->data = $imageResponse->getJSON ();
+//
+//        $sendMessage = new SendMessage ($this->client , $this->formParams);
+//
+//        return $this->request ($sendMessage);
     }
 
 }

@@ -12,10 +12,61 @@ class Home extends BaseController
         $chatId = '339322905';
 
         $gap = new \App\Libraries\GapAPI\GapAPI ($token , $this->request);
+//
+//        $gap->set_chat_id ($chatId)
+//            ->send_text ('LLLL');
 
-        /* -------------------------------------------------------------------------------- */
+        /* ----------------------------------------------------------------------
+         * Step one of uploading
+         * ----------------------------------------------------------------------
+         */
 
+        $imagePath = FCPATH . '/Images/s.jpg';
+//
+//        $gap->set_chat_id ($chatId);
+//
+//        log_message ('alert' , 'send image');
+//        $uploadImage = $gap->send_image ($imagePath , 'OK OK OK');
+//
+//        $post = json_encode ($this->request->getPost ());
+//        log_message ('alert' , 'status code: ' . $uploadImage->getStatusCode ());
+//        log_message ('alert' , 'get json: ' . $uploadImage->getJSON ());
+//        log_message ('alert' , 'post: ' . $post);
+//        log_message ('alert' , 'get body: ' . $uploadImage->getBody ());
 
+        /* ----------------------------------------------------------------------
+         * Step two of uploading
+         * ----------------------------------------------------------------------
+         */
+
+        $image = $gap->receive->get_data (ReceiveTypes::image);
+        log_message ('alert' , 'GET IMAGE IS SUCCESS');
+        log_message ('alert' , $image);
+
+        $uploadURL = 'https://api.gap.im/upload';
+        $sendMessageURL = 'https://api.gap.im/sendMessage';
+
+        $curl = \Config\Services::curlrequest ();
+
+        $options = [
+            'headers' => [
+                'token' => $token ,
+            ] ,
+            'form_params' => [
+                'chat_id' => $chatId ,
+                'type' => 'image' ,
+                'data' => json_encode ($image) ,
+            ] ,
+        ];
+
+        log_message ('alert' , 'start send message');
+        $ok = $curl->request ('POST' , $sendMessageURL , $options);
+        log_message ('alert' , 'end of send message');
+
+        $post = json_encode ($this->request->getPost ());
+        log_message ('alert' , 'step 2 - status code: ' . $ok->getStatusCode ());
+        log_message ('alert' , 'step 2 - get body: ' . $ok->getBody ());
+        log_message ('alert' , 'step 2 - post: ' . $post);
 
         /* -------------------------------------------------------------------------------- */
 
