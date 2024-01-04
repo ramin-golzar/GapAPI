@@ -4,6 +4,7 @@ namespace App\Libraries\GapAPI;
 use App\Libraries\GapAPI\Handlers\FormParams;
 use App\Libraries\GapAPI\Handlers\Multipart;
 use App\Libraries\GapAPI\Send\Handlers\Currency;
+use App\Libraries\GapAPI\Send\Handlers\Types;
 
 class SetParams
 {
@@ -147,8 +148,10 @@ class SetParams
         $this->formParams = new FormParams();
     }
 
-    protected function set_image (string &$imagePath , string &$description = ''): void {
-        $this->multipart->image = new \CURLFile ($imagePath);
+    protected function set_file (Types $fileType , string &$imagePath , string &$description = ''): void {
+        $type = $fileType->name;
+
+        $this->multipart->$type = new \CURLFile ($imagePath);
 
         $this->multipart->desc = $description;
     }

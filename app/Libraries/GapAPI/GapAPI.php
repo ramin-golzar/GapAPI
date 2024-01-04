@@ -157,7 +157,7 @@ class GapAPI extends SetParams
     }
 
     public function send_image (string $imagePath , string $description = ''): object {
-        $this->set_image ($imagePath , $description);
+        $this->set_file (Types::image , $imagePath , $description);
 
         $upload = new Upload (Types::image , $this->client , $this->formParams , $this->multipart);
 

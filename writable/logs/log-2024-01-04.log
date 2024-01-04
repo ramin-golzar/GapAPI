@@ -18,3 +18,590 @@ in APPPATH\Libraries\GapAPI\Send\Upload.php on line 39.
  5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
  6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ALERT - 2024-01-04 04:21:57 --> start of send image
+CRITICAL - 2024-01-04 04:22:00 --> App\Libraries\GapAPI\Send\Upload::request(): Return value must be of type object, none returned
+in APPPATH\Libraries\GapAPI\Send\Upload.php on line 39.
+ 1 APPPATH\Libraries\GapAPI\SetParams.php(157): App\Libraries\GapAPI\Send\Upload->request()
+ 2 APPPATH\Libraries\GapAPI\GapAPI.php(172): App\Libraries\GapAPI\SetParams->request(Object(App\Libraries\GapAPI\Send\Upload))
+ 3 APPPATH\Controllers\Home.php(28): App\Libraries\GapAPI\GapAPI->send_image('FCPATH\\Images\\s.jpg', 'Hello upload, how are you??')
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ALERT - 2024-01-04 04:23:05 --> start of send image
+CRITICAL - 2024-01-04 04:23:12 --> App\Libraries\GapAPI\Send\Upload::request(): Return value must be of type object, none returned
+in APPPATH\Libraries\GapAPI\Send\Upload.php on line 39.
+ 1 APPPATH\Libraries\GapAPI\SetParams.php(157): App\Libraries\GapAPI\Send\Upload->request()
+ 2 APPPATH\Libraries\GapAPI\GapAPI.php(172): App\Libraries\GapAPI\SetParams->request(Object(App\Libraries\GapAPI\Send\Upload))
+ 3 APPPATH\Controllers\Home.php(28): App\Libraries\GapAPI\GapAPI->send_image('FCPATH\\Images\\s.jpg')
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ALERT - 2024-01-04 04:23:16 --> start of send image
+ALERT - 2024-01-04 04:23:20 --> start of send image
+CRITICAL - 2024-01-04 04:23:21 --> App\Libraries\GapAPI\Send\Upload::request(): Return value must be of type object, none returned
+in APPPATH\Libraries\GapAPI\Send\Upload.php on line 39.
+ 1 APPPATH\Libraries\GapAPI\SetParams.php(157): App\Libraries\GapAPI\Send\Upload->request()
+ 2 APPPATH\Libraries\GapAPI\GapAPI.php(172): App\Libraries\GapAPI\SetParams->request(Object(App\Libraries\GapAPI\Send\Upload))
+ 3 APPPATH\Controllers\Home.php(28): App\Libraries\GapAPI\GapAPI->send_image('FCPATH\\Images\\s.jpg')
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-04 04:23:24 --> App\Libraries\GapAPI\Send\Upload::request(): Return value must be of type object, none returned
+in APPPATH\Libraries\GapAPI\Send\Upload.php on line 39.
+ 1 APPPATH\Libraries\GapAPI\SetParams.php(157): App\Libraries\GapAPI\Send\Upload->request()
+ 2 APPPATH\Libraries\GapAPI\GapAPI.php(172): App\Libraries\GapAPI\SetParams->request(Object(App\Libraries\GapAPI\Send\Upload))
+ 3 APPPATH\Controllers\Home.php(28): App\Libraries\GapAPI\GapAPI->send_image('FCPATH\\Images\\s.jpg')
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ALERT - 2024-01-04 04:27:51 --> start of send image
+CRITICAL - 2024-01-04 04:27:58 --> App\Libraries\GapAPI\Send\Upload::request(): Return value must be of type object, none returned
+in APPPATH\Libraries\GapAPI\Send\Upload.php on line 39.
+ 1 APPPATH\Libraries\GapAPI\SetParams.php(157): App\Libraries\GapAPI\Send\Upload->request()
+ 2 APPPATH\Libraries\GapAPI\GapAPI.php(164): App\Libraries\GapAPI\SetParams->request(Object(App\Libraries\GapAPI\Send\Upload))
+ 3 APPPATH\Controllers\Home.php(28): App\Libraries\GapAPI\GapAPI->send_image('FCPATH\\Images\\s.jpg', 'AA')
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ALERT - 2024-01-04 04:31:50 --> start of send image
+ALERT - 2024-01-04 04:31:50 --> AA
+CRITICAL - 2024-01-04 04:31:50 --> log_message(): Argument #2 ($message) must be of type string, App\Libraries\GapAPI\Handlers\FormParams given, called in E:\SoftWare\xampp-windows-x64-8.2.4-0-VS16-installer\htdocs\my_projects\GitHub\GapAPI\app\Libraries\GapAPI\Send\Handlers\PrepareParams.php on line 27
+in SYSTEMPATH\Common.php on line 781.
+ 1 APPPATH\Libraries\GapAPI\Send\Handlers\PrepareParams.php(27): log_message('alert', Object(App\Libraries\GapAPI\Handlers\FormParams))
+ 2 APPPATH\Libraries\GapAPI\Send\BaseSend.php(106): App\Libraries\GapAPI\Send\Handlers\PrepareParams->run(Object(App\Libraries\GapAPI\Handlers\FormParams))
+ 3 APPPATH\Libraries\GapAPI\Send\BaseSend.php(65): App\Libraries\GapAPI\Send\BaseSend->prepare_params(Object(App\Libraries\GapAPI\Handlers\FormParams), Object(App\Libraries\GapAPI\Handlers\Multipart))
+ 4 APPPATH\Libraries\GapAPI\Send\Upload.php(20): App\Libraries\GapAPI\Send\BaseSend->__construct(Object(CodeIgniter\HTTP\CURLRequest), Object(App\Libraries\GapAPI\Handlers\FormParams), Object(App\Libraries\GapAPI\Handlers\Multipart))
+ 5 APPPATH\Libraries\GapAPI\GapAPI.php(162): App\Libraries\GapAPI\Send\Upload->__construct(Object(App\Libraries\GapAPI\Send\Handlers\Types), Object(CodeIgniter\HTTP\CURLRequest), Object(App\Libraries\GapAPI\Handlers\FormParams), Object(App\Libraries\GapAPI\Handlers\Multipart))
+ 6 APPPATH\Controllers\Home.php(28): App\Libraries\GapAPI\GapAPI->send_image('FCPATH\\Images\\s.jpg', 'AA')
+ 7 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-04 04:31:50 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse json string, error: "Non-backed enums have no default serialization". in E:\SoftWare\xampp-windows-x64-8.2.4-0-VS16-installer\htdocs\my_projects\GitHub\GapAPI\system\Format\JSONFormatter.php:41
+Stack trace:
+#0 E:\SoftWare\xampp-windows-x64-8.2.4-0-VS16-installer\htdocs\my_projects\GitHub\GapAPI\system\Format\JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Non-backed enum...')
+#1 E:\SoftWare\xampp-windows-x64-8.2.4-0-VS16-installer\htdocs\my_projects\GitHub\GapAPI\system\API\ResponseTrait.php(341): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 E:\SoftWare\xampp-windows-x64-8.2.4-0-VS16-installer\htdocs\my_projects\GitHub\GapAPI\system\API\ResponseTrait.php(99): CodeIgniter\Debug\Exceptions->format(Array)
+#3 E:\SoftWare\xampp-windows-x64-8.2.4-0-VS16-installer\htdocs\my_projects\GitHub\GapAPI\system\Debug\Exceptions.php(120): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(TypeError))
+#5 {main}
+  thrown
+in SYSTEMPATH\Format\JSONFormatter.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ALERT - 2024-01-04 04:32:17 --> start of send image
+ALERT - 2024-01-04 04:32:17 --> AA
+CRITICAL - 2024-01-04 04:32:17 --> log_message(): Argument #2 ($message) must be of type string, App\Libraries\GapAPI\Handlers\FormParams given, called in E:\SoftWare\xampp-windows-x64-8.2.4-0-VS16-installer\htdocs\my_projects\GitHub\GapAPI\app\Libraries\GapAPI\Send\Handlers\PrepareParams.php on line 27
+in SYSTEMPATH\Common.php on line 781.
+ 1 APPPATH\Libraries\GapAPI\Send\Handlers\PrepareParams.php(27): log_message('alert', Object(App\Libraries\GapAPI\Handlers\FormParams))
+ 2 APPPATH\Libraries\GapAPI\Send\BaseSend.php(106): App\Libraries\GapAPI\Send\Handlers\PrepareParams->run(Object(App\Libraries\GapAPI\Handlers\FormParams))
+ 3 APPPATH\Libraries\GapAPI\Send\BaseSend.php(65): App\Libraries\GapAPI\Send\BaseSend->prepare_params(Object(App\Libraries\GapAPI\Handlers\FormParams), Object(App\Libraries\GapAPI\Handlers\Multipart))
+ 4 APPPATH\Libraries\GapAPI\Send\Upload.php(20): App\Libraries\GapAPI\Send\BaseSend->__construct(Object(CodeIgniter\HTTP\CURLRequest), Object(App\Libraries\GapAPI\Handlers\FormParams), Object(App\Libraries\GapAPI\Handlers\Multipart))
+ 5 APPPATH\Libraries\GapAPI\GapAPI.php(162): App\Libraries\GapAPI\Send\Upload->__construct(Object(App\Libraries\GapAPI\Send\Handlers\Types), Object(CodeIgniter\HTTP\CURLRequest), Object(App\Libraries\GapAPI\Handlers\FormParams), Object(App\Libraries\GapAPI\Handlers\Multipart))
+ 6 APPPATH\Controllers\Home.php(28): App\Libraries\GapAPI\GapAPI->send_image('FCPATH\\Images\\s.jpg', 'AA')
+ 7 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-04 04:32:17 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse json string, error: "Non-backed enums have no default serialization". in E:\SoftWare\xampp-windows-x64-8.2.4-0-VS16-installer\htdocs\my_projects\GitHub\GapAPI\system\Format\JSONFormatter.php:41
+Stack trace:
+#0 E:\SoftWare\xampp-windows-x64-8.2.4-0-VS16-installer\htdocs\my_projects\GitHub\GapAPI\system\Format\JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Non-backed enum...')
+#1 E:\SoftWare\xampp-windows-x64-8.2.4-0-VS16-installer\htdocs\my_projects\GitHub\GapAPI\system\API\ResponseTrait.php(341): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 E:\SoftWare\xampp-windows-x64-8.2.4-0-VS16-installer\htdocs\my_projects\GitHub\GapAPI\system\API\ResponseTrait.php(99): CodeIgniter\Debug\Exceptions->format(Array)
+#3 E:\SoftWare\xampp-windows-x64-8.2.4-0-VS16-installer\htdocs\my_projects\GitHub\GapAPI\system\Debug\Exceptions.php(120): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(TypeError))
+#5 {main}
+  thrown
+in SYSTEMPATH\Format\JSONFormatter.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ALERT - 2024-01-04 04:34:16 --> start of send image
+ALERT - 2024-01-04 04:34:16 --> AA
+CRITICAL - 2024-01-04 04:34:17 --> Undefined property: App\Libraries\GapAPI\Handlers\FormParams::$desc
+in APPPATH\Libraries\GapAPI\Send\Handlers\PrepareParams.php on line 27.
+ 1 APPPATH\Libraries\GapAPI\Send\Handlers\PrepareParams.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Libraries\\GapAPI\\Handlers\\FormParams::$desc', 'APPPATH\\Libraries\\GapAPI\\Send\\Handlers\\PrepareParams.php', 27)
+ 2 APPPATH\Libraries\GapAPI\Send\BaseSend.php(106): App\Libraries\GapAPI\Send\Handlers\PrepareParams->run(Object(App\Libraries\GapAPI\Handlers\FormParams))
+ 3 APPPATH\Libraries\GapAPI\Send\BaseSend.php(65): App\Libraries\GapAPI\Send\BaseSend->prepare_params(Object(App\Libraries\GapAPI\Handlers\FormParams), Object(App\Libraries\GapAPI\Handlers\Multipart))
+ 4 APPPATH\Libraries\GapAPI\Send\Upload.php(20): App\Libraries\GapAPI\Send\BaseSend->__construct(Object(CodeIgniter\HTTP\CURLRequest), Object(App\Libraries\GapAPI\Handlers\FormParams), Object(App\Libraries\GapAPI\Handlers\Multipart))
+ 5 APPPATH\Libraries\GapAPI\GapAPI.php(162): App\Libraries\GapAPI\Send\Upload->__construct(Object(App\Libraries\GapAPI\Send\Handlers\Types), Object(CodeIgniter\HTTP\CURLRequest), Object(App\Libraries\GapAPI\Handlers\FormParams), Object(App\Libraries\GapAPI\Handlers\Multipart))
+ 6 APPPATH\Controllers\Home.php(28): App\Libraries\GapAPI\GapAPI->send_image('FCPATH\\Images\\s.jpg', 'AA')
+ 7 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-04 04:34:17 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse json string, error: "Non-backed enums have no default serialization". in E:\SoftWare\xampp-windows-x64-8.2.4-0-VS16-installer\htdocs\my_projects\GitHub\GapAPI\system\Format\JSONFormatter.php:41
+Stack trace:
+#0 E:\SoftWare\xampp-windows-x64-8.2.4-0-VS16-installer\htdocs\my_projects\GitHub\GapAPI\system\Format\JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Non-backed enum...')
+#1 E:\SoftWare\xampp-windows-x64-8.2.4-0-VS16-installer\htdocs\my_projects\GitHub\GapAPI\system\API\ResponseTrait.php(341): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 E:\SoftWare\xampp-windows-x64-8.2.4-0-VS16-installer\htdocs\my_projects\GitHub\GapAPI\system\API\ResponseTrait.php(99): CodeIgniter\Debug\Exceptions->format(Array)
+#3 E:\SoftWare\xampp-windows-x64-8.2.4-0-VS16-installer\htdocs\my_projects\GitHub\GapAPI\system\Debug\Exceptions.php(120): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#5 {main}
+  thrown
+in SYSTEMPATH\Format\JSONFormatter.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ALERT - 2024-01-04 04:35:53 --> start of send image
+ALERT - 2024-01-04 04:35:53 --> AA
+CRITICAL - 2024-01-04 04:35:53 --> Undefined property: App\Libraries\GapAPI\Handlers\FormParams::$desc
+in APPPATH\Libraries\GapAPI\Send\Handlers\PrepareParams.php on line 27.
+ 1 APPPATH\Libraries\GapAPI\Send\Handlers\PrepareParams.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Libraries\\GapAPI\\Handlers\\FormParams::$desc', 'APPPATH\\Libraries\\GapAPI\\Send\\Handlers\\PrepareParams.php', 27)
+ 2 APPPATH\Libraries\GapAPI\Send\BaseSend.php(106): App\Libraries\GapAPI\Send\Handlers\PrepareParams->run(Object(App\Libraries\GapAPI\Handlers\FormParams))
+ 3 APPPATH\Libraries\GapAPI\Send\BaseSend.php(65): App\Libraries\GapAPI\Send\BaseSend->prepare_params(Object(App\Libraries\GapAPI\Handlers\FormParams), Object(App\Libraries\GapAPI\Handlers\Multipart))
+ 4 APPPATH\Libraries\GapAPI\Send\Upload.php(20): App\Libraries\GapAPI\Send\BaseSend->__construct(Object(CodeIgniter\HTTP\CURLRequest), Object(App\Libraries\GapAPI\Handlers\FormParams), Object(App\Libraries\GapAPI\Handlers\Multipart))
+ 5 APPPATH\Libraries\GapAPI\GapAPI.php(162): App\Libraries\GapAPI\Send\Upload->__construct(Object(App\Libraries\GapAPI\Send\Handlers\Types), Object(CodeIgniter\HTTP\CURLRequest), Object(App\Libraries\GapAPI\Handlers\FormParams), Object(App\Libraries\GapAPI\Handlers\Multipart))
+ 6 APPPATH\Controllers\Home.php(28): App\Libraries\GapAPI\GapAPI->send_image('FCPATH\\Images\\s.jpg', 'AA')
+ 7 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-04 04:35:53 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse json string, error: "Non-backed enums have no default serialization". in E:\SoftWare\xampp-windows-x64-8.2.4-0-VS16-installer\htdocs\my_projects\GitHub\GapAPI\system\Format\JSONFormatter.php:41
+Stack trace:
+#0 E:\SoftWare\xampp-windows-x64-8.2.4-0-VS16-installer\htdocs\my_projects\GitHub\GapAPI\system\Format\JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Non-backed enum...')
+#1 E:\SoftWare\xampp-windows-x64-8.2.4-0-VS16-installer\htdocs\my_projects\GitHub\GapAPI\system\API\ResponseTrait.php(341): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 E:\SoftWare\xampp-windows-x64-8.2.4-0-VS16-installer\htdocs\my_projects\GitHub\GapAPI\system\API\ResponseTrait.php(99): CodeIgniter\Debug\Exceptions->format(Array)
+#3 E:\SoftWare\xampp-windows-x64-8.2.4-0-VS16-installer\htdocs\my_projects\GitHub\GapAPI\system\Debug\Exceptions.php(120): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#5 {main}
+  thrown
+in SYSTEMPATH\Format\JSONFormatter.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ALERT - 2024-01-04 04:36:59 --> start of send image
+ALERT - 2024-01-04 04:36:59 --> AA
+ALERT - 2024-01-04 04:36:59 --> no desc
+ALERT - 2024-01-04 04:36:59 --> AA
+CRITICAL - 2024-01-04 04:37:05 --> App\Libraries\GapAPI\Send\Upload::request(): Return value must be of type object, none returned
+in APPPATH\Libraries\GapAPI\Send\Upload.php on line 39.
+ 1 APPPATH\Libraries\GapAPI\SetParams.php(157): App\Libraries\GapAPI\Send\Upload->request()
+ 2 APPPATH\Libraries\GapAPI\GapAPI.php(164): App\Libraries\GapAPI\SetParams->request(Object(App\Libraries\GapAPI\Send\Upload))
+ 3 APPPATH\Controllers\Home.php(28): App\Libraries\GapAPI\GapAPI->send_image('FCPATH\\Images\\s.jpg', 'AA')
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ALERT - 2024-01-04 05:04:01 --> start of send image
+ALERT - 2024-01-04 05:04:01 --> AA
+CRITICAL - 2024-01-04 05:04:01 --> Array to string conversion
+in APPPATH\Libraries\GapAPI\Send\Handlers\PrepareParams.php on line 29.
+ 1 APPPATH\Libraries\GapAPI\Send\Handlers\PrepareParams.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Libraries\\GapAPI\\Send\\Handlers\\PrepareParams.php', 29)
+ 2 APPPATH\Libraries\GapAPI\Send\BaseSend.php(106): App\Libraries\GapAPI\Send\Handlers\PrepareParams->run(Object(App\Libraries\GapAPI\Handlers\FormParams))
+ 3 APPPATH\Libraries\GapAPI\Send\BaseSend.php(65): App\Libraries\GapAPI\Send\BaseSend->prepare_params(Object(App\Libraries\GapAPI\Handlers\FormParams), Object(App\Libraries\GapAPI\Handlers\Multipart))
+ 4 APPPATH\Libraries\GapAPI\Send\Upload.php(20): App\Libraries\GapAPI\Send\BaseSend->__construct(Object(CodeIgniter\HTTP\CURLRequest), Object(App\Libraries\GapAPI\Handlers\FormParams), Object(App\Libraries\GapAPI\Handlers\Multipart))
+ 5 APPPATH\Libraries\GapAPI\GapAPI.php(162): App\Libraries\GapAPI\Send\Upload->__construct(Object(App\Libraries\GapAPI\Send\Handlers\Types), Object(CodeIgniter\HTTP\CURLRequest), Object(App\Libraries\GapAPI\Handlers\FormParams), Object(App\Libraries\GapAPI\Handlers\Multipart))
+ 6 APPPATH\Controllers\Home.php(28): App\Libraries\GapAPI\GapAPI->send_image('FCPATH\\Images\\s.jpg', 'AA')
+ 7 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-04 05:04:01 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse json string, error: "Non-backed enums have no default serialization". in E:\SoftWare\xampp-windows-x64-8.2.4-0-VS16-installer\htdocs\my_projects\GitHub\GapAPI\system\Format\JSONFormatter.php:41
+Stack trace:
+#0 E:\SoftWare\xampp-windows-x64-8.2.4-0-VS16-installer\htdocs\my_projects\GitHub\GapAPI\system\Format\JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Non-backed enum...')
+#1 E:\SoftWare\xampp-windows-x64-8.2.4-0-VS16-installer\htdocs\my_projects\GitHub\GapAPI\system\API\ResponseTrait.php(341): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 E:\SoftWare\xampp-windows-x64-8.2.4-0-VS16-installer\htdocs\my_projects\GitHub\GapAPI\system\API\ResponseTrait.php(99): CodeIgniter\Debug\Exceptions->format(Array)
+#3 E:\SoftWare\xampp-windows-x64-8.2.4-0-VS16-installer\htdocs\my_projects\GitHub\GapAPI\system\Debug\Exceptions.php(120): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#5 {main}
+  thrown
+in SYSTEMPATH\Format\JSONFormatter.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ALERT - 2024-01-04 05:04:49 --> start of send image
+ALERT - 2024-01-04 05:04:49 --> AA
+ALERT - 2024-01-04 05:04:49 --> no desc
+ALERT - 2024-01-04 05:04:49 --> AA
+CRITICAL - 2024-01-04 05:04:54 --> App\Libraries\GapAPI\Send\Upload::request(): Return value must be of type object, none returned
+in APPPATH\Libraries\GapAPI\Send\Upload.php on line 39.
+ 1 APPPATH\Libraries\GapAPI\SetParams.php(157): App\Libraries\GapAPI\Send\Upload->request()
+ 2 APPPATH\Libraries\GapAPI\GapAPI.php(164): App\Libraries\GapAPI\SetParams->request(Object(App\Libraries\GapAPI\Send\Upload))
+ 3 APPPATH\Controllers\Home.php(28): App\Libraries\GapAPI\GapAPI->send_image('FCPATH\\Images\\s.jpg', 'AA')
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ALERT - 2024-01-04 05:07:08 --> start of send image
+ALERT - 2024-01-04 05:07:08 --> AA
+ALERT - 2024-01-04 05:07:08 --> AA
+CRITICAL - 2024-01-04 05:07:11 --> App\Libraries\GapAPI\Send\Upload::request(): Return value must be of type object, none returned
+in APPPATH\Libraries\GapAPI\Send\Upload.php on line 39.
+ 1 APPPATH\Libraries\GapAPI\SetParams.php(157): App\Libraries\GapAPI\Send\Upload->request()
+ 2 APPPATH\Libraries\GapAPI\GapAPI.php(164): App\Libraries\GapAPI\SetParams->request(Object(App\Libraries\GapAPI\Send\Upload))
+ 3 APPPATH\Controllers\Home.php(28): App\Libraries\GapAPI\GapAPI->send_image('FCPATH\\Images\\s.jpg', 'AA')
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ALERT - 2024-01-04 05:09:06 --> start of send image
+ALERT - 2024-01-04 05:09:06 --> AA
+ALERT - 2024-01-04 05:09:06 --> AA
+CRITICAL - 2024-01-04 05:09:11 --> Undefined array key "multipart"
+in APPPATH\Libraries\GapAPI\Send\BaseSend.php on line 162.
+ 1 APPPATH\Libraries\GapAPI\Send\BaseSend.php(162): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "multipart"', 'APPPATH\\Libraries\\GapAPI\\Send\\BaseSend.php', 162)
+ 2 APPPATH\Libraries\GapAPI\Send\Upload.php(56): App\Libraries\GapAPI\Send\BaseSend->request()
+ 3 APPPATH\Libraries\GapAPI\Send\Upload.php(35): App\Libraries\GapAPI\Send\Upload->send_file(Object(CodeIgniter\HTTP\Response))
+ 4 APPPATH\Libraries\GapAPI\SetParams.php(157): App\Libraries\GapAPI\Send\Upload->request()
+ 5 APPPATH\Libraries\GapAPI\GapAPI.php(164): App\Libraries\GapAPI\SetParams->request(Object(App\Libraries\GapAPI\Send\Upload))
+ 6 APPPATH\Controllers\Home.php(28): App\Libraries\GapAPI\GapAPI->send_image('FCPATH\\Images\\s.jpg', 'AA')
+ 7 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ALERT - 2024-01-04 05:11:00 --> start of send image
+ALERT - 2024-01-04 05:11:00 --> [AA]
+ALERT - 2024-01-04 05:11:00 --> [AA]
+CRITICAL - 2024-01-04 05:11:04 --> Undefined array key "multipart"
+in APPPATH\Libraries\GapAPI\Send\BaseSend.php on line 162.
+ 1 APPPATH\Libraries\GapAPI\Send\BaseSend.php(162): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "multipart"', 'APPPATH\\Libraries\\GapAPI\\Send\\BaseSend.php', 162)
+ 2 APPPATH\Libraries\GapAPI\Send\Upload.php(56): App\Libraries\GapAPI\Send\BaseSend->request()
+ 3 APPPATH\Libraries\GapAPI\Send\Upload.php(35): App\Libraries\GapAPI\Send\Upload->send_file(Object(CodeIgniter\HTTP\Response))
+ 4 APPPATH\Libraries\GapAPI\SetParams.php(157): App\Libraries\GapAPI\Send\Upload->request()
+ 5 APPPATH\Libraries\GapAPI\GapAPI.php(164): App\Libraries\GapAPI\SetParams->request(Object(App\Libraries\GapAPI\Send\Upload))
+ 6 APPPATH\Controllers\Home.php(28): App\Libraries\GapAPI\GapAPI->send_image('FCPATH\\Images\\s.jpg', '[AA]')
+ 7 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ALERT - 2024-01-04 05:11:19 --> start of send image
+ALERT - 2024-01-04 05:11:19 --> [AA]
+ALERT - 2024-01-04 05:11:19 --> [AA]
+CRITICAL - 2024-01-04 05:11:25 --> Undefined array key "multipart"
+in APPPATH\Libraries\GapAPI\Send\BaseSend.php on line 162.
+ 1 APPPATH\Libraries\GapAPI\Send\BaseSend.php(162): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "multipart"', 'APPPATH\\Libraries\\GapAPI\\Send\\BaseSend.php', 162)
+ 2 APPPATH\Libraries\GapAPI\Send\Upload.php(56): App\Libraries\GapAPI\Send\BaseSend->request()
+ 3 APPPATH\Libraries\GapAPI\Send\Upload.php(35): App\Libraries\GapAPI\Send\Upload->send_file(Object(CodeIgniter\HTTP\Response))
+ 4 APPPATH\Libraries\GapAPI\SetParams.php(157): App\Libraries\GapAPI\Send\Upload->request()
+ 5 APPPATH\Libraries\GapAPI\GapAPI.php(164): App\Libraries\GapAPI\SetParams->request(Object(App\Libraries\GapAPI\Send\Upload))
+ 6 APPPATH\Controllers\Home.php(28): App\Libraries\GapAPI\GapAPI->send_image('FCPATH\\Images\\s.jpg', '[AA]')
+ 7 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ALERT - 2024-01-04 05:11:53 --> start of send image
+ALERT - 2024-01-04 05:11:53 --> KKK
+ALERT - 2024-01-04 05:11:53 --> KKK
+CRITICAL - 2024-01-04 05:11:57 --> Undefined array key "multipart"
+in APPPATH\Libraries\GapAPI\Send\BaseSend.php on line 162.
+ 1 APPPATH\Libraries\GapAPI\Send\BaseSend.php(162): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "multipart"', 'APPPATH\\Libraries\\GapAPI\\Send\\BaseSend.php', 162)
+ 2 APPPATH\Libraries\GapAPI\Send\Upload.php(56): App\Libraries\GapAPI\Send\BaseSend->request()
+ 3 APPPATH\Libraries\GapAPI\Send\Upload.php(35): App\Libraries\GapAPI\Send\Upload->send_file(Object(CodeIgniter\HTTP\Response))
+ 4 APPPATH\Libraries\GapAPI\SetParams.php(157): App\Libraries\GapAPI\Send\Upload->request()
+ 5 APPPATH\Libraries\GapAPI\GapAPI.php(164): App\Libraries\GapAPI\SetParams->request(Object(App\Libraries\GapAPI\Send\Upload))
+ 6 APPPATH\Controllers\Home.php(28): App\Libraries\GapAPI\GapAPI->send_image('FCPATH\\Images\\s.jpg', 'KKK')
+ 7 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ALERT - 2024-01-04 05:12:07 --> start of send image
+ALERT - 2024-01-04 05:12:07 --> KKK
+ALERT - 2024-01-04 05:12:07 --> KKK
+CRITICAL - 2024-01-04 05:12:12 --> Undefined array key "multipart"
+in APPPATH\Libraries\GapAPI\Send\BaseSend.php on line 162.
+ 1 APPPATH\Libraries\GapAPI\Send\BaseSend.php(162): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "multipart"', 'APPPATH\\Libraries\\GapAPI\\Send\\BaseSend.php', 162)
+ 2 APPPATH\Libraries\GapAPI\Send\Upload.php(56): App\Libraries\GapAPI\Send\BaseSend->request()
+ 3 APPPATH\Libraries\GapAPI\Send\Upload.php(35): App\Libraries\GapAPI\Send\Upload->send_file(Object(CodeIgniter\HTTP\Response))
+ 4 APPPATH\Libraries\GapAPI\SetParams.php(157): App\Libraries\GapAPI\Send\Upload->request()
+ 5 APPPATH\Libraries\GapAPI\GapAPI.php(164): App\Libraries\GapAPI\SetParams->request(Object(App\Libraries\GapAPI\Send\Upload))
+ 6 APPPATH\Controllers\Home.php(28): App\Libraries\GapAPI\GapAPI->send_image('FCPATH\\Images\\s.jpg', 'KKK')
+ 7 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ALERT - 2024-01-04 05:14:18 --> start of send image
+ALERT - 2024-01-04 05:14:18 --> KKK
+CRITICAL - 2024-01-04 05:14:24 --> App\Libraries\GapAPI\Send\Upload::request(): Return value must be of type object, none returned
+in APPPATH\Libraries\GapAPI\Send\Upload.php on line 39.
+ 1 APPPATH\Libraries\GapAPI\SetParams.php(157): App\Libraries\GapAPI\Send\Upload->request()
+ 2 APPPATH\Libraries\GapAPI\GapAPI.php(164): App\Libraries\GapAPI\SetParams->request(Object(App\Libraries\GapAPI\Send\Upload))
+ 3 APPPATH\Controllers\Home.php(28): App\Libraries\GapAPI\GapAPI->send_image('FCPATH\\Images\\s.jpg', 'KKK')
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ALERT - 2024-01-04 05:17:08 --> start of send image
+ALERT - 2024-01-04 05:17:13 --> end of send image
+ALERT - 2024-01-04 05:17:13 --> status code: 200
+ALERT - 2024-01-04 05:17:49 --> start of send image
+ALERT - 2024-01-04 05:17:56 --> end of send image
+ALERT - 2024-01-04 05:17:56 --> status code: 200
+ALERT - 2024-01-04 05:25:35 --> start of send image
+ALERT - 2024-01-04 05:25:35 --> KKK
+CRITICAL - 2024-01-04 05:25:38 --> Undefined array key "multipart"
+in APPPATH\Libraries\GapAPI\Send\BaseSend.php on line 162.
+ 1 APPPATH\Libraries\GapAPI\Send\BaseSend.php(162): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "multipart"', 'APPPATH\\Libraries\\GapAPI\\Send\\BaseSend.php', 162)
+ 2 APPPATH\Libraries\GapAPI\Send\Upload.php(56): App\Libraries\GapAPI\Send\BaseSend->request()
+ 3 APPPATH\Libraries\GapAPI\Send\Upload.php(35): App\Libraries\GapAPI\Send\Upload->send_file(Object(CodeIgniter\HTTP\Response))
+ 4 APPPATH\Libraries\GapAPI\SetParams.php(157): App\Libraries\GapAPI\Send\Upload->request()
+ 5 APPPATH\Libraries\GapAPI\GapAPI.php(164): App\Libraries\GapAPI\SetParams->request(Object(App\Libraries\GapAPI\Send\Upload))
+ 6 APPPATH\Controllers\Home.php(28): App\Libraries\GapAPI\GapAPI->send_image('FCPATH\\Images\\s.jpg', 'KKK')
+ 7 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-04 05:39:01 --> Undefined property: stdClass::$chat_id
+in APPPATH\Libraries\GapAPI\Receive\Receive.php on line 24.
+ 1 APPPATH\Libraries\GapAPI\Receive\Receive.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$chat_id', 'APPPATH\\Libraries\\GapAPI\\Receive\\Receive.php', 24)
+ 2 APPPATH\Libraries\GapAPI\SetParams.php(25): App\Libraries\GapAPI\Receive\Receive->get_chat_id()
+ 3 APPPATH\Libraries\GapAPI\GapAPI.php(42): App\Libraries\GapAPI\SetParams->set_chat_id()
+ 4 APPPATH\Controllers\Home.php(14): App\Libraries\GapAPI\GapAPI->__construct('18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496', Object(CodeIgniter\HTTP\IncomingRequest))
+ 5 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ALERT - 2024-01-04 05:41:20 --> start of send image
+CRITICAL - 2024-01-04 05:41:21 --> 22 : The requested URL returned error: 500
+in SYSTEMPATH\HTTP\CURLRequest.php on line 655.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(655): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested URL returned error: 500')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(363): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(136): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://api.gap.im/upload')
+ 4 APPPATH\Libraries\GapAPI\Send\BaseSend.php(161): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://api.gap.im/upload', [...])
+ 5 APPPATH\Libraries\GapAPI\Send\Upload.php(32): App\Libraries\GapAPI\Send\BaseSend->request()
+ 6 APPPATH\Libraries\GapAPI\SetParams.php(157): App\Libraries\GapAPI\Send\Upload->request()
+ 7 APPPATH\Libraries\GapAPI\GapAPI.php(164): App\Libraries\GapAPI\SetParams->request(Object(App\Libraries\GapAPI\Send\Upload))
+ 8 APPPATH\Controllers\Home.php(28): App\Libraries\GapAPI\GapAPI->send_image('FCPATH\\Images\\s.jpg', 'KKK')
+ 9 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+10 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ALERT - 2024-01-04 05:41:30 --> start of send image
+CRITICAL - 2024-01-04 05:41:30 --> 22 : The requested URL returned error: 500
+in SYSTEMPATH\HTTP\CURLRequest.php on line 655.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(655): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested URL returned error: 500')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(363): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(136): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://api.gap.im/upload')
+ 4 APPPATH\Libraries\GapAPI\Send\BaseSend.php(161): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://api.gap.im/upload', [...])
+ 5 APPPATH\Libraries\GapAPI\Send\Upload.php(32): App\Libraries\GapAPI\Send\BaseSend->request()
+ 6 APPPATH\Libraries\GapAPI\SetParams.php(157): App\Libraries\GapAPI\Send\Upload->request()
+ 7 APPPATH\Libraries\GapAPI\GapAPI.php(164): App\Libraries\GapAPI\SetParams->request(Object(App\Libraries\GapAPI\Send\Upload))
+ 8 APPPATH\Controllers\Home.php(28): App\Libraries\GapAPI\GapAPI->send_image('FCPATH\\Images\\s.jpg', 'KKK')
+ 9 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+10 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ALERT - 2024-01-04 05:42:41 --> start of send image
+ALERT - 2024-01-04 05:42:48 --> end of send image
+ALERT - 2024-01-04 05:42:48 --> status code: 200
+ALERT - 2024-01-04 05:43:07 --> start of send image
+ALERT - 2024-01-04 05:43:13 --> end of send image
+ALERT - 2024-01-04 05:43:13 --> status code: 200
+ALERT - 2024-01-04 05:44:03 --> start of send image
+ALERT - 2024-01-04 05:44:07 --> end of send image
+ALERT - 2024-01-04 05:44:07 --> status code: 200
+ALERT - 2024-01-04 05:50:12 --> start of send image
+ALERT - 2024-01-04 05:50:28 --> end of send image
+ALERT - 2024-01-04 05:50:28 --> status code: 200
+ALERT - 2024-01-04 05:51:18 --> start of send image
+ALERT - 2024-01-04 05:51:54 --> start of send image
+ALERT - 2024-01-04 05:52:41 --> start of send image
+ALERT - 2024-01-04 05:52:53 --> {"SID":"a2cc57cc6e8a459593dfcf923331a4bf.jpg","filename":"s.jpg","filesize":845941,"type":"image","width":1024,"height":768,"duration":0,"desc":["Debug"]}
+ALERT - 2024-01-04 05:53:01 --> end of send image
+ALERT - 2024-01-04 05:53:01 --> status code: 200
+ALERT - 2024-01-04 05:53:44 --> {"SID":"338cf21126ac4c548eae716203896814.jpg","filename":"s.jpg","filesize":845941,"type":"image","width":1024,"height":768,"duration":0,"desc":["Debug"]}
+ALERT - 2024-01-04 05:53:54 --> end of send image
+ALERT - 2024-01-04 05:53:54 --> status code: 200
+ALERT - 2024-01-04 05:54:23 --> aaa
+ALERT - 2024-01-04 05:54:23 --> end of send image
+ALERT - 2024-01-04 05:54:23 --> status code: 200
+ALERT - 2024-01-04 05:54:37 --> start of send image
+ALERT - 2024-01-04 05:54:44 --> end of send image
+ALERT - 2024-01-04 05:54:44 --> status code: 200
+ALERT - 2024-01-04 05:55:53 --> start of send image
+CRITICAL - 2024-01-04 05:55:58 --> 22 : The requested URL returned error: 400
+in SYSTEMPATH\HTTP\CURLRequest.php on line 655.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(655): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested URL returned error: 400')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(363): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(136): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://api.gap.im/sendMessage')
+ 4 APPPATH\Libraries\GapAPI\Send\BaseSend.php(161): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://api.gap.im/sendMessage', [...])
+ 5 APPPATH\Libraries\GapAPI\Send\Upload.php(56): App\Libraries\GapAPI\Send\BaseSend->request()
+ 6 APPPATH\Libraries\GapAPI\Send\Upload.php(35): App\Libraries\GapAPI\Send\Upload->send_file(Object(CodeIgniter\HTTP\Response))
+ 7 APPPATH\Libraries\GapAPI\SetParams.php(157): App\Libraries\GapAPI\Send\Upload->request()
+ 8 APPPATH\Libraries\GapAPI\GapAPI.php(164): App\Libraries\GapAPI\SetParams->request(Object(App\Libraries\GapAPI\Send\Upload))
+ 9 APPPATH\Controllers\Home.php(28): App\Libraries\GapAPI\GapAPI->send_image('FCPATH\\Images\\s.jpg', 'aaaaa')
+10 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+11 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ALERT - 2024-01-04 05:56:50 --> start of send image
+CRITICAL - 2024-01-04 05:56:54 --> 22 : The requested URL returned error: 400
+in SYSTEMPATH\HTTP\CURLRequest.php on line 655.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(655): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested URL returned error: 400')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(363): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(136): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://api.gap.im/sendMessage')
+ 4 APPPATH\Libraries\GapAPI\Send\BaseSend.php(161): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://api.gap.im/sendMessage', [...])
+ 5 APPPATH\Libraries\GapAPI\Send\Upload.php(56): App\Libraries\GapAPI\Send\BaseSend->request()
+ 6 APPPATH\Libraries\GapAPI\Send\Upload.php(35): App\Libraries\GapAPI\Send\Upload->send_file(Object(CodeIgniter\HTTP\Response))
+ 7 APPPATH\Libraries\GapAPI\SetParams.php(157): App\Libraries\GapAPI\Send\Upload->request()
+ 8 APPPATH\Libraries\GapAPI\GapAPI.php(164): App\Libraries\GapAPI\SetParams->request(Object(App\Libraries\GapAPI\Send\Upload))
+ 9 APPPATH\Controllers\Home.php(28): App\Libraries\GapAPI\GapAPI->send_image('FCPATH\\Images\\s.jpg', 'aaaaa')
+10 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+11 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ALERT - 2024-01-04 05:58:33 --> start of send image
+ALERT - 2024-01-04 05:58:37 --> end of send image
+ALERT - 2024-01-04 05:58:37 --> status code: 200
+ALERT - 2024-01-04 05:59:32 --> start of send image
+ALERT - 2024-01-04 05:59:38 --> end of send image
+ALERT - 2024-01-04 05:59:38 --> status code: 200
+ALERT - 2024-01-04 05:59:58 --> start of send image
+ALERT - 2024-01-04 06:00:04 --> end of send image
+ALERT - 2024-01-04 06:00:04 --> status code: 200
+ALERT - 2024-01-04 06:00:56 --> start of send image
+ALERT - 2024-01-04 06:01:03 --> end of send image
+ALERT - 2024-01-04 06:01:03 --> status code: 200
+ALERT - 2024-01-04 06:02:15 --> start of send image
+ALERT - 2024-01-04 06:02:20 --> {"SID":"511eb20813b64ed4a53424327a3e1bc3.jpg","filename":"s.jpg","filesize":845941,"type":"image","width":1024,"height":768,"duration":0,"desc":["aaaaa"]}
+ALERT - 2024-01-04 06:02:21 --> end of send image
+ALERT - 2024-01-04 06:02:21 --> status code: 200
+ALERT - 2024-01-04 06:30:11 --> start of send image
+ALERT - 2024-01-04 06:30:54 --> start of send image
+ALERT - 2024-01-04 06:30:57 --> start of send image
+ALERT - 2024-01-04 06:33:48 --> start of send image
+CRITICAL - 2024-01-04 06:37:10 --> Maximum execution time of 120 seconds exceeded
+in SYSTEMPATH\HTTP\CURLRequest.php on line 652.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-01-04 06:37:10 --> Maximum execution time of 120 seconds exceeded
+in SYSTEMPATH\HTTP\CURLRequest.php on line 652.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-01-04 06:37:14 --> Undefined property: stdClass::$chat_id
+in APPPATH\Libraries\GapAPI\Receive\Receive.php on line 24.
+ 1 APPPATH\Libraries\GapAPI\Receive\Receive.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$chat_id', 'APPPATH\\Libraries\\GapAPI\\Receive\\Receive.php', 24)
+ 2 APPPATH\Libraries\GapAPI\SetParams.php(25): App\Libraries\GapAPI\Receive\Receive->get_chat_id()
+ 3 APPPATH\Libraries\GapAPI\GapAPI.php(42): App\Libraries\GapAPI\SetParams->set_chat_id()
+ 4 APPPATH\Controllers\Home.php(14): App\Libraries\GapAPI\GapAPI->__construct('18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496', Object(CodeIgniter\HTTP\IncomingRequest))
+ 5 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-04 06:37:16 --> Undefined property: stdClass::$chat_id
+in APPPATH\Libraries\GapAPI\Receive\Receive.php on line 24.
+ 1 APPPATH\Libraries\GapAPI\Receive\Receive.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$chat_id', 'APPPATH\\Libraries\\GapAPI\\Receive\\Receive.php', 24)
+ 2 APPPATH\Libraries\GapAPI\SetParams.php(25): App\Libraries\GapAPI\Receive\Receive->get_chat_id()
+ 3 APPPATH\Libraries\GapAPI\GapAPI.php(42): App\Libraries\GapAPI\SetParams->set_chat_id()
+ 4 APPPATH\Controllers\Home.php(14): App\Libraries\GapAPI\GapAPI->__construct('18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496', Object(CodeIgniter\HTTP\IncomingRequest))
+ 5 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-04 06:37:16 --> Undefined property: stdClass::$chat_id
+in APPPATH\Libraries\GapAPI\Receive\Receive.php on line 24.
+ 1 APPPATH\Libraries\GapAPI\Receive\Receive.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$chat_id', 'APPPATH\\Libraries\\GapAPI\\Receive\\Receive.php', 24)
+ 2 APPPATH\Libraries\GapAPI\SetParams.php(25): App\Libraries\GapAPI\Receive\Receive->get_chat_id()
+ 3 APPPATH\Libraries\GapAPI\GapAPI.php(42): App\Libraries\GapAPI\SetParams->set_chat_id()
+ 4 APPPATH\Controllers\Home.php(14): App\Libraries\GapAPI\GapAPI->__construct('18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496', Object(CodeIgniter\HTTP\IncomingRequest))
+ 5 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-04 06:37:17 --> Undefined property: stdClass::$chat_id
+in APPPATH\Libraries\GapAPI\Receive\Receive.php on line 24.
+ 1 APPPATH\Libraries\GapAPI\Receive\Receive.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$chat_id', 'APPPATH\\Libraries\\GapAPI\\Receive\\Receive.php', 24)
+ 2 APPPATH\Libraries\GapAPI\SetParams.php(25): App\Libraries\GapAPI\Receive\Receive->get_chat_id()
+ 3 APPPATH\Libraries\GapAPI\GapAPI.php(42): App\Libraries\GapAPI\SetParams->set_chat_id()
+ 4 APPPATH\Controllers\Home.php(14): App\Libraries\GapAPI\GapAPI->__construct('18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496', Object(CodeIgniter\HTTP\IncomingRequest))
+ 5 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-04 06:37:17 --> Undefined property: stdClass::$chat_id
+in APPPATH\Libraries\GapAPI\Receive\Receive.php on line 24.
+ 1 APPPATH\Libraries\GapAPI\Receive\Receive.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$chat_id', 'APPPATH\\Libraries\\GapAPI\\Receive\\Receive.php', 24)
+ 2 APPPATH\Libraries\GapAPI\SetParams.php(25): App\Libraries\GapAPI\Receive\Receive->get_chat_id()
+ 3 APPPATH\Libraries\GapAPI\GapAPI.php(42): App\Libraries\GapAPI\SetParams->set_chat_id()
+ 4 APPPATH\Controllers\Home.php(14): App\Libraries\GapAPI\GapAPI->__construct('18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496', Object(CodeIgniter\HTTP\IncomingRequest))
+ 5 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-04 06:37:35 --> Maximum execution time of 120 seconds exceeded
+in SYSTEMPATH\HTTP\CURLRequest.php on line 652.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-01-04 06:37:49 --> Maximum execution time of 120 seconds exceeded
+in SYSTEMPATH\HTTP\CURLRequest.php on line 652.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ALERT - 2024-01-04 06:38:22 --> start of send image
+ALERT - 2024-01-04 06:38:30 --> end of send image
+ALERT - 2024-01-04 06:38:30 --> status code: 200
+ALERT - 2024-01-04 06:38:46 --> start of send image
+ALERT - 2024-01-04 06:38:52 --> end of send image
+ALERT - 2024-01-04 06:38:52 --> status code: 200
+ALERT - 2024-01-04 06:42:09 --> start of send image
+ALERT - 2024-01-04 06:42:19 --> end of send image
+ALERT - 2024-01-04 06:42:19 --> status code: 200
+ALERT - 2024-01-04 06:44:03 --> start of send image
+ALERT - 2024-01-04 06:44:09 --> end of send image
+ALERT - 2024-01-04 06:44:09 --> status code: 200
+ALERT - 2024-01-04 06:47:01 --> start of send image
+ALERT - 2024-01-04 06:47:08 --> end of send image
+ALERT - 2024-01-04 06:47:08 --> status code: 200
+ALERT - 2024-01-04 07:04:18 --> start of send image
+CRITICAL - 2024-01-04 07:04:18 --> Object of class App\Libraries\GapAPI\Send\Handlers\Types could not be converted to string
+in APPPATH\Libraries\GapAPI\SetParams.php on line 152.
+ 1 APPPATH\Libraries\GapAPI\GapAPI.php(160): App\Libraries\GapAPI\SetParams->set_image(Object(App\Libraries\GapAPI\Send\Handlers\Types), 'FCPATH\\Images\\s.jpg', 'بلالاخره آپلود فایل به پایان رسید')
+ 2 APPPATH\Controllers\Home.php(28): App\Libraries\GapAPI\GapAPI->send_image('FCPATH\\Images\\s.jpg', 'بلالاخره آپلود فایل به پایان رسید')
+ 3 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 4 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-04 07:04:18 --> Uncaught CodeIgniter\Format\Exceptions\FormatException: Failed to parse json string, error: "Non-backed enums have no default serialization". in E:\SoftWare\xampp-windows-x64-8.2.4-0-VS16-installer\htdocs\my_projects\GitHub\GapAPI\system\Format\JSONFormatter.php:41
+Stack trace:
+#0 E:\SoftWare\xampp-windows-x64-8.2.4-0-VS16-installer\htdocs\my_projects\GitHub\GapAPI\system\Format\JSONFormatter.php(41): CodeIgniter\Format\Exceptions\FormatException::forInvalidJSON('Non-backed enum...')
+#1 E:\SoftWare\xampp-windows-x64-8.2.4-0-VS16-installer\htdocs\my_projects\GitHub\GapAPI\system\API\ResponseTrait.php(341): CodeIgniter\Format\JSONFormatter->format(Array)
+#2 E:\SoftWare\xampp-windows-x64-8.2.4-0-VS16-installer\htdocs\my_projects\GitHub\GapAPI\system\API\ResponseTrait.php(99): CodeIgniter\Debug\Exceptions->format(Array)
+#3 E:\SoftWare\xampp-windows-x64-8.2.4-0-VS16-installer\htdocs\my_projects\GitHub\GapAPI\system\Debug\Exceptions.php(120): CodeIgniter\Debug\Exceptions->respond(Array, 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(Error))
+#5 {main}
+  thrown
+in SYSTEMPATH\Format\JSONFormatter.php on line 41.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ALERT - 2024-01-04 07:06:30 --> start of send image
+ALERT - 2024-01-04 07:06:33 --> end of send image
+ALERT - 2024-01-04 07:06:33 --> status code: 200
+ALERT - 2024-01-04 07:08:16 --> start of send image
+ALERT - 2024-01-04 07:08:25 --> end of send image
+ALERT - 2024-01-04 07:08:25 --> status code: 200
+ALERT - 2024-01-04 07:09:47 --> start of send image
+ALERT - 2024-01-04 07:09:54 --> end of send image
+ALERT - 2024-01-04 07:09:54 --> status code: 200
+ALERT - 2024-01-04 07:13:13 --> start of send image
+CRITICAL - 2024-01-04 07:13:18 --> 22 : The requested URL returned error: 400
+in SYSTEMPATH\HTTP\CURLRequest.php on line 655.
+ 1 SYSTEMPATH\HTTP\CURLRequest.php(655): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError('22', 'The requested URL returned error: 400')
+ 2 SYSTEMPATH\HTTP\CURLRequest.php(363): CodeIgniter\HTTP\CURLRequest->sendRequest([...])
+ 3 SYSTEMPATH\HTTP\CURLRequest.php(136): CodeIgniter\HTTP\CURLRequest->send('POST', 'https://api.gap.im/sendMessage')
+ 4 APPPATH\Libraries\GapAPI\Send\BaseSend.php(161): CodeIgniter\HTTP\CURLRequest->request('POST', 'https://api.gap.im/sendMessage', [...])
+ 5 APPPATH\Libraries\GapAPI\Send\Upload.php(79): App\Libraries\GapAPI\Send\BaseSend->request()
+ 6 APPPATH\Libraries\GapAPI\Send\Upload.php(58): App\Libraries\GapAPI\Send\Upload->send_file(Object(CodeIgniter\HTTP\Response))
+ 7 APPPATH\Libraries\GapAPI\SetParams.php(160): App\Libraries\GapAPI\Send\Upload->request()
+ 8 APPPATH\Libraries\GapAPI\GapAPI.php(164): App\Libraries\GapAPI\SetParams->request(Object(App\Libraries\GapAPI\Send\Upload))
+ 9 APPPATH\Controllers\Home.php(28): App\Libraries\GapAPI\GapAPI->send_image('FCPATH\\Images\\s.jpg')
+10 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+11 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ALERT - 2024-01-04 07:18:06 --> start of send image
+CRITICAL - 2024-01-04 07:18:06 --> Undefined array key "desc"
+in APPPATH\Libraries\GapAPI\Send\BaseSend.php on line 161.
+ 1 APPPATH\Libraries\GapAPI\Send\BaseSend.php(161): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "desc"', 'APPPATH\\Libraries\\GapAPI\\Send\\BaseSend.php', 161)
+ 2 APPPATH\Libraries\GapAPI\Send\Upload.php(55): App\Libraries\GapAPI\Send\BaseSend->request()
+ 3 APPPATH\Libraries\GapAPI\SetParams.php(160): App\Libraries\GapAPI\Send\Upload->request()
+ 4 APPPATH\Libraries\GapAPI\GapAPI.php(164): App\Libraries\GapAPI\SetParams->request(Object(App\Libraries\GapAPI\Send\Upload))
+ 5 APPPATH\Controllers\Home.php(28): App\Libraries\GapAPI\GapAPI->send_image('FCPATH\\Images\\s.jpg')
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ALERT - 2024-01-04 07:21:55 --> start of send image
+ALERT - 2024-01-04 07:21:59 --> end of send image
+ALERT - 2024-01-04 07:21:59 --> status code: 200
+ALERT - 2024-01-04 07:24:02 --> start of send image
+ALERT - 2024-01-04 07:24:05 --> end of send image
+ALERT - 2024-01-04 07:24:05 --> status code: 200
+ALERT - 2024-01-04 07:26:58 --> start of send image
+ALERT - 2024-01-04 07:27:06 --> end of send image
+ALERT - 2024-01-04 07:27:06 --> status code: 200
+ALERT - 2024-01-04 07:27:51 --> start of send image
+ALERT - 2024-01-04 07:27:55 --> end of send image
+ALERT - 2024-01-04 07:27:55 --> status code: 200
+ALERT - 2024-01-04 07:28:44 --> start of send image
+ALERT - 2024-01-04 07:28:49 --> end of send image
+ALERT - 2024-01-04 07:28:49 --> status code: 200
