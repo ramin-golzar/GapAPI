@@ -25,9 +25,10 @@ class Home extends BaseController
 
         $gap->set_chat_id ($chatId);
         log_message ('alert' , 'start of send image');
-        $uploadImage = $gap->send_image ($imagePath , 'SSSSSS');
+        $uploadImage = $gap->send_image ($imagePath , 'Hello upload, how are you??');
         log_message ('alert' , 'end of send image');
-        $this->gapAPI ($chatId , $token , $uploadImage);
+        log_message ('alert' , 'status code: ' . $uploadImage->getStatusCode ());
+//        $this->gapAPI ($chatId , $token , $uploadImage);
 
         /* -------------------------------------------------------------------------------- */
 

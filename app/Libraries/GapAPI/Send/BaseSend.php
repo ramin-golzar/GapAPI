@@ -22,7 +22,7 @@ class BaseSend
      *
      * @var Params
      */
-    private ?array $formParams = [];
+    protected ?array $formParams = [];
 
     /**
      * To hold the upload parameters
@@ -37,6 +37,13 @@ class BaseSend
      * @var object
      */
     public object $client;
+
+    /**
+     * Is upload required or not
+     *
+     * @var bool
+     */
+    private bool $uploadRequired = false;
 
     /* ToDo: convert those constants to enum file */
 
@@ -80,6 +87,10 @@ class BaseSend
         $this->formParams ['type'] = $type->name;
     }
 
+    protected function set_upload_required (bool $uploadRequired): void {
+        $this->uploadRequired = $uploadRequired;
+    }
+
     /**
      * Initialize the formParams & multipar
      * properties for send
@@ -106,7 +117,7 @@ class BaseSend
      * @return array
      */
     private function get_options (): array {
-        if ($this->multipart) {
+        if ($this->uploadRequired) {
             return $this->get_upload_options ();
         } else {
             return $this->get_message_options ();

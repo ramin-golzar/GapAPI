@@ -16,8 +16,9 @@ use App\Libraries\GapAPI\Send\PaymentVerify;
 use App\Libraries\GapAPI\Send\PaymentInquiry;
 use App\Libraries\GapAPI\Send\EditMessage;
 use App\Libraries\GapAPI\Send\DeleteMessage;
-use App\Libraries\GapAPI\Send\Upload\Image;
+use App\Libraries\GapAPI\Send\Upload;
 use App\Libraries\GapAPI\Receive\Receive;
+use App\Libraries\GapAPI\Send\Handlers\Types;
 
 class GapAPI extends SetParams
 {
@@ -159,22 +160,21 @@ class GapAPI extends SetParams
         $this->set_image ($imagePath , $description);
 
         /* ToDo: this code not standard */
-        $formParams = null;
+//        $formParams = null;
 
-        $image = new Image ($this->client , $formParams , $this->multipart);
+        $upload = new Upload (Types::image , $this->client , $this->formParams , $this->multipart);
 
         /* ToDo: ehtemalan mishavad dar inja
          * as object receive va method get_chat_id
          * estefade kard */
-        $chatId = $this->multipart->chat_id;
+//        $chatId = $this->multipart->chat_id;
 
-        $imageResponse = $this->request ($image);
+        return $this->request ($upload);
 
-        return $imageResponse;
-
+//        return $imageResponse;
 //        $this->formParams->chat_id = $chatId;
 //
-//        $this->formParams->data = $imageResponse->getJSON ();
+//        $this->formParams->data = $imageResponse->getBody ();
 //
 //        $sendMessage = new SendMessage ($this->client , $this->formParams);
 //
