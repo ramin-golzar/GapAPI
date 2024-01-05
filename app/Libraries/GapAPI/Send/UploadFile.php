@@ -6,7 +6,7 @@ use App\Libraries\GapAPI\Handlers\Multipart;
 use App\Libraries\GapAPI\Send\Handlers\URLs;
 use App\Libraries\GapAPI\Send\Handlers\Types;
 
-class Upload extends BaseSend
+class UploadFile extends BaseSend
 {
 
     /**

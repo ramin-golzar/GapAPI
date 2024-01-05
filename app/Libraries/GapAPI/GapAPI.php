@@ -16,7 +16,7 @@ use App\Libraries\GapAPI\Send\PaymentVerify;
 use App\Libraries\GapAPI\Send\PaymentInquiry;
 use App\Libraries\GapAPI\Send\EditMessage;
 use App\Libraries\GapAPI\Send\DeleteMessage;
-use App\Libraries\GapAPI\Send\Upload;
+use App\Libraries\GapAPI\Send\UploadFile;
 use App\Libraries\GapAPI\Receive\Receive;
 use App\Libraries\GapAPI\Send\Handlers\Types;
 
@@ -156,10 +156,10 @@ class GapAPI extends SetParams
         return $this->request ($deleteMessage);
     }
 
-    public function send_image (string $imagePath , string $description = ''): object {
+    public function upload_image (string $imagePath , string $description = ''): object {
         $this->set_file (Types::image , $imagePath , $description);
 
-        $upload = new Upload (Types::image , $this->client , $this->formParams , $this->multipart);
+        $upload = new UploadFile (Types::image , $this->client , $this->formParams , $this->multipart);
 
         return $this->request ($upload);
     }

@@ -21,15 +21,18 @@ class Home extends BaseController
          * ----------------------------------------------------------------------
          */
 
+        /* ToDo:
+         * - a problem in the edit message
+         * - escape the user inputs
+         * - create the SendFile class
+         */
+
         $imagePath = FCPATH . '/Images/s.jpg';
 
-        $gap->set_chat_id ($chatId);
-        log_message ('alert' , 'start of send image');
-        $gap->set_reply_keyboard ('example');
-        $uploadImage = $gap->send_image ($imagePath , 'hello');
-        log_message ('alert' , 'end of send image');
-        log_message ('alert' , 'status code: ' . $uploadImage->getStatusCode ());
-//        $this->gapAPI ($chatId , $token , $uploadImage);
+//        $gap->set_chat_id ($chatId);
+
+        $gap->upload_image ($imagePath , 'aa aa aa');
+        log_message ('alert' , 'end of send');
 
         /* -------------------------------------------------------------------------------- */
 
