@@ -31,8 +31,11 @@ class Home extends BaseController
 
 //        $gap->set_chat_id ($chatId);
 
-        $gap->upload_image ($imagePath , 'aa aa aa');
-        log_message ('alert' , 'end of send');
+        log_message ('alert' , 'START UPLOAD');
+
+        $gap->send_image ($imagePath);
+
+        log_message ('alert' , 'END OF UPLOAD');
 
         /* -------------------------------------------------------------------------------- */
 

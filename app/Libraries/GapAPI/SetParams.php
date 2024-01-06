@@ -148,12 +148,31 @@ class SetParams
         $this->formParams = new FormParams();
     }
 
-    protected function set_file (Types $fileType , string &$imagePath , string &$description = ''): void {
+    protected function set_upload_file (Types $fileType , string &$imagePath , string &$description = ''): void {
         $type = $fileType->name;
 
         $this->multipart->$type = new \CURLFile ($imagePath);
 
         $this->multipart->desc = $description;
+    }
+
+    protected function set_send_file (object $jsonFile , Types $type , string &$description): void {
+        if (is_string ($jsonFile)) {
+            $decoded = json_decode ($jsonFile , true);
+        } else {
+            $decoded = json_decode ($jsonFile->getBody () , true);
+        }
+
+
+        if (!key_exists ('type' , $decoded)) {
+            $decoded ['type'] = $type->name;
+        }
+
+        if ($description) {
+            $decoded ['desc'] = $description;
+        }
+
+        $this->formParams->data = json_encode ($decoded);
     }
 
     protected function request (object &$sendClass): object {

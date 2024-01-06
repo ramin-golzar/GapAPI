@@ -19,6 +19,7 @@ use App\Libraries\GapAPI\Send\DeleteMessage;
 use App\Libraries\GapAPI\Send\UploadFile;
 use App\Libraries\GapAPI\Receive\Receive;
 use App\Libraries\GapAPI\Send\Handlers\Types;
+use App\Libraries\GapAPI\Send\SendImage;
 
 class GapAPI extends SetParams
 {
@@ -156,10 +157,34 @@ class GapAPI extends SetParams
         return $this->request ($deleteMessage);
     }
 
-    public function upload_image (string $imagePath , string $description = ''): object {
-        $this->set_file (Types::image , $imagePath , $description);
+    public function send_image (string $image , string $description = ''): object {
+        if ($this->is_require_upload ($image)) {
+            $image = $this->upload (Types::image , $image , $description);
+        }
 
-        $upload = new UploadFile (Types::image , $this->client , $this->formParams , $this->multipart);
+        $this->set_send_file ($image , Types::image , $description);
+
+        $sendImage = new SendImage ($this->client , $this->formParams);
+
+        return $this->request ($sendImage);
+    }
+
+    private function is_require_upload (string $file): bool {
+        if (!json_decode ($file)) {
+            if (!is_file ($file)) {
+                throw new Exception ('Did not passed a valid file');
+            }
+
+            return true;
+        }
+
+        return false;
+    }
+
+    private function upload (Types $type , string &$file , string &$description): object {
+        $this->set_upload_file ($type , $file , $description);
+
+        $upload = new UploadFile ($type , $this->client , $this->formParams , $this->multipart);
 
         return $this->request ($upload);
     }
