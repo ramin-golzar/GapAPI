@@ -54,11 +54,7 @@ class UploadFile extends BaseSend
     public function request (): object {
         $uploadRequest = parent::request ();
 
-        if ($uploadRequest->getStatusCode () == 200) {
-            return $this->send_file ($uploadRequest);
-        } else {
-            return $uploadRequest;
-        }
+        return $uploadRequest;
     }
 
     /**
@@ -67,17 +63,12 @@ class UploadFile extends BaseSend
      * @param object $uploadRequest
      * @return object
      */
-    private function send_file (object &$uploadRequest): object {
-        $this->set_method (URLs::send_message);
-
-        $this->set_type ($this->type);
-
-        $this->set_upload_required (false);
-
-        $this->set_description ($uploadRequest);
-
-        return parent::request ();
-    }
+//    private function send_file (object &$uploadRequest): object {
+//
+//        $this->set_description ($uploadRequest);
+//
+//        return parent::request ();
+//    }
 
     /**
      * Setting the description parameter in
@@ -86,16 +77,16 @@ class UploadFile extends BaseSend
      * @param object $uploadRequest
      * @return void
      */
-    private function set_description (object &$uploadRequest): void {
-        if ($this->description) {
-            $decoded = json_decode ($uploadRequest->getBody () , true);
-
-            $decoded['desc'] = $this->description;
-
-            $this->formParams ['data'] = json_encode ($decoded);
-        } else {
-            $this->formParams ['data'] = $uploadRequest->getBody ();
-        }
-    }
+//    private function set_description (object &$uploadRequest): void {
+//        if ($this->description) {
+//            $decoded = json_decode ($uploadRequest->getBody () , true);
+//
+//            $decoded['desc'] = $this->description;
+//
+//            $this->formParams ['data'] = json_encode ($decoded);
+//        } else {
+//            $this->formParams ['data'] = $uploadRequest->getBody ();
+//        }
+//    }
 
 }
