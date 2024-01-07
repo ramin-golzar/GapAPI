@@ -33,7 +33,9 @@ class Home extends BaseController
 
         log_message ('alert' , 'START UPLOAD');
 
-        $gap->send_image ($imagePath);
+        $getImage = $gap->receive->get_data (ReceiveTypes::image);
+
+        $gap->send_image ($getImage , 'aaa');
 
         log_message ('alert' , 'END OF UPLOAD');
 

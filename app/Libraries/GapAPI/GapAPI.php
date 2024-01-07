@@ -186,7 +186,7 @@ class GapAPI extends SetParams
 
         $upload = new UploadFile ($type , $this->client , $this->formParams , $this->multipart);
 
-        return $this->request ($upload);
+        return $this->request ($upload , false);
     }
 
 }

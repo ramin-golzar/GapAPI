@@ -142,10 +142,12 @@ class SetParams
         return $this;
     }
 
-    private function reset_form_params (): void {
+    private function reset_params (): void {
         unset ($this->formParams);
+        unset ($this->multipart);
 
         $this->formParams = new FormParams();
+        $this->multipart = new Multipart();
     }
 
     protected function set_upload_file (Types $fileType , string &$imagePath , string &$description = ''): void {
@@ -156,7 +158,7 @@ class SetParams
         $this->multipart->desc = $description;
     }
 
-    protected function set_send_file (object $jsonFile , Types $type , string &$description): void {
+    protected function set_send_file (object|string $jsonFile , Types $type , string &$description): void {
         if (is_string ($jsonFile)) {
             $decoded = json_decode ($jsonFile , true);
         } else {
@@ -175,10 +177,12 @@ class SetParams
         $this->formParams->data = json_encode ($decoded);
     }
 
-    protected function request (object &$sendClass): object {
+    protected function request (object &$sendClass , bool $resetParams = true): object {
         $response = $sendClass->request ();
 
-        $this->reset_form_params ();
+        if ($resetParams) {
+            $this->reset_params ();
+        }
 
         return $response;
     }
