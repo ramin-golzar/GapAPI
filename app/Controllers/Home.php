@@ -32,10 +32,9 @@ class Home extends BaseController
 //        $gap->set_chat_id ($chatId);
 
 
+        $from = $gap->get_from ('id');
 
-
-
-
+        $gap->send_text ($from);
 
         /* -------------------------------------------------------------------------------- */
 

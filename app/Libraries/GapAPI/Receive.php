@@ -45,18 +45,12 @@ trait Receive
      * @param bool $decode
      * @return array|string|false
      */
-    public function get_from (?string $fromKey = null , bool $decode = true): array|string|false {
-        if (!isset ($this->post->from)) {
-            return false;
+    public function get_from (?string $fromKey = null , bool $decoding = true): array|string|false {
+        if (isset ($this->post->from)) {
+            return $this->post_analysis ('from' , $decoding , $fromKey);
         }
 
-        if (!$decode) {
-            return $this->post->from;
-        }
-
-        $fromDecoded = json_decode ($this->post->from , true);
-
-        return $fromKey ? $fromDecoded [$fromKey] : $fromDecoded;
+        return false;
     }
 
     public function get_text (): string|false {
@@ -75,7 +69,7 @@ trait Receive
         return false;
     }
 
-    private function post_analysis (string $postKey , bool &$decoding = false , string $postKeyKey = ''): string|array|false {
+    private function post_analysis (string $postKey , bool &$decoding = false , ?string $postKeyKey = null): string|array|false {
         if (!isset ($this->post->$postKey)) {
             return false;
         } elseif (isset ($this->post->$postKey) && !$decoding) {
