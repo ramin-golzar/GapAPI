@@ -24,7 +24,7 @@ class Home extends BaseController
         /* ToDo:
          * - a problem in the edit message
          * - escape the user inputs
-         * - create the SendFile class
+         * - base64 encode & decode
          */
 
         $imagePath = FCPATH . '/Images/s.jpg';
