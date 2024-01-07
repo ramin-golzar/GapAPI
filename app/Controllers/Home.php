@@ -35,12 +35,12 @@ class Home extends BaseController
 
         $from = $gap->get_data (ReceiveTypes::text , true);
 
-        $message = "Your Info\n\n"
-            . 'Your Name: ' . $from['name'] . "\n"
-            . 'Your ID: ' . $from['id'] . "\n"
-            . 'Your Username: ' . $from['username'];
+//        $message = "Your Info\n\n"
+//            . 'Your Name: ' . $from['name'] . "\n"
+//            . 'Your ID: ' . $from['id'] . "\n"
+//            . 'Your Username: ' . $from['username'];
 
-        $gap->send_text ($message);
+        $gap->send_text ('aa');
 
         /* -------------------------------------------------------------------------------- */
 
