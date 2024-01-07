@@ -23,8 +23,8 @@ class SetParams
             $this->formParams->chat_id = $chatId;
             $this->multipart->chat_id = $chatId;
         } else {
-            $this->formParams->chat_id = $this->receive->get_chat_id ();
-            $this->multipart->chat_id = $this->receive->get_chat_id ();
+            $this->formParams->chat_id = $this->get_chat_id ();
+            $this->multipart->chat_id = $this->get_chat_id ();
         }
 
         return $this;

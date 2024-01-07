@@ -17,14 +17,13 @@ use App\Libraries\GapAPI\Send\PaymentInquiry;
 use App\Libraries\GapAPI\Send\EditMessage;
 use App\Libraries\GapAPI\Send\DeleteMessage;
 use App\Libraries\GapAPI\Send\UploadFile;
-use App\Libraries\GapAPI\Receive\Receive;
 use App\Libraries\GapAPI\Send\Handlers\Types;
 use App\Libraries\GapAPI\Send\SendImage;
 
 class GapAPI extends SetParams
 {
 
-    public object $receive;
+    use \App\Libraries\GapAPI\Receive;
 
     /**
      * This is cURL object
@@ -38,7 +37,7 @@ class GapAPI extends SetParams
 
         $this->client = \Config\Services::curlrequest ($this->get_base_options ($token));
 
-        $this->receive = new Receive ($request);
+        $this->post = (object) $request->getPost ();
 
         $this->set_chat_id ();
     }

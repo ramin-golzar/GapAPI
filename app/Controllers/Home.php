@@ -31,15 +31,16 @@ class Home extends BaseController
 
 //        $gap->set_chat_id ($chatId);
 
-        $gap->set_reply_keyboard ('example');
 
-        log_message ('alert' , 'START UPLOAD');
 
-        $getImage = $gap->receive->get_data (ReceiveTypes::image);
+        $from = $gap->get_data (ReceiveTypes::text , true);
 
-        $gap->send_image ($getImage);
+        $message = "Your Info\n\n"
+            . 'Your Name: ' . $from['name'] . "\n"
+            . 'Your ID: ' . $from['id'] . "\n"
+            . 'Your Username: ' . $from['username'];
 
-        log_message ('alert' , 'END OF UPLOAD');
+        $gap->send_text ($message);
 
         /* -------------------------------------------------------------------------------- */
 
