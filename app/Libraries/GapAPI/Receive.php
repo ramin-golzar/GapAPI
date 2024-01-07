@@ -18,12 +18,16 @@ trait Receive
         return $this->post->chat_id ?: false;
     }
 
-    public function get_from (string $fromKey = ''): array|string|false {
-        if (!$this->post->from) {
+    public function get_from (?string $fromKey = null , bool $decod = true): array|string|false {
+        if (!isset ($this->post->from)) {
             return false;
         }
 
-        $fromDecoded = json_decode ($this->post->from);
+        if (!$decod) {
+            return $this->post->from;
+        }
+
+        $fromDecoded = json_decode ($this->post->from , true);
 
         return $fromKey ? $fromDecoded [$fromKey] : $fromDecoded;
     }
