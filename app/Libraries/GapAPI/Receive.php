@@ -63,6 +63,20 @@ trait Receive
     }
 
     /**
+     * To get the image contnt
+     *
+     * @param bool $decoding
+     * @return string|array|false
+     */
+    public function get_image (bool $decoding = false): string|array|false {
+        if ($this->exist_type (ReceiveTypes::image)) {
+            return $this->get_from_post ('data' , $decoding);
+        }
+
+        return false;
+    }
+
+    /**
      * To check exist a specific value of
      * type key into the post method
      *

@@ -34,6 +34,10 @@ class Home extends BaseController
 
         $from = $gap->get_from ('id');
 
+        $image = $gap->get_image ();
+
+        $gap->send_image ($image);
+
         $gap->send_text ($gap->get_chat_id () . "\n\n" . $from);
 
         /* -------------------------------------------------------------------------------- */
