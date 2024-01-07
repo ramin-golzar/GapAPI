@@ -35,7 +35,7 @@ trait Receive
      * @return string|false
      */
     public function get_chat_id (): string|false {
-        return $this->post->chat_id ?: false;
+        return $this->get_from_post ('chat_id');
     }
 
     /**
@@ -46,11 +46,7 @@ trait Receive
      * @return array|string|false
      */
     public function get_from (?string $fromKey = null , bool $decoding = true): array|string|false {
-        if (isset ($this->post->from)) {
-            return $this->get_from_post ('from' , $decoding , $fromKey);
-        }
-
-        return false;
+        return $this->get_from_post ('from' , $decoding , $fromKey);
     }
 
     /**
