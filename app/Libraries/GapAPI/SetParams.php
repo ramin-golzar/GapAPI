@@ -59,14 +59,19 @@ class SetParams
 
     protected function set_answer_callback (string &$text , string &$callbackId , bool &$showAlert = false): void {
         $this->formParams->text = $text;
+
         $this->formParams->callback_id = $callbackId;
+
         $this->formParams->show_alert = $showAlert;
     }
 
     protected function set_invoice (string &$amount , string &$description , string &$expirTime = '86400' , Currency $currency = Currency::rial): void {
         $this->formParams->amount = $amount;
+
         $this->formParams->currency = $currency->value;
+
         $this->formParams->description = $description;
+
         $this->formParams->expir_time = $expirTime;
     }
 
@@ -150,19 +155,17 @@ class SetParams
         $this->multipart = new Multipart();
     }
 
-    protected function set_upload_file (Types $fileType , string &$imagePath , string &$description = ''): void {
+    protected function set_upload_file (Types $fileType , string &$imagePath): void {
         $type = $fileType->name;
 
         $this->multipart->$type = new \CURLFile ($imagePath);
-
-        $this->multipart->desc = $description;
     }
 
-    protected function set_send_file (object|string $jsonFile , Types $type , string &$description): void {
-        if (is_string ($jsonFile)) {
-            $decoded = json_decode ($jsonFile , true);
+    protected function set_send_file (object|string $file , Types $type , string &$description): void {
+        if (is_string ($file)) {
+            $decoded = json_decode ($file , true);
         } else {
-            $decoded = json_decode ($jsonFile->getBody () , true);
+            $decoded = json_decode ($file->getBody () , true);
         }
 
 

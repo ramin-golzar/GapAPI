@@ -181,8 +181,8 @@ class GapAPI extends SetParams
         return false;
     }
 
-    private function upload (Types $type , string &$file , string &$description): object {
-        $this->set_upload_file ($type , $file , $description);
+    private function upload (Types $type , string &$file): object {
+        $this->set_upload_file ($type , $file);
 
         $upload = new UploadFile ($type , $this->client , $this->formParams , $this->multipart);
 

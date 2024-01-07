@@ -31,11 +31,13 @@ class Home extends BaseController
 
 //        $gap->set_chat_id ($chatId);
 
+        $gap->set_reply_keyboard ('example');
+
         log_message ('alert' , 'START UPLOAD');
 
         $getImage = $gap->receive->get_data (ReceiveTypes::image);
 
-        $gap->send_image ($getImage , 'aaa');
+        $gap->send_image ($getImage);
 
         log_message ('alert' , 'END OF UPLOAD');
 

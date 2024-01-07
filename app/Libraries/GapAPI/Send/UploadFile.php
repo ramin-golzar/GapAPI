@@ -16,16 +16,7 @@ class UploadFile extends BaseSend
      */
     private Types $type;
 
-    /**
-     * Holds the desc parameter
-     *
-     * @var string
-     */
-    private string $description = '';
-
     public function __construct (Types $type , object &$client , ?FormParams &$formParams = null , ?Multipart &$multipart = null) {
-        $this->detach_description ($multipart);
-
         parent::__construct ($client , $formParams , $multipart);
 
         $this->set_type ($type);
@@ -37,56 +28,10 @@ class UploadFile extends BaseSend
         $this->set_upload_required (true);
     }
 
-    /**
-     * Detach the desc parameter
-     *
-     * @param Multipart|null $multipart
-     * @return void
-     */
-    private function detach_description (?Multipart &$multipart): void {
-        if (!is_null ($multipart)) {
-            $this->description = $multipart->desc;
-
-            $multipart->desc = '';
-        }
-    }
-
     public function request (): object {
         $uploadRequest = parent::request ();
 
         return $uploadRequest;
     }
-
-    /**
-     * Sending the upload resutl to sendMessage URL
-     *
-     * @param object $uploadRequest
-     * @return object
-     */
-//    private function send_file (object &$uploadRequest): object {
-//
-//        $this->set_description ($uploadRequest);
-//
-//        return parent::request ();
-//    }
-
-    /**
-     * Setting the description parameter in
-     * the formParams
-     *
-     * @param object $uploadRequest
-     * @return void
-     */
-//    private function set_description (object &$uploadRequest): void {
-//        if ($this->description) {
-//            $decoded = json_decode ($uploadRequest->getBody () , true);
-//
-//            $decoded['desc'] = $this->description;
-//
-//            $this->formParams ['data'] = json_encode ($decoded);
-//        } else {
-//            $this->formParams ['data'] = $uploadRequest->getBody ();
-//        }
-//    }
 
 }
