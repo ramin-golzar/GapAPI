@@ -32,10 +32,10 @@ class Home extends BaseController
 //        $gap->set_chat_id ($chatId);
 
 
-        $get = $gap->get_video ();
+        $get = $gap->get_audio ();
 
         if ($get) {
-            $gap->send_text ('this is a video');
+            $gap->send_text ('this is a audio');
         } else {
             $gap->send_text ($gap->get_chat_id ());
         }
