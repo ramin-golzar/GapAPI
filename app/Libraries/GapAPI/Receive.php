@@ -4,26 +4,53 @@ namespace App\Libraries\GapAPI;
 trait Receive
 {
 
+    /**
+     * Holds the data of post method
+     *
+     * @var object
+     */
     private object $post;
 
+    /**
+     * If user is joined, returned true
+     *
+     * @return bool
+     */
     public function is_joined (): bool {
         return $this->check_type (ReceiveTypes::join);
     }
 
+    /**
+     * If user is leaved, returned true
+     *
+     * @return bool
+     */
     public function is_leaved (): bool {
         return $this->check_type (ReceiveTypes::leave);
     }
 
+    /**
+     * To get the chat_id
+     *
+     * @return string|false
+     */
     public function get_chat_id (): string|false {
         return $this->post->chat_id ?: false;
     }
 
-    public function get_from (?string $fromKey = null , bool $decod = true): array|string|false {
+    /**
+     * To get the from, from contains user info
+     *
+     * @param string|null $fromKey
+     * @param bool $decode
+     * @return array|string|false
+     */
+    public function get_from (?string $fromKey = null , bool $decode = true): array|string|false {
         if (!isset ($this->post->from)) {
             return false;
         }
 
-        if (!$decod) {
+        if (!$decode) {
             return $this->post->from;
         }
 
@@ -32,15 +59,15 @@ trait Receive
         return $fromKey ? $fromDecoded [$fromKey] : $fromDecoded;
     }
 
-    public function get_data (ReceiveTypes $type , bool $decoding = false , string $dataKey = ''): string|array|false {
-        if ($this->check_type ($type)) {
-            return $this->data_analysis ($decoding , $dataKey);
+    public function get_text (): string|false {
+        if ($this->exist_type (ReceiveTypes::text)) {
+            return $this->post_analysis ('data');
         }
 
         return false;
     }
 
-    private function check_type (ReceiveTypes $type): string|false {
+    private function exist_type (ReceiveTypes $type): bool {
         if (isset ($this->post->type) && $this->post->type == $type->name) {
             return true;
         }
@@ -48,15 +75,15 @@ trait Receive
         return false;
     }
 
-    private function data_analysis (bool &$decoding = false , string $dataKey = ''): string|array|false {
-        if (!isset ($this->post->data)) {
+    private function post_analysis (string $postKey , bool &$decoding = false , string $postKeyKey = ''): string|array|false {
+        if (!isset ($this->post->$postKey)) {
             return false;
-        } elseif (isset ($this->post->data) && !$decoding) {
-            return $this->post->data;
-        } elseif (isset ($this->post->data) && $decoding) {
-            $dataDecoded = json_decode ($this->post->data , true);
+        } elseif (isset ($this->post->$postKey) && !$decoding) {
+            return $this->post->$postKey;
+        } elseif (isset ($this->post->$postKey) && $decoding) {
+            $decoded = json_decode ($this->post->$postKey , true);
 
-            return $dataKey ? $dataDecoded [$dataKey] : $dataDecoded;
+            return $postKeyKey ? $decoded [$postKeyKey] : $decoded;
         }
     }
 
