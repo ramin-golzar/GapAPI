@@ -34,9 +34,11 @@ class Home extends BaseController
 
         $gap->set_form ('example');
 
-        $gap->send_text ('aa');
+        $gap->send_text ('Please fill out the form above');
 
-        $get = $gap->get_form (true);
+        $get = $gap->get_form (false);
+
+        $gap->set_chat_id ();
 
         if ($get) {
             $gap->send_text ("The form data is: \n\n $get");
