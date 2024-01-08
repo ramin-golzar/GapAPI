@@ -23,7 +23,7 @@ use App\Libraries\GapAPI\Send\SendImage;
 class GapAPI extends SetParams
 {
 
-    use \App\Libraries\GapAPI\Receive;
+    use Receive\Receive;
 
     /**
      * This is cURL object

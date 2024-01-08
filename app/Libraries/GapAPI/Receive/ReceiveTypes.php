@@ -1,5 +1,5 @@
 <?php
-namespace App\Libraries\GapAPI;
+namespace App\Libraries\GapAPI\Receive;
 
 enum ReceiveTypes
 {
