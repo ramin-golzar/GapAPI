@@ -164,6 +164,22 @@ trait Receive
     }
 
     /**
+     * To get info about inline button
+     * was clicked
+     *
+     * @param bool $decodeing
+     * @param string|null $returnKey
+     * @return string|array|false
+     */
+    public function get_trigger_button (bool $decodeing = true , ?string $returnKey = 'data'): string|array|false {
+        if ($this->exist_type (ReceiveTypes::triggerButton)) {
+            return $this->get_from_post ('data' , $decodeing , $returnKey);
+        }
+
+        return false;
+    }
+
+    /**
      * To get the video content
      *
      * @param bool $decoding

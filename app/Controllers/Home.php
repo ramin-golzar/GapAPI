@@ -32,11 +32,11 @@ class Home extends BaseController
 //        $gap->set_chat_id ($chatId);
 
 
-        $gap->set_form ('example');
+        $gap->set_inline_keyboard ('example');
 
-        $gap->send_text ('Please fill out the form above');
+        $gap->send_text ('please click on a keyboard');
 
-        $get = $gap->get_form (false);
+        $get = $gap->get_trigger_button ();
 
         $gap->set_chat_id ();
 
