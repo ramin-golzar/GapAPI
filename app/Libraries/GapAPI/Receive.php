@@ -149,6 +149,21 @@ trait Receive
     }
 
     /**
+     * To get the form data
+     *
+     * @param bool $decoding
+     * @param string|null $returnKey
+     * @return string|array|false
+     */
+    public function get_form (bool $decoding = true , ?string $returnKey = null): string|array|false {
+        if ($this->exist_type (ReceiveTypes::submitForm)) {
+            return $this->get_from_post ('data' , $decoding , $returnKey);
+        }
+
+        return false;
+    }
+
+    /**
      * To get the video content
      *
      * @param bool $decoding

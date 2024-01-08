@@ -32,12 +32,14 @@ class Home extends BaseController
 //        $gap->set_chat_id ($chatId);
 
 
-        $gap->set_location_keyboard ('Send Location');
+        $gap->set_form ('example');
 
-        $get = $gap->get_location (false);
+        $gap->send_text ('aa');
+
+        $get = $gap->get_form (true);
 
         if ($get) {
-            $gap->send_text ('Your location is: ' . $get);
+            $gap->send_text ("The form data is: \n\n $get");
         } else {
             $gap->send_text ($gap->get_chat_id ());
         }

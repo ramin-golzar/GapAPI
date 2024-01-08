@@ -14,7 +14,7 @@ enum ReceiveTypes
     case file;
     case contact;
     case location;
-    case form;
+    case submitForm;
     case triggerButton;
     case paycallback;
     case invoicecallback;
