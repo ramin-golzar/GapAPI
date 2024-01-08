@@ -180,6 +180,21 @@ trait Receive
     }
 
     /**
+     * To get the paycallback info
+     *
+     * @param bool $decoding
+     * @param string|null $returnKey
+     * @return string|array|false
+     */
+    public function get_paycallback (bool $decoding = true , ?string $returnKey = null): string|array|false {
+        if ($this->exist_type (ReceiveTypes::paycallback)) {
+            return $this->get_from_post ('data' , $decoding , $returnKey);
+        }
+
+        return false;
+    }
+
+    /**
      * To get the video content
      *
      * @param bool $decoding
