@@ -32,10 +32,12 @@ class Home extends BaseController
 //        $gap->set_chat_id ($chatId);
 
 
-        $get = $gap->get_file ();
+        $gap->set_contact_keyboard ('Send Contact');
+
+        $get = $gap->get_contact (false);
 
         if ($get) {
-            $gap->send_text ('this is a file');
+            $gap->send_text ('Your phone is: ' . $get);
         } else {
             $gap->send_text ($gap->get_chat_id ());
         }
