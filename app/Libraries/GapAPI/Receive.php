@@ -77,6 +77,20 @@ trait Receive
     }
 
     /**
+     * To get the video content
+     *
+     * @param bool $decoding
+     * @return string|array|false
+     */
+    public function get_video (bool $decoding = false): string|array|false {
+        if ($this->exist_type (ReceiveTypes::video)) {
+            return $this->get_from_post ('data' , $decoding);
+        }
+
+        return false;
+    }
+
+    /**
      * To get the audio content
      *
      * @param bool $decoding
@@ -195,14 +209,15 @@ trait Receive
     }
 
     /**
-     * To get the video content
+     * To get the invoice callback info
      *
      * @param bool $decoding
+     * @param string|null $returnKey
      * @return string|array|false
      */
-    public function get_video (bool $decoding = false): string|array|false {
-        if ($this->exist_type (ReceiveTypes::video)) {
-            return $this->get_from_post ('data' , $decoding);
+    public function get_invoicecallback (bool $decoding = true , ?string $returnKey = null): string|array|false {
+        if ($this->exist_type (ReceiveTypes::invoicecallback)) {
+            return $this->get_from_post ('data' , $decoding , $returnKey);
         }
 
         return false;
