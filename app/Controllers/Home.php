@@ -31,22 +31,10 @@ class Home extends BaseController
 
 //        $gap->set_chat_id ($chatId);
 
-
-        $gap->set_inline_keyboard ('example');
-
-        $gap->send_text ('please click on a keyboard');
-
-        $get = $gap->get_trigger_button ();
-
-        $gap->set_chat_id ();
-
-        if ($get) {
-            $gap->send_text ("The form data is: \n\n $get");
-        } else {
-            $gap->send_text ($gap->get_chat_id ());
-        }
-
-
+        $gap->set_reply_keyboard ([[['start' => 'start']]])
+            ->set_inline_keyboard ('example')
+            ->set_form ('example')
+            ->send_image ($imagePath);
 
         /* -------------------------------------------------------------------------------- */
 
