@@ -105,6 +105,20 @@ trait Receive
     }
 
     /**
+     * To get a actulal file
+     *
+     * @param bool $decoding
+     * @return string|array|false
+     */
+    public function get_file (bool $decoding = false): string|array|false {
+        if ($this->exist_type (ReceiveTypes::file)) {
+            return $this->get_from_post ('data' , $decoding);
+        }
+
+        return false;
+    }
+
+    /**
      * To get the video content
      *
      * @param bool $decoding
