@@ -19,6 +19,7 @@ use App\Libraries\GapAPI\Send\UploadFile;
 use App\Libraries\GapAPI\Send\Handlers\Types;
 use App\Libraries\GapAPI\Send\SendImage;
 use App\Libraries\GapAPI\Send\SendVideo;
+use App\Libraries\GapAPI\Send\SendAudio;
 
 trait Send
 {
@@ -163,9 +164,21 @@ trait Send
 
         $this->set_send_file ($video , Types::video , $description);
 
-        $sendVideo = new SendVideo ($this->client , $this->FormParams , $this->Multipart);
+        $sendVideo = new SendVideo ($this->client , $this->formParams);
 
         return $this->request ($sendVideo);
+    }
+
+    public function send_audio (string $audio , string $description = ''): object {
+        if ($this->is_require_upload ($audio)) {
+            $audio = $this->upload (Types::audio , $audio);
+        }
+
+        $this->set_send_file ($audio , Types::audio , $description);
+
+        $sendAudio = new SendAudio ($this->client , $this->formParams);
+
+        return $this->request ($sendAudio);
     }
 
     private function is_require_upload (string $file): bool {
