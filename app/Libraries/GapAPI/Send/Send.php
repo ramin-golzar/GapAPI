@@ -20,6 +20,7 @@ use App\Libraries\GapAPI\Send\Handlers\Types;
 use App\Libraries\GapAPI\Send\SendImage;
 use App\Libraries\GapAPI\Send\SendVideo;
 use App\Libraries\GapAPI\Send\SendAudio;
+use App\Libraries\GapAPI\Send\SendVoice;
 
 trait Send
 {
@@ -179,6 +180,18 @@ trait Send
         $sendAudio = new SendAudio ($this->client , $this->formParams);
 
         return $this->request ($sendAudio);
+    }
+
+    public function send_voice (string $voice , string $description = ''): object {
+        if ($this->is_require_upload ($voice)) {
+            $voice = $this->upload (Types::voice , $voice);
+        }
+
+        $this->set_send_file ($voice , Types::voice , $description);
+
+        $sendVoice = new SendVoice ($this->client , $this->formParams);
+
+        return $this->request ($sendVoice);
     }
 
     private function is_require_upload (string $file): bool {
