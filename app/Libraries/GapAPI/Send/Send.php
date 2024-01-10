@@ -18,6 +18,7 @@ use App\Libraries\GapAPI\Send\DeleteMessage;
 use App\Libraries\GapAPI\Send\UploadFile;
 use App\Libraries\GapAPI\Send\Handlers\Types;
 use App\Libraries\GapAPI\Send\SendImage;
+use App\Libraries\GapAPI\Send\SendVideo;
 
 trait Send
 {
@@ -153,6 +154,18 @@ trait Send
         $sendImage = new SendImage ($this->client , $this->formParams);
 
         return $this->request ($sendImage);
+    }
+
+    public function send_video (string $video , string $description = ''): object {
+        if ($this->is_require_upload ($video)) {
+            $video = $this->upload (Types::video , $video);
+        }
+
+        $this->set_send_file ($video , Types::video , $description);
+
+        $sendVideo = new SendVideo ($this->client , $this->FormParams , $this->Multipart);
+
+        return $this->request ($sendVideo);
     }
 
     private function is_require_upload (string $file): bool {

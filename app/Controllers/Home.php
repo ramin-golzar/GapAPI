@@ -27,14 +27,12 @@ class Home extends BaseController
          * - base64 encode & decode
          */
 
-        $imagePath = FCPATH . '/Images/s.jpg';
+        $imagePath = FCPATH . '/Files/image.jpg';
+        $videoPath = FCPATH . '/Files/video.mp4';
 
-//        $gap->set_chat_id ($chatId);
+        $gap->set_chat_id ($chatId);
 
-        $gap->set_reply_keyboard ([[['start' => 'start']]])
-            ->set_inline_keyboard ('example')
-            ->set_form ('example')
-            ->send_image ($imagePath);
+        $gap->send_image ($imagePath);
 
         /* -------------------------------------------------------------------------------- */
 
