@@ -169,8 +169,12 @@ class SetParams
         }
 
 
-        if (!key_exists ('type' , $decoded) && $type->name != 'file') {
+        if (!key_exists ('type' , $decoded)) {
             $decoded ['type'] = $type->name;
+        }
+
+        if (key_exists ('type' , $decoded) && ($type->name == 'file' && $decoded['type'] != 'file')) {
+            $decoded['type'] = 'file';
         }
 
         if ($description) {
