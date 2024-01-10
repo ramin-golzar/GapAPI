@@ -34,14 +34,15 @@ class Home extends BaseController
             'audio' => FCPATH . '/Files/music.mp3' ,
         ];
 
-//        $gap->set_chat_id ($chatId);
+        $get = $gap->get_trigger_button (true);
+//        log_message ('alert' , 'button ' . $get['data']);
+        log_message ('alert' , 'start editing');
+        $gap->send_edit_message ($get['message_id'] , 'AAAA');
+        log_message ('alert' , 'end editing');
 
-
-        $gap->set_reply_keyboard ([[['start' => 'start']]]);
-
-        $get = $gap->get_audio ();
-
-        $gap->send_audio ($get);
+//        $gap->set_reply_keyboard ([[['start' => 'start']]])
+//            ->set_inline_keyboard ('example')
+//            ->send_text ('TEXT');
 
         /* -------------------------------------------------------------------------------- */
 

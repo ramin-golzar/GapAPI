@@ -107,6 +107,7 @@ class SetParams
 
     protected function set_edit_message (string &$messageId , string &$newData): void {
         $this->formParams->message_id = $messageId;
+
         $this->formParams->data = $newData;
     }
 

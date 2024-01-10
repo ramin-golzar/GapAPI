@@ -185,7 +185,7 @@ trait Receive
      * @param string|null $returnKey
      * @return string|array|false
      */
-    public function get_trigger_button (bool $decodeing = true , ?string $returnKey = 'data'): string|array|false {
+    public function get_trigger_button (bool $decodeing = false , ?string $returnKey = null): string|array|false {
         if ($this->exist_type (ReceiveTypes::triggerButton)) {
             return $this->get_from_post ('data' , $decodeing , $returnKey);
         }
