@@ -39,6 +39,12 @@ class Home extends BaseController
 
         $gap->set_reply_keyboard ([[['start' => 'start']]]);
 
+        $getFile = $gap->get_file ();
+        log_message ('alert' , 'start send');
+        log_message ('alert' , $getFile);
+        $gap->send_audio ($files ['audio']);
+        log_message ('alert' , 'end send');
+
         /* -------------------------------------------------------------------------------- */
 
 //        $this->write_file ('GAP');
