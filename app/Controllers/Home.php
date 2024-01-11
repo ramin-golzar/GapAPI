@@ -7,42 +7,28 @@ class Home extends BaseController
 {
 
     public function index () {
-        $token = '18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496';
-
-        $chatId = '339322905';
-
-        $gap = new \App\Libraries\GapAPI\GapAPI ($token , $this->request);
-//
-//        $gap->set_chat_id ($chatId)
-//            ->send_text ('LLLL');
-
-        /* ----------------------------------------------------------------------
-         * Step one of uploading
-         * ----------------------------------------------------------------------
-         */
-
         /* ToDo:
          * - a problem in the edit message
          * - escape the user inputs
          * - base64 encode & decode
          */
 
+        /* ----------------------------------------------------------------------
+         * init GapAPI
+         * ----------------------------------------------------------------------
+         */
+
+        $token = '18b34dbfab054137d021173fbcc12fc0ee01bca35c8a2d52b566585b1ff71496';
+
+        $chatId = '339322905';
+
+        $gap = new \App\Libraries\GapAPI\GapAPI ($token , $this->request);
 
         $files = [
             'image' => FCPATH . '/Files/image.jpg' ,
             'video' => FCPATH . '/Files/video.mp4' ,
             'audio' => FCPATH . '/Files/music.mp3' ,
         ];
-
-        $get = $gap->get_trigger_button (true);
-//        log_message ('alert' , 'button ' . $get['data']);
-        log_message ('alert' , 'start editing');
-        $gap->send_edit_message ($get['message_id'] , 'AAAA');
-        log_message ('alert' , 'end editing');
-
-//        $gap->set_reply_keyboard ([[['start' => 'start']]])
-//            ->set_inline_keyboard ('example')
-//            ->send_text ('TEXT');
 
         /* -------------------------------------------------------------------------------- */
 
