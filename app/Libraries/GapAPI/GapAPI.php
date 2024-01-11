@@ -9,13 +9,11 @@ class GapAPI extends SetParams
     use Send\Send;
 
     public function __construct (string &$token , object &$request) {
+        $this->post = (object) $request->getPost ();
+
         parent::__construct ();
 
         $this->client = \Config\Services::curlrequest ($this->get_base_options ($token));
-
-        $this->post = (object) $request->getPost ();
-
-        $this->set_chat_id ();
     }
 
 }

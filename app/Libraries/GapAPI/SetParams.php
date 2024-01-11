@@ -13,9 +13,7 @@ class SetParams
     protected ?Multipart $multipart;
 
     public function __construct () {
-        $this->formParams = new FormParams();
-
-        $this->multipart = new Multipart();
+        $this->init_params ();
     }
 
     public function set_chat_id (string|int $chatId = ''): object {
@@ -148,7 +146,7 @@ class SetParams
         return $this;
     }
 
-    private function reset_params (): void {
+    private function init_params (): void {
         unset ($this->formParams);
         unset ($this->multipart);
 
@@ -191,7 +189,7 @@ class SetParams
         $response = $sendClass->request ();
 
         if ($resetParams) {
-            $this->reset_params ();
+            $this->init_params ();
         }
 
         return $response;
