@@ -8,11 +8,13 @@ class Home extends BaseController
 
     public function index () {
         /* ToDo:
-         * - a problem in the edit message
-         * - escape the user inputs
-         * - base64 encode & decode
-         * - setting the chat id after a
+         * - A problem in the edit message
+         * - Escape the user inputs
+         * - Base64 encode & decode
+         * - Setting the chat id after a
          *   reset formParams & multipart
+         * - Write some function for style
+         * - Testing the payment & invoice
          */
 
         /* ----------------------------------------------------------------------
@@ -32,14 +34,22 @@ class Home extends BaseController
             'audio' => FCPATH . '/Files/music.mp3' ,
         ];
 
-        $gap->set_reply_keyboard ([[['Test' => 'Test']]]);
-        $msg = $gap->send_text ('aaaaa');
+        $gap->set_reply_keyboard ([[['Yes' => 'Yes' , 'No' => 'No' ,]]])
+            ->send_text ('hello');
 
-        $decoded = json_decode ($msg->getBody () , true);
-
-        $edit = $gap->send_edit_message ($decoded['id'] , 'hello');
-
-        log_message ('alert' , 'status code: ' . $edit->getStatusCode ());
+        $get = $gap->get_text ();
+        log_message ('alert' , 'get --> ' . $get);
+        switch ($get) {
+            case 'No':
+                $gap->send_text ('You are click on No');
+                break;
+            case 'Yes':
+                $gap->send_text ('You are click on Yes');
+                break;
+            default:
+                $gap->set_reply_keyboard ('example')
+                    ->send_text ('please click on a below button');
+        }
 
         /* -------------------------------------------------------------------------------- */
 
