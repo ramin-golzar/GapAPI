@@ -32,6 +32,15 @@ class Home extends BaseController
             'audio' => FCPATH . '/Files/music.mp3' ,
         ];
 
+        $gap->set_reply_keyboard ([[['Test' => 'Test']]]);
+        $msg = $gap->send_text ('aaaaa');
+
+        $decoded = json_decode ($msg->getBody () , true);
+
+        $edit = $gap->send_edit_message ($decoded['id'] , 'hello');
+
+        log_message ('alert' , 'status code: ' . $edit->getStatusCode ());
+
         /* -------------------------------------------------------------------------------- */
 
 //        $this->write_file ('GAP');
