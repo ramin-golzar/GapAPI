@@ -154,6 +154,8 @@ class SetParams
 
         $this->formParams = new FormParams();
         $this->multipart = new Multipart();
+
+        $this->set_chat_id ();
     }
 
     protected function set_upload_file (Types $fileType , string &$imagePath): void {

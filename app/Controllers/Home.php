@@ -11,6 +11,8 @@ class Home extends BaseController
          * - a problem in the edit message
          * - escape the user inputs
          * - base64 encode & decode
+         * - setting the chat id after a
+         *   reset formParams & multipart
          */
 
         /* ----------------------------------------------------------------------
