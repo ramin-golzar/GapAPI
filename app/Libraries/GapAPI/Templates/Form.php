@@ -5,15 +5,26 @@ class Form
 {
     /*
      * Allowed keys for a form are:
-     * name , type , label , options
+     * - name
+     * - type
+     * - label
+     * - options
      *
      * Allowed value for type parameter are:
-     * text , textarea , radio , checkbox , inbuilt , select , submit
+     * - text
+     * - textarea
+     * - radio
+     * - checkbox
+     * - inbuilt
+     * - select
+     * - submit
      */
 
-    // This is a example for form template
-
-
+    /**
+     * This is a example for form template
+     *
+     * @var array
+     */
     public array $example = [
         [
             'type' => 'text' ,
