@@ -15,6 +15,9 @@ class Home extends BaseController
          *   reset formParams & multipart
          * - Write some function for style
          * - Testing the payment & invoice
+         * - The sending & receiving voice
+         *   has not beed tested
+         * - The invoce & payment has not been tested
          */
 
         /* ----------------------------------------------------------------------

@@ -30,7 +30,7 @@ trait Receive
     }
 
     /**
-     * To get the chat_id
+     * To get the user chat id
      *
      * @return string|false
      */
@@ -39,7 +39,7 @@ trait Receive
     }
 
     /**
-     * To get the from, from contains user info
+     * To get the from, the from contains user info
      *
      * @param string|null $fromKey
      * @param bool $decode
@@ -50,7 +50,7 @@ trait Receive
     }
 
     /**
-     * To get the text content
+     * To get the text from user
      *
      * @return string|false
      */

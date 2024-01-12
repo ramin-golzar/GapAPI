@@ -1,6 +1,10 @@
 <?php
 namespace App\Libraries\GapAPI\Receive;
 
+/**
+ * This enum file contains data type
+ * for get from user
+ */
 enum ReceiveTypes
 {
 

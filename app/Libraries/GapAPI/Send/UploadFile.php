@@ -28,6 +28,11 @@ class UploadFile extends BaseSend
         $this->set_upload_required (true);
     }
 
+    /**
+     * ToDo: this function can be deleted
+     *
+     * @return object
+     */
     public function request (): object {
         $uploadRequest = parent::request ();
 
