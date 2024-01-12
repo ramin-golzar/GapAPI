@@ -78,7 +78,7 @@ class BaseSend
     }
 
     /**
-     * Sets the data type
+     * Sets the valid data type for sendMessage method
      *
      * @param Types $type
      * @return void
@@ -87,6 +87,12 @@ class BaseSend
         $this->formParams ['type'] = $type->name;
     }
 
+    /**
+     * To determine if an upload is requird
+     *
+     * @param bool $uploadRequired
+     * @return void
+     */
     protected function set_upload_required (bool $uploadRequired): void {
         $this->uploadRequired = $uploadRequired;
     }
@@ -112,7 +118,8 @@ class BaseSend
     }
 
     /**
-     * Getting array of options
+     * Getting array of options for CURL
+     * request class to send data
      *
      * @return array
      */
