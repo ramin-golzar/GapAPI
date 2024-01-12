@@ -347,15 +347,34 @@ class SetParams
         $this->formParams->data = json_encode ($decoded);
     }
 
-    public function set_style (string $text , bool $bold = false , bool $italic = false , bool $underline = false , ?string $color = null): string {
+    /**
+     * To setting a simple style
+     *
+     * Example $color:#ff0000
+     *
+     * @param string $text
+     * @param bool $bold
+     * @param bool $italic
+     * @param bool $underline
+     * @param string|null $color <p>Important: the sharp sign neccessary for this parameter</p>
+     * @return object
+     */
+    public function set_style (string &$text , bool $bold = false , bool $italic = false , bool $underline = false , ?string $color = null): object {
         $this->set_bold_style ($text , $bold)
             ->set_italic_style ($text , $italic)
             ->set_underline_style ($text , $underline)
             ->set_color_style ($text , $color);
 
-        return $text;
+        return $this;
     }
 
+    /**
+     * Wraping the content into the b tag
+     *
+     * @param string $text
+     * @param bool $bold
+     * @return object
+     */
     private function set_bold_style (string &$text , bool &$bold): object {
         if ($bold) {
             $text = '<b>' . $text . '</b>';
@@ -364,6 +383,13 @@ class SetParams
         return $this;
     }
 
+    /**
+     * Wraping the content into the i tag
+     *
+     * @param string $text
+     * @param bool $italic
+     * @return object
+     */
     private function set_italic_style (string &$text , bool &$italic): object {
         if ($italic) {
             $text = '<i>' . $text . '</i>';
@@ -372,6 +398,13 @@ class SetParams
         return $this;
     }
 
+    /**
+     * Wraping the content into the u tag
+     *
+     * @param string $text
+     * @param bool $underline
+     * @return object
+     */
     private function set_underline_style (string &$text , bool &$underline): object {
         if ($underline) {
             $text = '<u>' . $text . '</u>';
@@ -380,6 +413,13 @@ class SetParams
         return $this;
     }
 
+    /**
+     * Wraping the content into the color tag
+     *
+     * @param string $text
+     * @param string|null $color
+     * @return object
+     */
     private function set_color_style (string &$text , ?string &$color): object {
         if ($color) {
             $text = "<color$color>" . $text . "</color>";

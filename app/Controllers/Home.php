@@ -37,14 +37,11 @@ class Home extends BaseController
             'audio' => FCPATH . '/Files/music.mp3' ,
         ];
 
-        $t1 = $gap->set_style ('TEXT 1' , true);
-        $t2 = $gap->set_style ('TEXT 2' , false , true);
-        $t3 = $gap->set_style ('TEXT 3' , false , false , true);
-        $t4 = $gap->set_style ('TEXT 4' , false , false , false , '#ffaa00');
-        $t5 = $gap->set_style ('TEXT 5' , true , true , true , '#44aaff');
+        $text = 'hello how are ypu?';
 
         $gap->set_reply_keyboard ([[['Yes' => 'Yes' , 'No' => 'No' ,]]])
-            ->send_text ($t1 . "\n\n" . $t2 . "\n\n" . $t3 . "\n\n" . $t4 . "\n\n" . $t5);
+            ->set_style ($text , false , true)
+            ->send_text ('php -> ' . $text);
 
 //        $get = $gap->get_text ();
 //
