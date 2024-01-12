@@ -37,25 +37,30 @@ class Home extends BaseController
             'audio' => FCPATH . '/Files/music.mp3' ,
         ];
 
-        $pack_10 = $gap->set_payment_keyboard ('pack 10 - 1000' , '10000' , 'aa');
+        $t1 = $gap->set_style ('TEXT 1' , true);
+        $t2 = $gap->set_style ('TEXT 2' , false , true);
+        $t3 = $gap->set_style ('TEXT 3' , false , false , true);
+        $t4 = $gap->set_style ('TEXT 4' , false , false , false , '#ffaa00');
+        $t5 = $gap->set_style ('TEXT 5' , true , true , true , '#44aaff');
+
         $gap->set_reply_keyboard ([[['Yes' => 'Yes' , 'No' => 'No' ,]]])
-            ->send_text ($pack_10 . "\n\n" . base64_decode ($pack_10));
+            ->send_text ($t1 . "\n\n" . $t2 . "\n\n" . $t3 . "\n\n" . $t4 . "\n\n" . $t5);
 
-        $get = $gap->get_text ();
-
-        switch ($get) {
-            case 'No':
-                $gap->send_text ('You are click on No');
-                break;
-            case 'Yes':
-                $gap->send_text ('You are click on Yes');
-                break;
-            default:
-                $get = $gap->get_text ();
-
-                $gap->set_reply_keyboard ([[['start' => 'start' ,]]])
-                    ->send_text ($get);
-        }
+//        $get = $gap->get_text ();
+//
+//        switch ($get) {
+//            case 'No':
+//                $gap->send_text ('You are click on No');
+//                break;
+//            case 'Yes':
+//                $gap->send_text ('You are click on Yes');
+//                break;
+//            default:
+//                $get = $gap->get_text ();
+//
+//                $gap->set_reply_keyboard ([[['start' => 'start' ,]]])
+//                    ->send_text ($get);
+//        }
 
         /* -------------------------------------------------------------------------------- */
 

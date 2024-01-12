@@ -347,6 +347,47 @@ class SetParams
         $this->formParams->data = json_encode ($decoded);
     }
 
+    public function set_style (string $text , bool $bold = false , bool $italic = false , bool $underline = false , ?string $color = null): string {
+        $this->set_bold_style ($text , $bold)
+            ->set_italic_style ($text , $italic)
+            ->set_underline_style ($text , $underline)
+            ->set_color_style ($text , $color);
+
+        return $text;
+    }
+
+    private function set_bold_style (string &$text , bool &$bold): object {
+        if ($bold) {
+            $text = '<b>' . $text . '</b>';
+        }
+
+        return $this;
+    }
+
+    private function set_italic_style (string &$text , bool &$italic): object {
+        if ($italic) {
+            $text = '<i>' . $text . '</i>';
+        }
+
+        return $this;
+    }
+
+    private function set_underline_style (string &$text , bool &$underline): object {
+        if ($underline) {
+            $text = '<u>' . $text . '</u>';
+        }
+
+        return $this;
+    }
+
+    private function set_color_style (string &$text , ?string &$color): object {
+        if ($color) {
+            $text = "<color$color>" . $text . "</color>";
+        }
+
+        return $this;
+    }
+
     /**
      * To send request by CURL
      *
