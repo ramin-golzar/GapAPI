@@ -10,9 +10,9 @@ class Home extends BaseController
         /* ToDo:
          * - A problem in the edit message -> F
          * - Escape the user inputs -> T
-         * - Base64 encode & decode
+         * - Base64 encode & decode -> T
          * - Setting the chat id after a
-         *   reset formParams & multipart
+         *   reset formParams & multipart -> T
          * - Write some function for style
          * - Testing the payment & invoice
          * - The sending & receiving voice
@@ -37,16 +37,11 @@ class Home extends BaseController
             'audio' => FCPATH . '/Files/music.mp3' ,
         ];
 
+        $pack_10 = $gap->set_payment_keyboard ('pack 10 - 1000' , '10000' , 'aa');
         $gap->set_reply_keyboard ([[['Yes' => 'Yes' , 'No' => 'No' ,]]])
-            ->send_text ('hello');
+            ->send_text ($pack_10 . "\n\n" . base64_decode ($pack_10));
 
         $get = $gap->get_text ();
-
-        $file = $gap->get_image ();
-
-        if ($file) {
-            $gap->send_image ($files['image']);
-        }
 
         switch ($get) {
             case 'No':

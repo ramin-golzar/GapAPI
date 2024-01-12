@@ -234,14 +234,10 @@ class SetParams
     /**
      * Return a string of code base64
      *
-     * ToDo: this code should also contain
-     * the user chat id for example: "1083924.f7s9fvlp13"
-     *
-     *
      * @return string
      */
     private function base64 (): string {
-        return base64_encode (uniqid ());
+        return base64_encode ($this->get_chat_id () . '.' . uniqid ());
     }
 
     /**
