@@ -1,6 +1,9 @@
 <?php
 namespace App\Libraries\GapAPI\Handlers;
 
+/**
+ * This class contains the parameters to uploading
+ */
 class Multipart
 {
 
