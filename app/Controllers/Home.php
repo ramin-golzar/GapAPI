@@ -8,8 +8,8 @@ class Home extends BaseController
 
     public function index () {
         /* ToDo:
-         * - A problem in the edit message
-         * - Escape the user inputs
+         * - A problem in the edit message -> F
+         * - Escape the user inputs -> T
          * - Base64 encode & decode
          * - Setting the chat id after a
          *   reset formParams & multipart
@@ -41,7 +41,13 @@ class Home extends BaseController
             ->send_text ('hello');
 
         $get = $gap->get_text ();
-        log_message ('alert' , 'get --> ' . $get);
+
+        $file = $gap->get_image ();
+
+        if ($file) {
+            $gap->send_image ($files['image']);
+        }
+
         switch ($get) {
             case 'No':
                 $gap->send_text ('You are click on No');
@@ -50,8 +56,10 @@ class Home extends BaseController
                 $gap->send_text ('You are click on Yes');
                 break;
             default:
-                $gap->set_reply_keyboard ('example')
-                    ->send_text ('please click on a below button');
+                $get = $gap->get_text ();
+
+                $gap->set_reply_keyboard ([[['start' => 'start' ,]]])
+                    ->send_text ($get);
         }
 
         /* -------------------------------------------------------------------------------- */

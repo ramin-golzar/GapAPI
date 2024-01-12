@@ -251,11 +251,11 @@ trait Receive
         if (!isset ($this->post->$postKey)) {
             return false;
         } elseif (isset ($this->post->$postKey) && !$decoding) {
-            return $this->post->$postKey;
+            return esc ($this->post->$postKey);
         } elseif (isset ($this->post->$postKey) && $decoding) {
             $decoded = json_decode ($this->post->$postKey , true);
 
-            return $postKeyKey ? $decoded [$postKeyKey] : $decoded;
+            return $postKeyKey ? esc ($decoded [$postKeyKey]) : esc ($decoded);
         }
     }
 
