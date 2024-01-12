@@ -5,6 +5,8 @@ use App\Libraries\GapAPI\Templates\ReplyKeyboard;
 use App\Libraries\GapAPI\Templates\InlineKeyboard;
 use App\Libraries\GapAPI\Templates\Form;
 
+/* ToDo: this class can be improved */
+
 class PrepareParams
 {
 
@@ -62,7 +64,7 @@ class PrepareParams
     }
 
     /**
-     * JSON some properties
+     * JSON encoding some properties
      *
      * @param array $params
      * @return void
@@ -96,7 +98,8 @@ class PrepareParams
     }
 
     /**
-     * Exit condition from function encode_reply_keyboard
+     * Exit condition from function
+     * encode_reply_keyboard
      *
      * @param array $params
      * @return bool
@@ -188,7 +191,7 @@ class PrepareParams
     }
 
     /**
-     * Push the payment keybord in to the inline keyboard
+     * Pushing the payment keybord in to the inline keyboard
      *
      * @param array $params
      * @param array $inlineKeyboard
@@ -226,7 +229,7 @@ class PrepareParams
     }
 
     /**
-     * Return an array of template
+     * Return an array of one template
      *
      * @param string $className <p>Allowed: ReplyKeyboard , InlineKeyboard , Form</p>
      * @param string $propertyName

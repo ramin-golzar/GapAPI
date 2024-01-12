@@ -2,7 +2,8 @@
 namespace App\Libraries\GapAPI\Send\Handlers;
 
 /**
- * This class contains URLs for send
+ * This class contains base URLs & other method
+ * for send any data
  */
 enum URLs: string
 {

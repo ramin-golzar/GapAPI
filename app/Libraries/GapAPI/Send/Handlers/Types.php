@@ -1,6 +1,10 @@
 <?php
 namespace App\Libraries\GapAPI\Send\Handlers;
 
+/**
+ * This enum file to specify the data type
+ * for sendMessage method
+ */
 enum Types
 {
 
