@@ -9,12 +9,6 @@ class Home extends BaseController
     public function index () {
         /* ToDo:
          * - A problem in the edit message -> F
-         * - Escape the user inputs -> T
-         * - Base64 encode & decode -> T
-         * - Setting the chat id after a
-         *   reset formParams & multipart -> T
-         * - Write some function for style
-         * - Testing the payment & invoice
          * - The sending & receiving voice
          *   has not beed tested
          * - The invoce & payment has not been tested
@@ -37,27 +31,32 @@ class Home extends BaseController
             'audio' => FCPATH . '/Files/music.mp3' ,
         ];
 
-        $text = 'hello how are ypu?';
+        $refId = $gap->set_payment_keyboard ('Pack 10' , '1000' , 'Pack 10 - 1000 Rial');
 
-        $gap->set_reply_keyboard ([[['Yes' => 'Yes' , 'No' => 'No' ,]]])
-            ->set_style ($text , false , true)
-            ->send_text ('php -> ' . $text);
+        $gap->set_reply_keyboard ([[['Start' => 'Start']]])
+            ->send_text ('Please payment the this');
 
-//        $get = $gap->get_text ();
-//
-//        switch ($get) {
-//            case 'No':
-//                $gap->send_text ('You are click on No');
-//                break;
-//            case 'Yes':
-//                $gap->send_text ('You are click on Yes');
-//                break;
-//            default:
-//                $get = $gap->get_text ();
-//
-//                $gap->set_reply_keyboard ([[['start' => 'start' ,]]])
-//                    ->send_text ($get);
-//        }
+        log_message ('alert' , 'send text & payment keyboard.');
+
+        $getPayment = $gap->get_paycallback ();
+
+        if ($getPayment) {
+            log_message ('alert' , 'get payment');
+
+            foreach ($getPayment as $k => $v) {
+                log_message ('alert' , $k . ' -> ' . $v);
+            }
+
+            $payInquiry = $gap->send_payment_inquiry ($getPayment['ref_id']);
+
+            log_message ('alert' , 'payment inquiry status code: ' . $payInquiry->getStatusCode ());
+            log_message ('alert' , 'payment inquiry body: ' . $payInquiry->getBody ());
+        }
+
+        $payVerify = $gap->send_payment_verify ($refId);
+
+        log_message ('alert' , 'payment verify status code: ' . $payVerify->getStatusCode ());
+        log_message ('alert' , 'payment verify body: ' . $payVerify->getBody ());
 
         /* -------------------------------------------------------------------------------- */
 
