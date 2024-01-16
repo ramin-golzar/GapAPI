@@ -210,7 +210,7 @@ trait Send
     private function is_require_upload (string $file): bool {
         if (!json_decode ($file)) {
             if (!is_file ($file)) {
-                throw new Exception ('Did not passed a valid file');
+                throw new \Exception ('Did not passed a valid file');
             }
 
             return true;

@@ -11,7 +11,6 @@ class Home extends BaseController
          * - A problem in the edit message -> F
          * - The sending & receiving voice
          *   has not beed tested
-         * - The invoce & payment has not been tested
          */
 
         /* ----------------------------------------------------------------------
@@ -25,43 +24,9 @@ class Home extends BaseController
 
         $gap = new \App\Libraries\GapAPI\GapAPI ($token , $this->request);
 
-        $files = [
-            'image' => FCPATH . '/Files/image.jpg' ,
-            'video' => FCPATH . '/Files/video.mp4' ,
-            'audio' => FCPATH . '/Files/music.mp3' ,
-        ];
+        $voice = $gap->get_image ();
 
-        $refId = $gap->set_payment_keyboard ('Pack 10' , '1000' , 'Pack 10 - 1000 Rial');
-
-        $gap->set_reply_keyboard ([[['Start' => 'Start']]])
-            ->send_text ('Please payment the this');
-
-        log_message ('alert' , 'send text & payment keyboard.');
-
-        $getPayment = $gap->get_paycallback ();
-
-        if ($getPayment) {
-            log_message ('alert' , 'get payment');
-
-            foreach ($getPayment as $k => $v) {
-                log_message ('alert' , $k . ' -> ' . $v);
-            }
-
-            $payInquiry = $gap->send_payment_inquiry ($getPayment['ref_id']);
-
-            log_message ('alert' , 'payment inquiry status code: ' . $payInquiry->getStatusCode ());
-            log_message ('alert' , 'payment inquiry body: ' . $payInquiry->getBody ());
-        }
-
-        $payVerify = $gap->send_payment_verify ($refId);
-
-        log_message ('alert' , 'payment verify status code: ' . $payVerify->getStatusCode ());
-        log_message ('alert' , 'payment verify body: ' . $payVerify->getBody ());
-
-        /* -------------------------------------------------------------------------------- */
-
-//        $this->write_file ('GAP');
-//        $this->api ($chatId , $token , $imagePath);
+        $gap->send_image ($voice);
     }
 
     private function api (string $chatId , string $token , string $imagePath): void {
