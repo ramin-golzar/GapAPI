@@ -16,4 +16,21 @@ class GapAPI extends SetParams
         $this->client = \Config\Services::curlrequest ($this->get_base_options ($token));
     }
 
+    /**
+     * To send request by CURL
+     *
+     * @param object $sendClass
+     * @param bool $resetParams
+     * @return object
+     */
+    protected function request (object &$sendClass , bool $resetParams = true): object {
+        $response = $sendClass->request ();
+
+        if ($resetParams) {
+            $this->init_params ();
+        }
+
+        return $response;
+    }
+
 }

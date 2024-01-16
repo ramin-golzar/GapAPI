@@ -428,21 +428,4 @@ class SetParams
         return $this;
     }
 
-    /**
-     * To send request by CURL
-     *
-     * @param object $sendClass
-     * @param bool $resetParams
-     * @return object
-     */
-    protected function request (object &$sendClass , bool $resetParams = true): object {
-        $response = $sendClass->request ();
-
-        if ($resetParams) {
-            $this->init_params ();
-        }
-
-        return $response;
-    }
-
 }
