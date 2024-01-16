@@ -149,6 +149,7 @@ trait Send
 
     public function send_image (string $image , string $description = ''): object {
         if ($this->is_require_upload ($image)) {
+            log_message ('alert' , 'is require upload');
             $image = $this->upload (Types::image , $image , $description);
         }
 
@@ -208,7 +209,7 @@ trait Send
     }
 
     private function is_require_upload (string $file): bool {
-        if (!json_decode ($file)) {
+        if (!json_decode ($file , true)) {
             if (!is_file ($file)) {
                 throw new \Exception ('Did not passed a valid file');
             }

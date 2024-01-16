@@ -251,7 +251,7 @@ trait Receive
         if (!isset ($this->post->$postKey)) {
             return false;
         } elseif (isset ($this->post->$postKey) && !$decoding) {
-            return esc ($this->post->$postKey);
+            return $this->post->$postKey;
         } elseif (isset ($this->post->$postKey) && $decoding) {
             $decoded = json_decode ($this->post->$postKey , true);
 
