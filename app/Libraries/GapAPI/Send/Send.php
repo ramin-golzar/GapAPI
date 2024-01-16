@@ -149,7 +149,6 @@ trait Send
 
     public function send_image (string $image , string $description = ''): object {
         if ($this->is_require_upload ($image)) {
-            log_message ('alert' , 'is require upload');
             $image = $this->upload (Types::image , $image , $description);
         }
 
