@@ -31,33 +31,27 @@ class Home extends BaseController
             'audio' => FCPATH . '/Files/music.mp3' ,
         ];
 
-        $refId = $gap->set_payment_keyboard ('Pack 10' , '1000' , 'Pack 10 - 1000 Rial');
+        log_message ('alert' , 'START');
 
-        $gap->set_reply_keyboard ([[['Start' => 'Start']]])
-            ->send_text ('Please payment the this');
+        $id = $gap->set_reply_keyboard ([[['Start' => 'Start' ,]]])
+            ->set_inline_keyboard ('example')
+            ->send_text ('please click on "start"');
 
-        log_message ('alert' , 'send text & payment keyboard.');
+        $decoded = json_decode ($id->getBody () , true);
 
-        $getPayment = $gap->get_paycallback ();
+//        $api = new \App\Libraries\API\Api ($token);
+//        $api->editMessage ($chatId , '2448' , 'edit message' , [[['text' => 'a' , 'cb_data' => 'a']]]);
 
-        if ($getPayment) {
-            log_message ('alert' , 'get payment');
+        $gap->set_inline_keyboard ([[['text' => 'a' , 'cb_data' => 'a']]]);
+        $gap->send_edit_message ('2452' , 'edit by my api');
 
-            foreach ($getPayment as $k => $v) {
-                log_message ('alert' , $k . ' -> ' . $v);
-            }
+        $trigger = $gap->get_trigger_button (true , 'message_id');
 
-            $payInquiry = $gap->send_payment_inquiry ($getPayment['ref_id']);
+        log_message ('alert' , 'ID: ' . $decoded['id']);
 
-            log_message ('alert' , 'payment inquiry status code: ' . $payInquiry->getStatusCode ());
-            log_message ('alert' , 'payment inquiry body: ' . $payInquiry->getBody ());
-        }
+        log_message ('alert' , 'trigger: ' . $trigger);
 
-        $payVerify = $gap->send_payment_verify ($refId);
-
-        log_message ('alert' , 'payment verify status code: ' . $payVerify->getStatusCode ());
-        log_message ('alert' , 'payment verify body: ' . $payVerify->getBody ());
-
+        log_message ('alert' , 'END');
         /* -------------------------------------------------------------------------------- */
 
 //        $this->write_file ('GAP');

@@ -201,7 +201,9 @@ trait Receive
      * @return string|array|false
      */
     public function get_paycallback (bool $decoding = true , ?string $returnKey = null): string|array|false {
+        log_message ('alert' , 'get_paycallback func');
         if ($this->exist_type (ReceiveTypes::paycallback)) {
+            log_message ('alert' , 'get paycallback cond');
             return $this->get_from_post ('data' , $decoding , $returnKey);
         }
 
