@@ -12,13 +12,6 @@ class Home extends BaseController
     private string $token = '';
 
     /**
-     * To holds the user chat id
-     *
-     * @var string
-     */
-    private string $chatId = '';
-
-    /**
      * Gap API
      *
      * @var object
