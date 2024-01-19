@@ -293,7 +293,7 @@ class SetParams
      *
      * @return void
      */
-    private function init_params (): void {
+    protected function init_params (): void {
         unset ($this->formParams);
         unset ($this->multipart);
 

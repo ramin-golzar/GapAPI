@@ -41,7 +41,7 @@ class Home extends BaseController
                 ['text' => 'video' , 'cb_data' => 'video']
             ] ,
             [
-                ['text' => 'Audio' , 'cb_data' => 'Audio']
+                ['text' => 'Audio' , 'cb_data' => 'audio']
             ] ,
             [
                 ['text' => 'voice' , 'cb_data' => 'voice']
@@ -67,11 +67,19 @@ class Home extends BaseController
     public function index () {
         $this->gap = new \App\Libraries\GapAPI\GapAPI ($this->token , $this->request);
 
-        $this->process_input ();
+        $this->process_text ();
+
+        $this->process_inline_keyboard ();
+
+        $this->process_form ();
     }
 
-    private function process_input (): void {
+    private function process_text (): void {
         $text = $this->gap->get_text ();
+
+        if (!$text) {
+            return;
+        }
 
         switch ($text) {
             case 'list':
@@ -83,11 +91,69 @@ class Home extends BaseController
                 $this->gap->set_form ($this->keyboards['register'])
                     ->set_reply_keyboard ($this->keyboards['menu'])
                     ->send_text ('Please fill this form');
+                break;
             case 'menu':
-            default :
+            default:
                 $this->gap->set_reply_keyboard ($this->keyboards['main'])
                     ->send_text ('Please select one of buttons below');
         }
+    }
+
+    private function process_inline_keyboard (): void {
+        $keyboard = $this->gap->get_trigger_button (true , 'data');
+
+        if (!$keyboard) {
+            return;
+        }
+
+        $this->send_file ($keyboard);
+    }
+
+    private function send_file (string $keyboard): void {
+        switch ($keyboard) {
+            case 'image':
+                $this->gap->set_reply_keyboard ($this->keyboards['menu'])
+                    ->send_image (FCPATH . "/Files/image.jpg");
+                break;
+            case 'video':
+                $this->gap->set_reply_keyboard ($this->keyboards['menu'])
+                    ->send_video (FCPATH . "/Files/video.mp4");
+                break;
+            case 'audio':
+                $this->gap->set_reply_keyboard ($this->keyboards['menu'])
+                    ->send_audio (FCPATH . "/Files/audio.mp3");
+                break;
+            case 'voice':
+                $this->gap->set_reply_keyboard ($this->keyboards['menu'])
+                    ->send_audio (FCPATH . "/Files/voice.ogg");
+                break;
+            case 'file':
+                $this->gap->set_reply_keyboard ($this->keyboards['menu'])
+                    ->send_file (FCPATH . "/Files/image.jpg");
+                break;
+        }
+    }
+
+    private function process_form (): void {
+        $form = $this->gap->get_form (true , 'data');
+
+        if (!$form) {
+            return;
+        }
+
+        $data = explode ('&' , $form);
+        foreach ($data as &$value) {
+            $value = explode ('=' , $value);
+        }
+
+        $text = 'Your first name is '
+            . esc ($data[0][1])
+            . ', and your last name is '
+            . esc ($data [1][1])
+            . ' 😉';
+
+        $this->gap->set_reply_keyboard ($this->keyboards['menu'])
+            ->send_text ($text);
     }
 
 }
